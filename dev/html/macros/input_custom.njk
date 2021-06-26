@@ -1,0 +1,6 @@
+{% macro field(label, type, placeholder, width, name) %}
+    <div class="input_custom">
+        <label class="text-15">{{ label }}</label>
+        <input name="{{ name }}" type="{{ type }}" placeholder="{{ placeholder }}" style="width: {{ width }}">
+    </div>
+{% endmacro %}

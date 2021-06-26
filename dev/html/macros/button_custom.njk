@@ -1,0 +1,8 @@
+{% macro button(text, width, height, theme, type, id) %}
+    <button id="{{ id }}" type="{{ type }}"
+            class="button text-17 {{ theme }}"
+            style="width: {{ width }}; height: {{ height }}"
+    >
+        {{ text }}
+    </button>
+{% endmacro %}

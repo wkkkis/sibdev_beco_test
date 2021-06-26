@@ -1,0 +1,28 @@
+{
+  "name": "shoof_admin_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://wkkkis@bitbucket.org/irokezprogrammers/shoof_admin_front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/irokezprogrammers/shoof_admin_front#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.1",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {}
+}
