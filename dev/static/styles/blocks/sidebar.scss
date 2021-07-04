@@ -1,0 +1,132 @@
+.side-bar-wrap {
+  background-color: $darkgray;
+  height: 100vh;
+  width: 300px;
+  font-family: $main-font;
+  position: fixed;
+
+  .side-bar {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+
+    .logo-sidebar {
+      padding: 20px 0 19px 26px;
+      border-bottom: 2px solid $lightborder;
+    }
+
+    .sidebar-links {
+      padding: 20px;
+
+      .active {
+        background: $lightblack;
+        border: 2px solid $lightborder;
+      }
+
+      .link {
+        padding: 6px 11px 6px 6px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        color: $lightgray;
+        cursor: pointer;
+
+        .description {
+          display: flex;
+          align-items: center;
+        }
+
+        .notification {
+          display: flex;
+          align-items: center;
+
+          div {
+            width: 50px;
+            height: 26px;
+            font-weight: bold;
+            border-radius: 10px;
+          }
+        }
+
+        svg {
+          padding: 6px 6px 6px 7px;
+          background: $lightblack;
+          border-radius: 6px;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: $lightblack;
+        }
+      }
+    }
+  }
+
+  .link-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 254px;
+    padding: 20px 26px 20px 20px;
+    border-top: 2px solid $lightborder;
+    position: absolute;
+    bottom: 0;
+
+    .description {
+      display: flex;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      .about-admin {
+        margin: 0;
+
+        span {
+          color: $lightgray;
+        }
+
+        p {
+          color: $fontcolor;
+          margin: 0;
+        }
+      }
+    }
+
+    .notification {
+      width: 50px;
+      height: 26px;
+      cursor: pointer;
+    }
+
+    .log-out {
+      position: absolute;
+      z-index: 999;
+      padding: 13px;
+      background-color: $fontcolor;
+      top: -85%;
+      right: 17px;
+      margin-top: 11px;
+      display: none;
+
+      .log-out-button{
+        padding: 9px 60px 9px 60px;
+        background-color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .arrow-log-out{
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 94%;
+        background-color: $fontcolor;
+        right: 27px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

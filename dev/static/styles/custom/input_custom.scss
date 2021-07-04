@@ -1,17 +1,33 @@
-.input_custom{
+.input_custom {
   display: flex;
   flex-direction: column;
-  input{
-    border: 1px solid #dddddd;
-    padding: 13px 0 12px 14px;
-    border-radius: 12px;
-    outline: none;
-    font-size: 17px;
-    &::-webkit-input-placeholder{
-      color:  #888888;
+
+  .input-with-clear {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 20%;
+      right: 10px;
+      cursor: pointer;
+      display: none;
     }
   }
-  label{
+
+  input {
+    border: 1px solid #dddddd;
+    padding: 13px 40px 12px 14px;
+    border-radius: 12px;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 17px;
+
+    &::-webkit-input-placeholder {
+      color: #888888;
+    }
+  }
+
+  label {
     color: #888888;
     margin-bottom: 8px;
     margin-left: 6px;

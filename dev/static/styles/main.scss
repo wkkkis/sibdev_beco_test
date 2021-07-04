@@ -1,10 +1,17 @@
 @import "utils/vars";
 @import "custom/all_custom";
 @import "pages/all_pages";
+@import "blocks/all_blocks";
 
-body{
+body {
   padding: 0;
-  margin: 0
+  margin: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.text-13 {
+  font-size: 13px;
 }
 
 .text-15 {
@@ -21,4 +28,21 @@ body{
 
 .bold {
   font-weight: bold;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1;
+}
+
+.main-wrapper {
+  width: 100%;
+
+  .content-wrapper {
+    padding-left: 20px;
+    margin-left: 300px;
+  }
 }

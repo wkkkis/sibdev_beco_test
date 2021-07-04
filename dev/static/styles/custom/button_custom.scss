@@ -1,19 +1,35 @@
 .button {
-  padding-top: 14px;
-  padding-bottom: 13px;
   border-radius: 12px;
-  margin-top: 19px;
-  text-align: center;
   border: none;
   font-family: $main-font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+#resetbtn {
+  margin-right: 10px;
 }
 
 .dark {
   background: $darkgray;
-  color: white
+  color: white;
 }
 
 .light {
   background: $lightgray;
   border: 1px solid $border;
+  color: $darkgray;
+  font-weight: bold;
+}
+
+.green {
+  background: $lightgreen;
+  color: $darkgray;
+}
+
+.gray {
+  background: $fontcolor;
+  color: $darkgray;
 }

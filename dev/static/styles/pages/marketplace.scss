@@ -1,0 +1,181 @@
+.marketplace-wrap {
+  font-family: $main-font;
+
+  .marketplace-content {
+
+    .tool-description-wrap {
+      display: flex;
+      margin-bottom: 14px;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #fff
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $border;
+        border-radius: 10px;
+        border: 6px solid #fff;
+
+        &:hover {
+          background-color: $darkgray;
+          border: 6px solid #fff
+        }
+      }
+
+      .tool-bar {
+        background: $lightgray;
+        padding: 10px 5px 10px 10px;
+        border-radius: 16px;
+        color: $darkgray;
+        margin-right: 20px;
+
+        &__title {
+          margin-bottom: 6px;
+          color: $fontcolor;
+          font-weight: 500;
+        }
+
+        &__links {
+          display: flex;
+        }
+      }
+
+      .description-bar {
+        background: $blackgray;
+        padding: 5px 0 5px 5px;
+        border-radius: 16px;
+        color: $darkgray;
+        display: flex;
+      }
+    }
+
+    .users-wrap {
+      width: 100%;
+      display: block;
+      overflow-x: scroll;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #fff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $border;
+        border-radius: 10px;
+        border: 6px solid #fff;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $darkgray;
+          border: 6px solid #fff
+        }
+      }
+
+      .users-sort {
+        display: flex;
+        margin-bottom: 10px;
+
+        .sort-block {
+          position: relative;
+
+          &:hover{
+
+            .options-users {
+              opacity: 1;
+              border: 2px solid $darkgray;
+              height: 42px;
+            }
+          }
+        }
+
+        .all-checkbox {
+          margin-right: 5px;
+          border-radius: 6px;
+          padding-right: 12px;
+          padding-top: 10px;
+          padding-left: 10px;
+        }
+      }
+
+      .users-data {
+        border: 1px solid $blackgray;
+        width: 1620px;
+        direction: ltr;
+        border-radius: 6px;
+
+        .user {
+          height: 44px;
+          border-bottom: 1px solid $blackgray;
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: 48px 137px 257px 207px 207px 157px 157px 157px 137px 157px;
+
+          .active-social{
+            padding: 3px;
+            background: $darkgray;
+            border-radius: 6px;
+            margin-left: 10px;
+          }
+
+          .disabled-social{
+            padding: 3px;
+            background: $border;
+            border-radius: 6px;
+            margin-left: 10px;
+          }
+
+          .user-padding {
+            padding-top: 12px;
+            border-right: 1px solid $lightgray;
+            word-wrap: break-word;
+            overflow-x: hidden;
+
+            span {
+              margin-left: 11px;
+            }
+          }
+
+          .user-checkbox {
+            border-right: 1px solid $lightgray;
+            width: 27px;
+            padding: 10px;
+
+            label:before {
+              border: 2px solid $border;
+            }
+
+            input[type="checkbox"] {
+
+              &:checked ~ label {
+
+                &:before {
+                  border: 2px solid $darkgray;
+                }
+              }
+            }
+          }
+
+          .nickname {
+            background: $lightgray;
+          }
+
+          &:hover {
+            background-color: $lightgray;
+          }
+        }
+      }
+    }
+  }
+
+}

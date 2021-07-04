@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
 .button {
-  padding-top: 14px;
-  padding-bottom: 13px;
   border-radius: 12px;
-  margin-top: 19px;
-  text-align: center;
   border: none;
-  font-family: "Cabin", sans-serif; }
+  font-family: "Cabin", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px; }
+
+#resetbtn {
+  margin-right: 10px; }
 
 .dark {
   background: #171717;
@@ -14,16 +17,35 @@
 
 .light {
   background: #F9F9F9;
-  border: 1px solid #DDDDDD; }
+  border: 1px solid #DDDDDD;
+  color: #171717;
+  font-weight: bold; }
+
+.green {
+  background: #5CFA54;
+  color: #171717; }
+
+.gray {
+  background: #4D4D4D;
+  color: #171717; }
 
 .input_custom {
   display: flex;
   flex-direction: column; }
+  .input_custom .input-with-clear {
+    position: relative; }
+    .input_custom .input-with-clear svg {
+      position: absolute;
+      top: 20%;
+      right: 10px;
+      cursor: pointer;
+      display: none; }
   .input_custom input {
     border: 1px solid #dddddd;
-    padding: 13px 0 12px 14px;
+    padding: 13px 40px 12px 14px;
     border-radius: 12px;
     outline: none;
+    margin-bottom: 10px;
     font-size: 17px; }
     .input_custom input::-webkit-input-placeholder {
       color: #888888; }
@@ -32,6 +54,253 @@
     margin-bottom: 8px;
     margin-left: 6px;
     font-size: 15px; }
+
+.pages-title {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  width: 100%; }
+  .pages-title .back-button {
+    width: 110px;
+    height: 36px;
+    cursor: pointer;
+    color: #4D4D4D;
+    font-weight: 700; }
+    .pages-title .back-button svg {
+      margin-right: 10px; }
+      .pages-title .back-button svg path {
+        fill: #DDDDDD; }
+  .pages-title .title-about-page {
+    display: flex;
+    align-items: flex-end; }
+    .pages-title .title-about-page .title-page {
+      font-weight: 700; }
+    .pages-title .title-about-page span {
+      padding-left: 20px;
+      padding-right: 20px; }
+    .pages-title .title-about-page .border {
+      width: 1px;
+      height: 22px;
+      background: #DDDDDD; }
+
+.page-description {
+  padding: 10px 12px 10px 12px;
+  background: #F9F9F9;
+  border-radius: 12px;
+  width: 126px;
+  margin-right: 5px; }
+  .page-description__title {
+    margin-bottom: 2px; }
+  .page-description__data {
+    font-weight: 700; }
+
+.tool-btn {
+  font-size: 13px;
+  border: 1px solid #DDDDDD;
+  color: #171717;
+  margin-right: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 33px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; }
+  .tool-btn svg {
+    margin-left: 10px; }
+  .tool-btn span {
+    margin-right: 15px; }
+
+.options-users {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+  height: 44px; }
+  .options-users span {
+    margin-left: 9px; }
+  .options-users svg {
+    margin-right: 9px; }
+
+.activesort {
+  border: 2px solid #171717;
+  height: 42px; }
+  .activesort span {
+    margin-left: 9px; }
+  .activesort svg {
+    margin-right: 9px; }
+
+.checkbox {
+  position: relative;
+  width: 21px;
+  height: 21px; }
+  .checkbox label {
+    position: relative;
+    max-width: 19px;
+    max-height: 19px;
+    display: block;
+    font-weight: normal;
+    cursor: pointer; }
+    .checkbox label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 19px;
+      max-height: 19px;
+      width: 100%;
+      min-height: 19px;
+      transition: transform 0.28s ease;
+      border-radius: 6px;
+      border: 2px solid #888888; }
+      .checkbox label:before .false-checkbox {
+        background-color: red; }
+    .checkbox label:after {
+      content: '';
+      max-width: 8px;
+      max-height: 8px;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #171717;
+      border-radius: 2px;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      background: black;
+      transform: rotate(0deg) scale(0);
+      position: absolute; }
+  .checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; }
+    .checkbox input[type="checkbox"]:checked ~ label:before {
+      border: 2px solid #171717; }
+    .checkbox input[type="checkbox"]:checked ~ label:after {
+      transform: rotate(0deg) scale(1); }
+      .checkbox input[type="checkbox"]:checked ~ label:after .false-checkbox {
+        visibility: visible; }
+    .checkbox input[type="checkbox"]:focus + label::before {
+      outline: 0; }
+
+.option-sort-disabled {
+  display: none; }
+
+.options-sort-block {
+  padding: 20px;
+  position: absolute;
+  background: white;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  margin-top: 55px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #DDDDDD; }
+  .options-sort-block #label-for-drop {
+    color: #888888;
+    font-size: 15px; }
+  .options-sort-block .options-checkbox {
+    display: flex;
+    margin-bottom: 20px; }
+    .options-sort-block .options-checkbox span {
+      margin-left: 7px;
+      color: #888888; }
+    .options-sort-block .options-checkbox .complete-checkbox {
+      display: flex;
+      align-items: center; }
+    .options-sort-block .options-checkbox .partial-checkbox {
+      display: flex;
+      align-items: center;
+      margin-left: 25px; }
+  .options-sort-block .select-wrap select {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    appearance: none;
+    padding: 13px;
+    width: 315px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    font-size: 17px;
+    color: #888888;
+    background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.9999 9.16994C16.8126 8.98369 16.5591 8.87915 16.2949 8.87915C16.0308 8.87915 15.7773 8.98369 15.5899 9.16994L11.9999 12.7099L8.45995 9.16994C8.27259 8.98369 8.01913 8.87915 7.75495 8.87915C7.49076 8.87915 7.23731 8.98369 7.04995 9.16994C6.95622 9.26291 6.88183 9.37351 6.83106 9.49537C6.78029 9.61723 6.75415 9.74793 6.75415 9.87994C6.75415 10.012 6.78029 10.1427 6.83106 10.2645C6.88183 10.3864 6.95622 10.497 7.04995 10.5899L11.2899 14.8299C11.3829 14.9237 11.4935 14.9981 11.6154 15.0488C11.7372 15.0996 11.8679 15.1257 11.9999 15.1257C12.132 15.1257 12.2627 15.0996 12.3845 15.0488C12.5064 14.9981 12.617 14.9237 12.7099 14.8299L16.9999 10.5899C17.0937 10.497 17.1681 10.3864 17.2188 10.2645C17.2696 10.1427 17.2957 10.012 17.2957 9.87994C17.2957 9.74793 17.2696 9.61723 17.2188 9.49537C17.1681 9.37351 17.0937 9.26291 16.9999 9.16994Z' fill='black'/%3E%3C/svg%3E") right 0.5rem center no-repeat; }
+  .options-sort-block .arrow-for-sort {
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    top: -6px;
+    left: 27px;
+    transform: rotate(45deg);
+    border-left: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD; }
+  .options-sort-block .option-sort-input {
+    display: flex;
+    align-items: flex-end; }
+    .options-sort-block .option-sort-input input[type="date"] {
+      display: block;
+      position: relative;
+      font-family: "Cabin", sans-serif;
+      padding: 10px;
+      color: #888888;
+      font-size: 17px;
+      border: 1px solid #888888;
+      border-radius: 12px;
+      background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 14C12.1978 14 12.3911 13.9414 12.5556 13.8315C12.72 13.7216 12.8482 13.5654 12.9239 13.3827C12.9996 13.2 13.0194 12.9989 12.9808 12.8049C12.9422 12.6109 12.847 12.4327 12.7071 12.2929C12.5673 12.153 12.3891 12.0578 12.1951 12.0192C12.0011 11.9806 11.8 12.0004 11.6173 12.0761C11.4346 12.1518 11.2784 12.28 11.1685 12.4444C11.0586 12.6089 11 12.8022 11 13C11 13.2652 11.1054 13.5196 11.2929 13.7071C11.4804 13.8946 11.7348 14 12 14ZM17 14C17.1978 14 17.3911 13.9414 17.5556 13.8315C17.72 13.7216 17.8482 13.5654 17.9239 13.3827C17.9996 13.2 18.0194 12.9989 17.9808 12.8049C17.9422 12.6109 17.847 12.4327 17.7071 12.2929C17.5673 12.153 17.3891 12.0578 17.1951 12.0192C17.0011 11.9806 16.8 12.0004 16.6173 12.0761C16.4346 12.1518 16.2784 12.28 16.1685 12.4444C16.0586 12.6089 16 12.8022 16 13C16 13.2652 16.1054 13.5196 16.2929 13.7071C16.4804 13.8946 16.7348 14 17 14ZM12 18C12.1978 18 12.3911 17.9414 12.5556 17.8315C12.72 17.7216 12.8482 17.5654 12.9239 17.3827C12.9996 17.2 13.0194 16.9989 12.9808 16.8049C12.9422 16.6109 12.847 16.4327 12.7071 16.2929C12.5673 16.153 12.3891 16.0578 12.1951 16.0192C12.0011 15.9806 11.8 16.0004 11.6173 16.0761C11.4346 16.1518 11.2784 16.28 11.1685 16.4444C11.0586 16.6089 11 16.8022 11 17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18ZM17 18C17.1978 18 17.3911 17.9414 17.5556 17.8315C17.72 17.7216 17.8482 17.5654 17.9239 17.3827C17.9996 17.2 18.0194 16.9989 17.9808 16.8049C17.9422 16.6109 17.847 16.4327 17.7071 16.2929C17.5673 16.153 17.3891 16.0578 17.1951 16.0192C17.0011 15.9806 16.8 16.0004 16.6173 16.0761C16.4346 16.1518 16.2784 16.28 16.1685 16.4444C16.0586 16.6089 16 16.8022 16 17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18ZM7 14C7.19778 14 7.39112 13.9414 7.55557 13.8315C7.72002 13.7216 7.84819 13.5654 7.92388 13.3827C7.99957 13.2 8.01937 12.9989 7.98079 12.8049C7.9422 12.6109 7.84696 12.4327 7.70711 12.2929C7.56725 12.153 7.38907 12.0578 7.19509 12.0192C7.00111 11.9806 6.80004 12.0004 6.61732 12.0761C6.43459 12.1518 6.27841 12.28 6.16853 12.4444C6.05865 12.6089 6 12.8022 6 13C6 13.2652 6.10536 13.5196 6.29289 13.7071C6.48043 13.8946 6.73478 14 7 14ZM19 4H18V3C18 2.73478 17.8946 2.48043 17.7071 2.29289C17.5196 2.10536 17.2652 2 17 2C16.7348 2 16.4804 2.10536 16.2929 2.29289C16.1054 2.48043 16 2.73478 16 3V4H8V3C8 2.73478 7.89464 2.48043 7.70711 2.29289C7.51957 2.10536 7.26522 2 7 2C6.73478 2 6.48043 2.10536 6.29289 2.29289C6.10536 2.48043 6 2.73478 6 3V4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM20 19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V10H20V19ZM20 8H4V7C4 6.73478 4.10536 6.48043 4.29289 6.29289C4.48043 6.10536 4.73478 6 5 6H19C19.2652 6 19.5196 6.10536 19.7071 6.29289C19.8946 6.48043 20 6.73478 20 7V8ZM7 18C7.19778 18 7.39112 17.9414 7.55557 17.8315C7.72002 17.7216 7.84819 17.5654 7.92388 17.3827C7.99957 17.2 8.01937 16.9989 7.98079 16.8049C7.9422 16.6109 7.84696 16.4327 7.70711 16.2929C7.56725 16.153 7.38907 16.0578 7.19509 16.0192C7.00111 15.9806 6.80004 16.0004 6.61732 16.0761C6.43459 16.1518 6.27841 16.28 6.16853 16.4444C6.05865 16.6089 6 16.8022 6 17C6 17.2652 6.10536 17.5196 6.29289 17.7071C6.48043 17.8946 6.73478 18 7 18Z' fill='black'/%3E%3C/svg%3E") right 1rem center no-repeat;
+      cursor: pointer;
+      width: 152px;
+      margin-bottom: 10px; }
+      .options-sort-block .option-sort-input input[type="date"]:focus {
+        outline: none; }
+    .options-sort-block .option-sort-input #date_from_input {
+      border: 1px solid #dddddd;
+      padding: 13px 14px 12px 14px;
+      border-radius: 12px;
+      outline: none;
+      margin-bottom: 10px;
+      font-size: 17px;
+      width: 152px;
+      background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 14C12.1978 14 12.3911 13.9414 12.5556 13.8315C12.72 13.7216 12.8482 13.5654 12.9239 13.3827C12.9996 13.2 13.0194 12.9989 12.9808 12.8049C12.9422 12.6109 12.847 12.4327 12.7071 12.2929C12.5673 12.153 12.3891 12.0578 12.1951 12.0192C12.0011 11.9806 11.8 12.0004 11.6173 12.0761C11.4346 12.1518 11.2784 12.28 11.1685 12.4444C11.0586 12.6089 11 12.8022 11 13C11 13.2652 11.1054 13.5196 11.2929 13.7071C11.4804 13.8946 11.7348 14 12 14ZM17 14C17.1978 14 17.3911 13.9414 17.5556 13.8315C17.72 13.7216 17.8482 13.5654 17.9239 13.3827C17.9996 13.2 18.0194 12.9989 17.9808 12.8049C17.9422 12.6109 17.847 12.4327 17.7071 12.2929C17.5673 12.153 17.3891 12.0578 17.1951 12.0192C17.0011 11.9806 16.8 12.0004 16.6173 12.0761C16.4346 12.1518 16.2784 12.28 16.1685 12.4444C16.0586 12.6089 16 12.8022 16 13C16 13.2652 16.1054 13.5196 16.2929 13.7071C16.4804 13.8946 16.7348 14 17 14ZM12 18C12.1978 18 12.3911 17.9414 12.5556 17.8315C12.72 17.7216 12.8482 17.5654 12.9239 17.3827C12.9996 17.2 13.0194 16.9989 12.9808 16.8049C12.9422 16.6109 12.847 16.4327 12.7071 16.2929C12.5673 16.153 12.3891 16.0578 12.1951 16.0192C12.0011 15.9806 11.8 16.0004 11.6173 16.0761C11.4346 16.1518 11.2784 16.28 11.1685 16.4444C11.0586 16.6089 11 16.8022 11 17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18ZM17 18C17.1978 18 17.3911 17.9414 17.5556 17.8315C17.72 17.7216 17.8482 17.5654 17.9239 17.3827C17.9996 17.2 18.0194 16.9989 17.9808 16.8049C17.9422 16.6109 17.847 16.4327 17.7071 16.2929C17.5673 16.153 17.3891 16.0578 17.1951 16.0192C17.0011 15.9806 16.8 16.0004 16.6173 16.0761C16.4346 16.1518 16.2784 16.28 16.1685 16.4444C16.0586 16.6089 16 16.8022 16 17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18ZM7 14C7.19778 14 7.39112 13.9414 7.55557 13.8315C7.72002 13.7216 7.84819 13.5654 7.92388 13.3827C7.99957 13.2 8.01937 12.9989 7.98079 12.8049C7.9422 12.6109 7.84696 12.4327 7.70711 12.2929C7.56725 12.153 7.38907 12.0578 7.19509 12.0192C7.00111 11.9806 6.80004 12.0004 6.61732 12.0761C6.43459 12.1518 6.27841 12.28 6.16853 12.4444C6.05865 12.6089 6 12.8022 6 13C6 13.2652 6.10536 13.5196 6.29289 13.7071C6.48043 13.8946 6.73478 14 7 14ZM19 4H18V3C18 2.73478 17.8946 2.48043 17.7071 2.29289C17.5196 2.10536 17.2652 2 17 2C16.7348 2 16.4804 2.10536 16.2929 2.29289C16.1054 2.48043 16 2.73478 16 3V4H8V3C8 2.73478 7.89464 2.48043 7.70711 2.29289C7.51957 2.10536 7.26522 2 7 2C6.73478 2 6.48043 2.10536 6.29289 2.29289C6.10536 2.48043 6 2.73478 6 3V4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM20 19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V10H20V19ZM20 8H4V7C4 6.73478 4.10536 6.48043 4.29289 6.29289C4.48043 6.10536 4.73478 6 5 6H19C19.2652 6 19.5196 6.10536 19.7071 6.29289C19.8946 6.48043 20 6.73478 20 7V8ZM7 18C7.19778 18 7.39112 17.9414 7.55557 17.8315C7.72002 17.7216 7.84819 17.5654 7.92388 17.3827C7.99957 17.2 8.01937 16.9989 7.98079 16.8049C7.9422 16.6109 7.84696 16.4327 7.70711 16.2929C7.56725 16.153 7.38907 16.0578 7.19509 16.0192C7.00111 15.9806 6.80004 16.0004 6.61732 16.0761C6.43459 16.1518 6.27841 16.28 6.16853 16.4444C6.05865 16.6089 6 16.8022 6 17C6 17.2652 6.10536 17.5196 6.29289 17.7071C6.48043 17.8946 6.73478 18 7 18Z' fill='black'/%3E%3C/svg%3E") right 1rem center no-repeat; }
+      .options-sort-block .option-sort-input #date_from_input::-webkit-input-placeholder {
+        color: #888888; }
+    .options-sort-block .option-sort-input #date_to_input {
+      border: 1px solid #dddddd;
+      padding: 13px 14px 12px 14px;
+      border-radius: 12px;
+      outline: none;
+      margin-bottom: 10px;
+      font-size: 17px;
+      width: 152px;
+      background: white url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 14C12.1978 14 12.3911 13.9414 12.5556 13.8315C12.72 13.7216 12.8482 13.5654 12.9239 13.3827C12.9996 13.2 13.0194 12.9989 12.9808 12.8049C12.9422 12.6109 12.847 12.4327 12.7071 12.2929C12.5673 12.153 12.3891 12.0578 12.1951 12.0192C12.0011 11.9806 11.8 12.0004 11.6173 12.0761C11.4346 12.1518 11.2784 12.28 11.1685 12.4444C11.0586 12.6089 11 12.8022 11 13C11 13.2652 11.1054 13.5196 11.2929 13.7071C11.4804 13.8946 11.7348 14 12 14ZM17 14C17.1978 14 17.3911 13.9414 17.5556 13.8315C17.72 13.7216 17.8482 13.5654 17.9239 13.3827C17.9996 13.2 18.0194 12.9989 17.9808 12.8049C17.9422 12.6109 17.847 12.4327 17.7071 12.2929C17.5673 12.153 17.3891 12.0578 17.1951 12.0192C17.0011 11.9806 16.8 12.0004 16.6173 12.0761C16.4346 12.1518 16.2784 12.28 16.1685 12.4444C16.0586 12.6089 16 12.8022 16 13C16 13.2652 16.1054 13.5196 16.2929 13.7071C16.4804 13.8946 16.7348 14 17 14ZM12 18C12.1978 18 12.3911 17.9414 12.5556 17.8315C12.72 17.7216 12.8482 17.5654 12.9239 17.3827C12.9996 17.2 13.0194 16.9989 12.9808 16.8049C12.9422 16.6109 12.847 16.4327 12.7071 16.2929C12.5673 16.153 12.3891 16.0578 12.1951 16.0192C12.0011 15.9806 11.8 16.0004 11.6173 16.0761C11.4346 16.1518 11.2784 16.28 11.1685 16.4444C11.0586 16.6089 11 16.8022 11 17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18ZM17 18C17.1978 18 17.3911 17.9414 17.5556 17.8315C17.72 17.7216 17.8482 17.5654 17.9239 17.3827C17.9996 17.2 18.0194 16.9989 17.9808 16.8049C17.9422 16.6109 17.847 16.4327 17.7071 16.2929C17.5673 16.153 17.3891 16.0578 17.1951 16.0192C17.0011 15.9806 16.8 16.0004 16.6173 16.0761C16.4346 16.1518 16.2784 16.28 16.1685 16.4444C16.0586 16.6089 16 16.8022 16 17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18ZM7 14C7.19778 14 7.39112 13.9414 7.55557 13.8315C7.72002 13.7216 7.84819 13.5654 7.92388 13.3827C7.99957 13.2 8.01937 12.9989 7.98079 12.8049C7.9422 12.6109 7.84696 12.4327 7.70711 12.2929C7.56725 12.153 7.38907 12.0578 7.19509 12.0192C7.00111 11.9806 6.80004 12.0004 6.61732 12.0761C6.43459 12.1518 6.27841 12.28 6.16853 12.4444C6.05865 12.6089 6 12.8022 6 13C6 13.2652 6.10536 13.5196 6.29289 13.7071C6.48043 13.8946 6.73478 14 7 14ZM19 4H18V3C18 2.73478 17.8946 2.48043 17.7071 2.29289C17.5196 2.10536 17.2652 2 17 2C16.7348 2 16.4804 2.10536 16.2929 2.29289C16.1054 2.48043 16 2.73478 16 3V4H8V3C8 2.73478 7.89464 2.48043 7.70711 2.29289C7.51957 2.10536 7.26522 2 7 2C6.73478 2 6.48043 2.10536 6.29289 2.29289C6.10536 2.48043 6 2.73478 6 3V4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM20 19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V10H20V19ZM20 8H4V7C4 6.73478 4.10536 6.48043 4.29289 6.29289C4.48043 6.10536 4.73478 6 5 6H19C19.2652 6 19.5196 6.10536 19.7071 6.29289C19.8946 6.48043 20 6.73478 20 7V8ZM7 18C7.19778 18 7.39112 17.9414 7.55557 17.8315C7.72002 17.7216 7.84819 17.5654 7.92388 17.3827C7.99957 17.2 8.01937 16.9989 7.98079 16.8049C7.9422 16.6109 7.84696 16.4327 7.70711 16.2929C7.56725 16.153 7.38907 16.0578 7.19509 16.0192C7.00111 15.9806 6.80004 16.0004 6.61732 16.0761C6.43459 16.1518 6.27841 16.28 6.16853 16.4444C6.05865 16.6089 6 16.8022 6 17C6 17.2652 6.10536 17.5196 6.29289 17.7071C6.48043 17.8946 6.73478 18 7 18Z' fill='black'/%3E%3C/svg%3E") right 1rem center no-repeat; }
+      .options-sort-block .option-sort-input #date_to_input::-webkit-input-placeholder {
+        color: #888888; }
+  .options-sort-block .option-sort-button {
+    display: flex;
+    justify-content: flex-end; }
+    .options-sort-block .option-sort-button button {
+      cursor: pointer;
+      margin-left: 10px;
+      width: 103px;
+      height: 44px; }
+
+::-webkit-clear-button,
+::-webkit-inner-spin-button {
+  display: none; }
+
+::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 2.5rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer; }
 
 .login-wrap {
   display: flex;
@@ -62,8 +331,7 @@
       justify-content: center; }
       .login-wrap__item__form_block .back {
         position: absolute;
-        top: -37%;
-        margin-top: -20px;
+        top: -30%;
         justify-content: flex-start;
         width: 50%;
         display: none; }
@@ -81,37 +349,418 @@
         top: 100%;
         margin-top: 20px;
         display: none; }
+        .login-wrap__item__form_block .description a {
+          text-decoration: none;
+          color: #4D4D4D;
+          font-weight: bold;
+          border-bottom: 1px solid #4D4D4D; }
       .login-wrap__item__form_block .password, .login-wrap__item__form_block .login {
-        display: none; }
+        display: none;
+        position: relative; }
+        .login-wrap__item__form_block .password #email-error, .login-wrap__item__form_block .login #email-error {
+          color: #ff0000;
+          position: absolute;
+          top: 50%; }
         .login-wrap__item__form_block .password .yey-toggle, .login-wrap__item__form_block .login .yey-toggle {
           position: relative; }
+          .login-wrap__item__form_block .password .yey-toggle input, .login-wrap__item__form_block .login .yey-toggle input {
+            width: 290px;
+            padding-right: 40px; }
           .login-wrap__item__form_block .password .yey-toggle svg, .login-wrap__item__form_block .login .yey-toggle svg {
             position: absolute;
-            top: 40%;
-            left: 88%;
-            background: white;
-            padding: 10px;
-            border-radius: 0 12px 12px 0;
-            border-right: 1px solid #DDDDDD; }
+            top: 23%;
+            left: 90%; }
+          .login-wrap__item__form_block .password .yey-toggle #view, .login-wrap__item__form_block .login .yey-toggle #view {
+            display: none; }
       .login-wrap__item__form_block .active {
         display: block; }
       .login-wrap__item__form_block #password-error {
         color: #ff0000;
         position: absolute;
-        margin-top: 22%; }
-      .login-wrap__item__form_block #email-error {
-        color: #ff0000;
-        position: absolute;
-        margin-top: 9.5%; }
+        left: 0;
+        top: 82%; }
       .login-wrap__item__form_block .button_wrap {
         display: flex;
-        justify-content: center; }
+        justify-content: center;
+        margin-top: 9px; }
+        .login-wrap__item__form_block .button_wrap button {
+          width: 220px;
+          height: 48px; }
     .login-wrap__item svg {
       margin-right: 240px; }
 
+.marketplace-wrap {
+  font-family: "Cabin", sans-serif; }
+  .marketplace-wrap .marketplace-content .tool-description-wrap {
+    display: flex;
+    margin-bottom: 14px;
+    overflow-x: scroll; }
+    .marketplace-wrap .marketplace-content .tool-description-wrap::-webkit-scrollbar {
+      background-color: #fff;
+      width: 10px; }
+    .marketplace-wrap .marketplace-content .tool-description-wrap::-webkit-scrollbar-track {
+      background-color: #fff; }
+    .marketplace-wrap .marketplace-content .tool-description-wrap::-webkit-scrollbar-thumb {
+      background-color: #DDDDDD;
+      border-radius: 10px;
+      border: 6px solid #fff; }
+      .marketplace-wrap .marketplace-content .tool-description-wrap::-webkit-scrollbar-thumb:hover {
+        background-color: #171717;
+        border: 6px solid #fff; }
+    .marketplace-wrap .marketplace-content .tool-description-wrap .tool-bar {
+      background: #F9F9F9;
+      padding: 10px 5px 10px 10px;
+      border-radius: 16px;
+      color: #171717;
+      margin-right: 20px; }
+      .marketplace-wrap .marketplace-content .tool-description-wrap .tool-bar__title {
+        margin-bottom: 6px;
+        color: #4D4D4D;
+        font-weight: 500; }
+      .marketplace-wrap .marketplace-content .tool-description-wrap .tool-bar__links {
+        display: flex; }
+    .marketplace-wrap .marketplace-content .tool-description-wrap .description-bar {
+      background: #EEEEEE;
+      padding: 5px 0 5px 5px;
+      border-radius: 16px;
+      color: #171717;
+      display: flex; }
+  .marketplace-wrap .marketplace-content .users-wrap {
+    width: 100%;
+    display: block;
+    overflow-x: scroll;
+    overflow-y: scroll; }
+    .marketplace-wrap .marketplace-content .users-wrap::-webkit-scrollbar {
+      background-color: #fff;
+      width: 10px; }
+    .marketplace-wrap .marketplace-content .users-wrap::-webkit-scrollbar-track {
+      background-color: #fff; }
+    .marketplace-wrap .marketplace-content .users-wrap::-webkit-scrollbar-thumb {
+      background-color: #DDDDDD;
+      border-radius: 10px;
+      border: 6px solid #fff;
+      cursor: pointer; }
+      .marketplace-wrap .marketplace-content .users-wrap::-webkit-scrollbar-thumb:hover {
+        background-color: #171717;
+        border: 6px solid #fff; }
+    .marketplace-wrap .marketplace-content .users-wrap .users-sort {
+      display: flex;
+      margin-bottom: 10px; }
+      .marketplace-wrap .marketplace-content .users-wrap .users-sort .sort-block {
+        position: relative; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-sort .sort-block:hover .options-users {
+          opacity: 1;
+          border: 2px solid #171717;
+          height: 42px; }
+      .marketplace-wrap .marketplace-content .users-wrap .users-sort .all-checkbox {
+        margin-right: 5px;
+        border-radius: 6px;
+        padding-right: 12px;
+        padding-top: 10px;
+        padding-left: 10px; }
+    .marketplace-wrap .marketplace-content .users-wrap .users-data {
+      border: 1px solid #EEEEEE;
+      width: 1620px;
+      direction: ltr;
+      border-radius: 6px; }
+      .marketplace-wrap .marketplace-content .users-wrap .users-data .user {
+        height: 44px;
+        border-bottom: 1px solid #EEEEEE;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 48px 137px 257px 207px 207px 157px 157px 157px 137px 157px; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user .active-social {
+          padding: 3px;
+          background: #171717;
+          border-radius: 6px;
+          margin-left: 10px; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user .disabled-social {
+          padding: 3px;
+          background: #DDDDDD;
+          border-radius: 6px;
+          margin-left: 10px; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user .user-padding {
+          padding-top: 12px;
+          border-right: 1px solid #F9F9F9;
+          word-wrap: break-word;
+          overflow-x: hidden; }
+          .marketplace-wrap .marketplace-content .users-wrap .users-data .user .user-padding span {
+            margin-left: 11px; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user .user-checkbox {
+          border-right: 1px solid #F9F9F9;
+          width: 27px;
+          padding: 10px; }
+          .marketplace-wrap .marketplace-content .users-wrap .users-data .user .user-checkbox label:before {
+            border: 2px solid #DDDDDD; }
+          .marketplace-wrap .marketplace-content .users-wrap .users-data .user .user-checkbox input[type="checkbox"]:checked ~ label:before {
+            border: 2px solid #171717; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user .nickname {
+          background: #F9F9F9; }
+        .marketplace-wrap .marketplace-content .users-wrap .users-data .user:hover {
+          background-color: #F9F9F9; }
+
+.side-bar-wrap {
+  background-color: #171717;
+  height: 100vh;
+  width: 300px;
+  font-family: "Cabin", sans-serif;
+  position: fixed; }
+  .side-bar-wrap .side-bar {
+    position: absolute;
+    z-index: 3;
+    width: 100%; }
+    .side-bar-wrap .side-bar .logo-sidebar {
+      padding: 20px 0 19px 26px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+    .side-bar-wrap .side-bar .sidebar-links {
+      padding: 20px; }
+      .side-bar-wrap .side-bar .sidebar-links .active {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.1); }
+      .side-bar-wrap .side-bar .sidebar-links .link {
+        padding: 6px 11px 6px 6px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        color: #F9F9F9;
+        cursor: pointer; }
+        .side-bar-wrap .side-bar .sidebar-links .link .description {
+          display: flex;
+          align-items: center; }
+        .side-bar-wrap .side-bar .sidebar-links .link .notification {
+          display: flex;
+          align-items: center; }
+          .side-bar-wrap .side-bar .sidebar-links .link .notification div {
+            width: 50px;
+            height: 26px;
+            font-weight: bold;
+            border-radius: 10px; }
+        .side-bar-wrap .side-bar .sidebar-links .link svg {
+          padding: 6px 6px 6px 7px;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 6px;
+          margin-right: 10px; }
+        .side-bar-wrap .side-bar .sidebar-links .link:hover {
+          background-color: rgba(255, 255, 255, 0.05); }
+  .side-bar-wrap .link-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 254px;
+    padding: 20px 26px 20px 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    bottom: 0; }
+    .side-bar-wrap .link-wrap .description {
+      display: flex; }
+      .side-bar-wrap .link-wrap .description svg {
+        margin-right: 10px; }
+      .side-bar-wrap .link-wrap .description .about-admin {
+        margin: 0; }
+        .side-bar-wrap .link-wrap .description .about-admin span {
+          color: #F9F9F9; }
+        .side-bar-wrap .link-wrap .description .about-admin p {
+          color: #4D4D4D;
+          margin: 0; }
+    .side-bar-wrap .link-wrap .notification {
+      width: 50px;
+      height: 26px;
+      cursor: pointer; }
+    .side-bar-wrap .link-wrap .log-out {
+      position: absolute;
+      z-index: 999;
+      padding: 13px;
+      background-color: #4D4D4D;
+      top: -85%;
+      right: 17px;
+      margin-top: 11px;
+      display: none; }
+      .side-bar-wrap .link-wrap .log-out .log-out-button {
+        padding: 9px 60px 9px 60px;
+        background-color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer; }
+      .side-bar-wrap .link-wrap .log-out .arrow-log-out {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 94%;
+        background-color: #4D4D4D;
+        right: 27px;
+        transform: rotate(45deg); }
+
+.pagination-wrap {
+  padding: 24px 0 24px 0;
+  display: flex;
+  background: white; }
+  .pagination-wrap button {
+    cursor: pointer;
+    font-weight: bold; }
+  .pagination-wrap .prev-btn {
+    margin-right: 16px;
+    display: flex; }
+    .pagination-wrap .prev-btn button {
+      margin-right: 10px; }
+  .pagination-wrap .pagination-btn {
+    display: flex; }
+    .pagination-wrap .pagination-btn button {
+      margin-right: 10px;
+      width: 36px;
+      height: 36px; }
+      .pagination-wrap .pagination-btn button a {
+        text-decoration: none;
+        color: #4D4D4D; }
+  .pagination-wrap .next-btn {
+    display: flex;
+    margin-left: 16px; }
+    .pagination-wrap .next-btn button {
+      margin-right: 10px; }
+    .pagination-wrap .next-btn svg {
+      transform: rotate(180deg); }
+
+.modal {
+  position: absolute;
+  z-index: 10000;
+  /* 1 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.modal-export {
+  visibility: hidden; }
+
+.modal-block {
+  visibility: hidden; }
+
+.is-visible {
+  visibility: visible; }
+
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s; }
+
+.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s; }
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 9999;
+  top: 30%;
+  left: calc(50% - 244px);
+  right: calc(50% - 244px);
+  width: 488px;
+  background-color: #fff;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+  padding: 22px 20px 20px 20px; }
+
+.modal-transition {
+  transition: all 0.3s 0.12s;
+  transform: translateY(-10%);
+  opacity: 0; }
+
+.is-visible .modal-transition {
+  transform: translateY(0);
+  opacity: 1; }
+
+.modal-header {
+  position: relative;
+  background-color: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold; }
+
+.modal-close {
+  cursor: pointer; }
+
+.modal-heading {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.modal-body .modal-content .modal-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 59px;
+  background-color: #F9F9F9;
+  text-align: center;
+  border-radius: 16px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.modal-body .modal-content .modal-time-about {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 43px;
+  font-weight: bold; }
+
+.modal-body .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .modal-body .modal-footer .modal-error {
+    color: red;
+    font-weight: bold; }
+  .modal-body .modal-footer .modal-buttons {
+    display: flex; }
+    .modal-body .modal-footer .modal-buttons button {
+      margin-left: 10px;
+      padding: 13px 16px 13px 16px; }
+
+.modal-body .modal-loading {
+  margin: 0 auto;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  width: 211px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal-body .modal-loading img {
+    animation: spin 0.5s linear infinite; }
+
+.modal-body .modal-download {
+  display: flex;
+  width: 211px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-decoration: none; }
+  .modal-body .modal-download svg {
+    margin-right: 10px; }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden;
+  overflow-y: scroll; }
+
+.text-13 {
+  font-size: 13px; }
 
 .text-15 {
   font-size: 15px; }
@@ -124,3 +773,15 @@ body {
 
 .bold {
   font-weight: bold; }
+
+.disabled {
+  opacity: 0.5; }
+
+.active {
+  opacity: 1; }
+
+.main-wrapper {
+  width: 100%; }
+  .main-wrapper .content-wrapper {
+    padding-left: 20px;
+    margin-left: 300px; }
