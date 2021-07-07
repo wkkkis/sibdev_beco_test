@@ -1,7 +1,7 @@
-$('#btn').on("click keypress", function () {
+$('#btn').on('click keypress', function () {
   if ($('#email').val() === '') {
     $('#email-error').html('email is required');
-  } else if ($('#email').val().indexOf("@") >= 1) {
+  } else if ($('#email').val().indexOf('@') >= 1) {
     $('#email-error').html('');
     $('.password').show('');
     $('.description').show('');
@@ -12,13 +12,13 @@ $('#btn').on("click keypress", function () {
   }
 });
 
-$("#email").on("keyup", function() {
-  if($(this).val().length > 0){
+$('#email').on('keyup', function () {
+  if ($(this).val().length > 0) {
     $('#email-error').html('');
-  }else{
+  } else {
     $('#email-error').html('email is required');
   }
-})
+});
 
 $(document).ready(function () {
   $(function () {

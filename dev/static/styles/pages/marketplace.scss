@@ -3,60 +3,9 @@
 
   .marketplace-content {
 
-    .tool-description-wrap {
-      display: flex;
-      margin-bottom: 14px;
-      overflow-x: scroll;
-
-      &::-webkit-scrollbar {
-        background-color: #fff;
-        width: 10px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: #fff
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $border;
-        border-radius: 10px;
-        border: 6px solid #fff;
-
-        &:hover {
-          background-color: $darkgray;
-          border: 6px solid #fff
-        }
-      }
-
-      .tool-bar {
-        background: $lightgray;
-        padding: 10px 5px 10px 10px;
-        border-radius: 16px;
-        color: $darkgray;
-        margin-right: 20px;
-
-        &__title {
-          margin-bottom: 6px;
-          color: $fontcolor;
-          font-weight: 500;
-        }
-
-        &__links {
-          display: flex;
-        }
-      }
-
-      .description-bar {
-        background: $blackgray;
-        padding: 5px 0 5px 5px;
-        border-radius: 16px;
-        color: $darkgray;
-        display: flex;
-      }
-    }
-
     .users-wrap {
       width: 100%;
+      margin-top: 10px;
       display: block;
       overflow-x: scroll;
       overflow-y: scroll;
@@ -89,7 +38,7 @@
         .sort-block {
           position: relative;
 
-          &:hover{
+          &:hover {
 
             .options-users {
               opacity: 1;
@@ -121,14 +70,14 @@
           display: grid;
           grid-template-columns: 48px 137px 257px 207px 207px 157px 157px 157px 137px 157px;
 
-          .active-social{
+          .active-social {
             padding: 3px;
             background: $darkgray;
             border-radius: 6px;
             margin-left: 10px;
           }
 
-          .disabled-social{
+          .disabled-social {
             padding: 3px;
             background: $border;
             border-radius: 6px;

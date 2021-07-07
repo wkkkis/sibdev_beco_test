@@ -58,3 +58,11 @@
     font-weight: 700;
   }
 }
+
+.description-bar {
+  background: $blackgray;
+  padding: 5px 0 5px 5px;
+  border-radius: 16px;
+  color: $darkgray;
+  display: flex;
+}
