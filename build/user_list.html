@@ -495,42 +495,16 @@
                 <span>City</span>
                 <div class="user-description-with-edit">
                   <span class="bold">Abu-Dhabi</span>
-                  <div id="city_select" class="select select-visibility">
-                    <div class="selectBtn">
-                      <span class="default-select">Abu-Dhabi</span>
-                      <svg width="24"
-                           height="24"
-                           viewBox="0 0 24 24"
-                           fill="none"
-                           xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.9997 9.17C16.8123 8.98375 16.5589 8.87921 16.2947 8.87921C16.0305 8.87921 15.7771 8.98375 15.5897 9.17L11.9997 12.71L8.4597 9.17C8.27234 8.98375 8.01889 8.87921 7.7547 8.87921C7.49052 8.87921 7.23707 8.98375 7.0497 9.17C6.95598 9.26297 6.88158 9.37357 6.83081 9.49543C6.78004 9.61729 6.75391 9.74799 6.75391 9.88C6.75391 10.012 6.78004 10.1427 6.83081 10.2646C6.88158 10.3864 6.95598 10.497 7.0497 10.59L11.2897 14.83C11.3827 14.9237 11.4933 14.9981 11.6151 15.0489C11.737 15.0997 11.8677 15.1258 11.9997 15.1258C12.1317 15.1258 12.2624 15.0997 12.3843 15.0489C12.5061 14.9981 12.6167 14.9237 12.7097 14.83L16.9997 10.59C17.0934 10.497 17.1678 10.3864 17.2186 10.2646C17.2694 10.1427 17.2955 10.012 17.2955 9.88C17.2955 9.74799 17.2694 9.61729 17.2186 9.49543C17.1678 9.37357 17.0934 9.26297 16.9997 9.17Z"
-                              fill="#4D4D4D" />
-                      </svg>
-                    </div>
-                    <div class="selectDropdown">
-                      <div class="option">
-                        <span>Abu-Dhabi</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 1</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 2</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 3</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 4</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 5</span>
-                      </div>
-                      <div class="option">
-                        <span>Select city 6</span>
-                      </div>
-                    </div>
-                  </div>
+                  <select id="city_select" class="select">
+                    <option disabled>Abu-Dhabi</option>
+                    <option value="1">Select status 1</option>
+                    <option value="2">Select status 2</option>
+                    <option value="3">Select status 3</option>
+                    <option value="4">Select status 4</option>
+                    <option value="5">Select status 5</option>
+                    <option value="5">Select status 6</option>
+                    <option value="5">Select status 7</option>
+                  </select>
                 </div>
               </div>
               <div class="user-description-padding">
@@ -619,7 +593,7 @@
                     </button>
 
 
-                    <button disabled class="tool-btn deactive button disabled" id="deactive" style="width: 119px;">
+                    <button disabled class="tool-btn deactive button disabled" style="width: 119px;">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.99984 1.66669C8.35166 1.66669 6.7405 2.15543 5.37009 3.07111C3.99968 3.98679 2.93158 5.28827 2.30084 6.81099C1.67011 8.33371 1.50509 10.0093 1.82663 11.6258C2.14817 13.2423 2.94185 14.7271 4.10728 15.8926C5.27272 17.058 6.75758 17.8517 8.37409 18.1732C9.9906 18.4948 11.6662 18.3297 13.1889 17.699C14.7116 17.0683 16.0131 16.0002 16.9288 14.6298C17.8444 13.2594 18.3332 11.6482 18.3332 10C18.3332 8.90567 18.1176 7.82204 17.6988 6.81099C17.28 5.79994 16.6662 4.88129 15.8924 4.10746C15.1186 3.33364 14.1999 2.71981 13.1889 2.30102C12.1778 1.88224 11.0942 1.66669 9.99984 1.66669ZM9.99984 16.6667C8.23173 16.6667 6.53604 15.9643 5.2858 14.7141C4.03555 13.4638 3.33317 11.7681 3.33317 10C3.33133 8.51947 3.82735 7.08131 4.74151 5.91669L14.0832 15.2584C12.9186 16.1725 11.4804 16.6685 9.99984 16.6667ZM15.2582 14.0834L5.91651 4.74169C7.08113 3.82753 8.5193 3.33151 9.99984 3.33335C11.768 3.33335 13.4636 4.03573 14.7139 5.28598C15.9641 6.53622 16.6665 8.23191 16.6665 10C16.6683 11.4806 16.1723 12.9187 15.2582 14.0834Z"
                               fill="#888888" />
@@ -688,9 +662,21 @@
 
                         <div class="modal-body">
                           <div class="modal-content">
-                            <div class="modal-description">
+                            <div class="modal-description description1">
+                              Export of the table to Excel will be compiled by the selected fields, if no field<br>
+                              or user is selected, the table will be exported in full
                             </div>
-                            <div class="modal-time-about">
+                            <div class="modal-description description2" style="display: none">
+                              Don’t close the page
+                            </div>
+                            <div class="modal-description description3" style="display: none">
+                              File ready, click button below, to download it
+                            </div>
+                            <div class="modal-time-about time-about1" style="display: none">
+                              Export will take a short period of time
+                            </div>
+                            <div class="modal-time-about time-about2" style="display: none;">
+                              Users_20052020_2359.xlsx
                             </div>
                           </div>
                           <div class="modal-footer">
@@ -714,10 +700,11 @@
 
                             </div>
                           </div>
-                          <div class="modal-loading">
+                          <div class="modal-loading" style="display: none">
                             <img src="../../static/images/loading.png" alt="">
                           </div>
-                          <a href="../../static/images/logo.svg" download class="modal-download dark text-15">
+                          <a href="../../static/images/logo.svg"
+                             download class="modal-download dark text-15" style="display: none">
                             <svg width="25"
                                  height="24"
                                  viewBox="0 0 25 24"
@@ -755,6 +742,8 @@
                         <div class="modal-body">
                           <div class="modal-content">
                             <div class="modal-description">
+                              Are you sure you want to block the selected users? These users will<br>
+                              not be able to use the platform until they are unblocked
                             </div>
                           </div>
                           <div class="modal-footer">
@@ -781,7 +770,6 @@
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -1046,79 +1034,31 @@
                   <div class="category-option options-sort-block option-sort-disabled">
                     <div class="arrow-for-sort">
                     </div>
-                    <label class="label-for-drop">Category</label>
-                    <div id="category_select" class="select">
-                      <div class="selectBtn">
-                        <span class="default-select">Select category</span>
-                        <svg width="24"
-                             height="24"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16.9997 9.17C16.8123 8.98375 16.5589 8.87921 16.2947 8.87921C16.0305 8.87921 15.7771 8.98375 15.5897 9.17L11.9997 12.71L8.4597 9.17C8.27234 8.98375 8.01889 8.87921 7.7547 8.87921C7.49052 8.87921 7.23707 8.98375 7.0497 9.17C6.95598 9.26297 6.88158 9.37357 6.83081 9.49543C6.78004 9.61729 6.75391 9.74799 6.75391 9.88C6.75391 10.012 6.78004 10.1427 6.83081 10.2646C6.88158 10.3864 6.95598 10.497 7.0497 10.59L11.2897 14.83C11.3827 14.9237 11.4933 14.9981 11.6151 15.0489C11.737 15.0997 11.8677 15.1258 11.9997 15.1258C12.1317 15.1258 12.2624 15.0997 12.3843 15.0489C12.5061 14.9981 12.6167 14.9237 12.7097 14.83L16.9997 10.59C17.0934 10.497 17.1678 10.3864 17.2186 10.2646C17.2694 10.1427 17.2955 10.012 17.2955 9.88C17.2955 9.74799 17.2694 9.61729 17.2186 9.49543C17.1678 9.37357 17.0934 9.26297 16.9997 9.17Z"
-                                fill="#4D4D4D" />
-                        </svg>
-                      </div>
-                      <div class="selectDropdown">
-                        <div class="option">
-                          <span>Select category</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element1</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element2</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element3</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element4</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element5</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element6</span>
-                        </div>
-                      </div>
+                    <div class="category-select">
+                      <label class="label-for-drop">Category</label>
+                      <select id="category_select" class="select">
+                        <option disabled>Select category</option>
+                        <option value="1">Select status 1</option>
+                        <option value="2">Select status 2</option>
+                        <option value="3">Select status 3</option>
+                        <option value="4">Select status 4</option>
+                        <option value="5">Select status 5</option>
+                        <option value="5">Select status 6</option>
+                        <option value="5">Select status 7</option>
+                      </select>
                     </div>
-                    <label class="label-for-drop">Subcategory</label>
-                    <div id="subcategory_select" class="select">
-                      <div class="selectBtn">
-                        <span class="default-select">Select subcategory (-ies)</span>
-                        <svg width="24"
-                             height="24"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16.9997 9.17C16.8123 8.98375 16.5589 8.87921 16.2947 8.87921C16.0305 8.87921 15.7771 8.98375 15.5897 9.17L11.9997 12.71L8.4597 9.17C8.27234 8.98375 8.01889 8.87921 7.7547 8.87921C7.49052 8.87921 7.23707 8.98375 7.0497 9.17C6.95598 9.26297 6.88158 9.37357 6.83081 9.49543C6.78004 9.61729 6.75391 9.74799 6.75391 9.88C6.75391 10.012 6.78004 10.1427 6.83081 10.2646C6.88158 10.3864 6.95598 10.497 7.0497 10.59L11.2897 14.83C11.3827 14.9237 11.4933 14.9981 11.6151 15.0489C11.737 15.0997 11.8677 15.1258 11.9997 15.1258C12.1317 15.1258 12.2624 15.0997 12.3843 15.0489C12.5061 14.9981 12.6167 14.9237 12.7097 14.83L16.9997 10.59C17.0934 10.497 17.1678 10.3864 17.2186 10.2646C17.2694 10.1427 17.2955 10.012 17.2955 9.88C17.2955 9.74799 17.2694 9.61729 17.2186 9.49543C17.1678 9.37357 17.0934 9.26297 16.9997 9.17Z"
-                                fill="#4D4D4D" />
-                        </svg>
-                      </div>
-                      <div class="selectDropdown">
-                        <div class="option">
-                          <span>Select subcategory (-ies)</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element1</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element2</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element3</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element4</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element5</span>
-                        </div>
-                        <div class="option">
-                          <span>Subcategory element6</span>
-                        </div>
-                      </div>
+                    <div>
+                      <label class="label-for-drop">Subcategory</label>
+                      <select id="subcategory_select" class="select">
+                        <option disabled>Select subcategory (-ies)</option>
+                        <option value="1">Select status 1</option>
+                        <option value="2">Select status 2</option>
+                        <option value="3">Select status 3</option>
+                        <option value="4">Select status 4</option>
+                        <option value="5">Select status 5</option>
+                        <option value="5">Select status 6</option>
+                        <option value="5">Select status 7</option>
+                      </select>
                     </div>
                     <div class="option-sort-button">
                       <div class="reset-btn">
@@ -1162,9 +1102,9 @@
                       <div style="margin-right: 20px">
 
                         <div class="input_custom">
-                          <label class="text-15" for="from_ad_id_input">Price</label>
-                          <div class="input-with-clear from_ad_id_input">
-                            <input id="from_ad_id_input" name="from_ad_id_input"
+                          <label class="text-15" for="from_price_input">Price</label>
+                          <div class="input-with-clear from_price_input">
+                            <input id="from_price_input" name="from_price_input"
                                    type="text"
                                    placeholder="From"
                                    style="width: 112px">
@@ -1184,9 +1124,9 @@
                       </div>
 
                       <div class="input_custom">
-                        <label class="text-15" for="to-id-input"></label>
-                        <div class="input-with-clear to-id-input">
-                          <input id="to-id-input" name="to-id-input"
+                        <label class="text-15" for="to-price-input"></label>
+                        <div class="input-with-clear to-price-input">
+                          <input id="to-price-input" name="to-price-input"
                                  type="text"
                                  placeholder="To"
                                  style="width: 112px">
@@ -1253,41 +1193,18 @@
                   <div class="status-option options-sort-block option-sort-disabled">
                     <div class="arrow-for-sort">
                     </div>
-                    <div id="user_status-select" class="select">
-                      <div class="selectBtn">
-                        <span class="default-select">Select status</span>
-                        <svg width="24"
-                             height="24"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16.9997 9.17C16.8123 8.98375 16.5589 8.87921 16.2947 8.87921C16.0305 8.87921 15.7771 8.98375 15.5897 9.17L11.9997 12.71L8.4597 9.17C8.27234 8.98375 8.01889 8.87921 7.7547 8.87921C7.49052 8.87921 7.23707 8.98375 7.0497 9.17C6.95598 9.26297 6.88158 9.37357 6.83081 9.49543C6.78004 9.61729 6.75391 9.74799 6.75391 9.88C6.75391 10.012 6.78004 10.1427 6.83081 10.2646C6.88158 10.3864 6.95598 10.497 7.0497 10.59L11.2897 14.83C11.3827 14.9237 11.4933 14.9981 11.6151 15.0489C11.737 15.0997 11.8677 15.1258 11.9997 15.1258C12.1317 15.1258 12.2624 15.0997 12.3843 15.0489C12.5061 14.9981 12.6167 14.9237 12.7097 14.83L16.9997 10.59C17.0934 10.497 17.1678 10.3864 17.2186 10.2646C17.2694 10.1427 17.2955 10.012 17.2955 9.88C17.2955 9.74799 17.2694 9.61729 17.2186 9.49543C17.1678 9.37357 17.0934 9.26297 16.9997 9.17Z"
-                                fill="#4D4D4D" />
-                        </svg>
-                      </div>
-                      <div class="selectDropdown">
-                        <div class="option">
-                          <span>Select status</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 1</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 2</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 3</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 4</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 5</span>
-                        </div>
-                        <div class="option">
-                          <span>Select status 6</span>
-                        </div>
-                      </div>
+                    <div>
+                      <label class="label-for-drop">Select status</label>
+                      <select id="user_status-select" class="select">
+                        <option disabled>Select status</option>
+                        <option value="1">Select status 1</option>
+                        <option value="2">Select status 2</option>
+                        <option value="3">Select status 3</option>
+                        <option value="4">Select status 4</option>
+                        <option value="5">Select status 5</option>
+                        <option value="5">Select status 6</option>
+                        <option value="5">Select status 7</option>
+                      </select>
                     </div>
                     <div class="option-sort-button">
                       <div class="reset-btn">

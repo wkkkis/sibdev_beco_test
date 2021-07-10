@@ -38,6 +38,10 @@
         .sort-block {
           position: relative;
 
+          .select {
+            margin-top: 8px;
+          }
+
           &:hover {
 
             .options-users {
@@ -89,6 +93,10 @@
             border-right: 1px solid $lightgray;
             word-wrap: break-word;
             overflow-x: hidden;
+
+            &:last-child {
+              border: none;
+            }
 
             span {
               margin-left: 11px;
