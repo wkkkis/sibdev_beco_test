@@ -36,6 +36,7 @@ $(document).ready(function () {
   $('.export, .modal-toggle').on('click', function (e) {
     e.preventDefault();
     $('.modal-export').toggleClass('is-visible');
+    $('.modal-export').find('.modal-close').show()
     $('.description1').show();
     $('.description2').hide();
     $('.description3').hide();
@@ -48,6 +49,7 @@ $(document).ready(function () {
 
   $('#apply_export').click(function (e) {
     e.preventDefault();
+    $('.modal-export').find('.modal-close').hide()
     $('.description1').hide();
     $('.description2').show();
     $('.modal-loading').show();
@@ -88,8 +90,9 @@ $(document).ready(function () {
     let marketplace = chek_has_parent('user-marketplace-checkbox');
     let user = chek_has_parent('user-checkbox');
     let announcement = chek_has_parent('announcement-checkbox');
+    let categories = chek_has_parent('categories-checkbox');
     let tool_btn = $('.tool-btn');
-    if (announcement === 0 && marketplace === 0 && user === 0) {
+    if (announcement === 0 && marketplace === 0 && user === 0 && categories === 0) {
       tool_btn.addClass('disabled');
       tool_btn.prop('disabled', true);
     } else {
@@ -125,7 +128,8 @@ $(document).ready(function () {
     'social', 'rating', 'register',
     'status', 'price', 'category',
     'title', 'photo', 'id', 'author',
-    'announcement-id', 'sumb'
+    'announcement-id', 'sumb', 'subs', 'created',
+    'announcements'
   ];
 
   $('.options-users').click(function () {
@@ -345,5 +349,88 @@ $(document).ready(function () {
       $(`.${parent[1]}`).children('img').css('visibility', 'hidden');
       $(this).css('visibility', 'hidden');
     });
+  });
+});
+
+$(document).ready(function () {
+  $('.categories-padding').children('button').click(function (e) {
+    e.preventDefault();
+    $(this).closest('.categories').children('.subcategories-drop').slideToggle(400);
+    $(this).closest('.categories').toggleClass('categories-active');
+    $(this).children('svg').toggleClass('active-subcategories');
+  });
+});
+
+$(document).ready(function () {
+  $('.categories-add, .modal-toggle-add-category').on('click', function () {
+    $('.modal-add-category').toggleClass('is-visible');
+  });
+  $('.categories-edit, .modal-toggle-edit-category').on('click', function () {
+    $('.modal-edit-category').toggleClass('is-visible');
+  });
+
+  $('.categories-remove, .modal-toggle-delete-category').on('click', function () {
+    $('.modal-delete-category').toggleClass('is-visible');
+    $('.select-category').show();
+    $('.enter-category-name-input').hide();
+    $('.about-category-delete').hide();
+    $('.delete-category-pt1').show();
+    $('.delete-category-pt2').hide();
+    $('.category-description-modal').show();
+  });
+  $('#delete_category1').on('click', function () {
+    $('.select-category-input').hide();
+    $('.enter-category-name-input').show();
+    $('.about-category-delete').show();
+    $('.delete-category-pt1').hide();
+    $('.delete-category-pt2').show();
+    $('.category-description-modal').hide();
+  });
+  $('.categories-deactive, .modal-toggle-deactivate-category').on('click', function () {
+    $('.modal-deactivate-category').toggleClass('is-visible');
+  });
+
+  $('.subs-add, .modal-toggle-add-subs').click(function () {
+    $('.modal-add-subs').toggleClass('is-visible');
+  });
+
+  $('.subs-edit, .modal-toggle-edit-subs').click(function () {
+    $('.modal-edit-subs').toggleClass('is-visible');
+  });
+});
+
+$(document).ready(function () {
+  $('.tag').click(function () {
+    let parent = $(this).parent().attr('class').split(" ")[0]
+    let tool_parent = $(this).closest(".subcategories-drop").find(".subcategories-tools")
+
+    for (let i = 0; i <  $(`.${parent}`).find(".tag").length; i++) {
+      if (this === $(`.${parent}`).children()[i]) {
+        $($(`.${parent}`).children()[i]).toggleClass('active-tag');
+      } else {
+        $($(`.${parent}`).children()[i]).removeClass('active-tag');
+      }
+    }
+
+    if ($(this).hasClass('active-tag')) {
+
+      tool_parent.find('.subs-add').attr('disabled', true);
+      tool_parent.find('.subs-add').addClass('disabled');
+
+      tool_parent.find('.subs-edit').attr('disabled', false);
+      tool_parent.find('.subs-edit').removeClass('disabled');
+
+      tool_parent.find('.subs-remove').attr('disabled', false);
+      tool_parent.find('.subs-remove').removeClass('disabled');
+    } else {
+      tool_parent.find('.subs-add').attr('disabled', false);
+      tool_parent.find('.subs-add').removeClass('disabled');
+
+      tool_parent.find('.subs-edit').attr('disabled', true);
+      tool_parent.find('.subs-edit').addClass('disabled');
+
+      tool_parent.find('.subs-remove').attr('disabled', true);
+      tool_parent.find('.subs-remove').addClass('disabled');
+    }
   });
 });

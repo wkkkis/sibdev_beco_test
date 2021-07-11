@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 #resetbtn {
@@ -32,4 +33,9 @@
 .gray {
   background: $fontcolor;
   color: $darkgray;
+}
+
+.red {
+  background: #FF0844;
+  color: #FFFFFF;
 }

@@ -88,8 +88,15 @@
           padding: 10px 15px 10px 10px;
           border-right: 1px solid $blackgray;
 
-          label:before {
-            border: 2px solid $border;
+          label {
+            &:before {
+              border: 2px solid $border;
+              margin-top: 4px;
+            }
+
+            &:after {
+              top: 9px;
+            }
           }
 
           input[type="checkbox"] {
