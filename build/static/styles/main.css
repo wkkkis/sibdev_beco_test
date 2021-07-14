@@ -1672,6 +1672,99 @@
     display: flex;
 }
 
+.documents-main-wrap .documents-content .documents-wrap .documents-sort {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-sort .all-checkbox {
+    margin-right: 5px;
+    border-radius: 6px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-sort .settings-btn {
+    margin-right: 5px;
+    border-radius: 6px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data {
+    width: 780px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents {
+    display: grid;
+    grid-template-columns: 46px 208px 138px 406px;
+    height: 44px;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .document-checkbox {
+    border-right: 1px solid #EEEEEE;
+    width: 27px;
+    height: 31px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .document-checkbox label:before {
+    border: 2px solid #DDDDDD;
+    margin-top: 4px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .document-checkbox label:after {
+    top: 9px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .document-checkbox input[type="checkbox"]:checked ~ label:before {
+    border: 2px solid #171717;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding {
+    border-right: 1px solid #EEEEEE;
+    word-wrap: break-word;
+    max-height: 31px;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding:last-child {
+    border: none;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding svg {
+    margin-left: 12px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding span {
+    margin-left: 10px;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding .documents-links {
+    color: #888888;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding .documents-links span:first-child {
+    color: #888888;
+}
+
+.documents-main-wrap .documents-content .documents-wrap .documents-data .documents .documents-padding .documents-links span:last-child {
+    margin-left: 0;
+    color: #171717;
+}
+
 .side-bar-wrap {
     background-color: #171717;
     height: 100vh;
@@ -1892,6 +1985,10 @@
 }
 
 .modal-edit-subs {
+    visibility: hidden;
+}
+
+.modal-create-document {
     visibility: hidden;
 }
 
@@ -2644,6 +2741,43 @@
 .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap button {
     width: 219px;
     height: 46px;
+}
+
+.modal-create-document .modal-wrapper {
+    top: 40px;
+    width: 1240px;
+    left: calc(50% - 640px);
+    right: calc(50% - 640px);
+}
+
+.modal-create-document .modal-wrapper .modal-header .document-tools-title {
+    display: flex;
+    align-items: center;
+}
+
+.modal-create-document .modal-wrapper .modal-header .document-tools-title button {
+    margin-left: 20px;
+}
+
+.modal-create-document .modal-wrapper .modal-body .modal-content .document-editor__toolbar {
+    --ck-border-radius: 12px 12px 0 0;
+    --ck-color-toolbar-background: white;
+}
+
+.modal-create-document .modal-wrapper .modal-body .modal-content .document-editor__toolbar button {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.modal-create-document .modal-wrapper .modal-body .modal-content .document-editor__editable {
+    --ck-inner-shadow: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 17px;
+    height: 578px;
+    border: 1px solid #DDDDDD;
+    border-radius: 0 0 12px 12px;
+    border-top: none;
 }
 
 .is-visible {

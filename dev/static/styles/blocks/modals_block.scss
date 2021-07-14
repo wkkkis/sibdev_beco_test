@@ -39,6 +39,10 @@
   visibility: hidden;
 }
 
+.modal-create-document {
+  visibility: hidden;
+}
+
 .modal-announcement {
   visibility: hidden;
   height: 100%;
@@ -797,6 +801,59 @@
           button {
             width: 219px;
             height: 46px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.modal-create-document {
+
+  .modal-wrapper {
+    top: 40px;
+    width: 1240px;
+    left: calc(50% - 640px);
+    right: calc(50% - 640px);
+
+    .modal-header {
+
+      .document-tools-title {
+        display: flex;
+        align-items: center;
+
+        button {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .modal-body {
+
+      .modal-content {
+
+        .document-editor{
+
+          &__toolbar {
+            --ck-border-radius: 12px 12px 0 0;
+            --ck-color-toolbar-background: white;
+
+            button {
+              border-radius: 50%;
+              margin-right: 20px;
+            }
+          }
+
+          &__editable {
+            --ck-inner-shadow: none;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 17px;
+            height: 578px;
+            border: 1px solid #DDDDDD;
+            border-radius: 0 0 12px 12px;
+            border-top: none;
           }
         }
       }

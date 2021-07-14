@@ -5,30 +5,26 @@ $('.logout-notification').click(function () {
 $(document).ready(function () {
   $('.input-with-clear').on('click', function () {
     let id_input = $(this).children('input');
-    let active_input = $(id_input).attr('id');
     id_input.on('keyup', function () {
-      if ($('#' + active_input).val() === '') {
-        $(`.${active_input}`).children('svg').fadeOut('');
+      if (id_input.val() === '') {
+        id_input.closest('.input-with-clear').children('svg').fadeOut('');
       } else {
-        $(`.${active_input}`).children('svg').fadeIn('');
-        console.log('deded');
+        id_input.closest('.input-with-clear').children('svg').fadeIn('');
       }
-    });
-    $(`.${active_input}`).children('svg').click(function () {
-      $(`#${active_input}`).val('');
-      $(`.${active_input}`).children('svg').fadeOut('');
     });
   });
 
+  $(`.input-with-clear`).children('svg').click(function () {
+    $(this).parent().children('input').val('');
+    $(this).fadeOut('');
+  });
+
   $('.reset-btn').click(function () {
-    let block_inputs = $(this).children('button').attr('id').split('_');
-    let option_id = $(`.${block_inputs[1]}-option`);
-    option_id.find('*').val('');
+    let option_id = $(this).closest('.options-sort-block')
+    option_id.find('*').val('')
     option_id.find('*').prop('checked', false);
-    let text = option_id.find('.selectDropDown').children('.select');
-    console.log(text);
     $('.options-checkbox').find('*').css('color', '#888888');
-    $('.svg-clear-toggle').fadeOut('');
+    option_id.find('svg').fadeOut('');
   });
 });
 
@@ -91,6 +87,7 @@ $(document).ready(function () {
     let user = chek_has_parent('user-checkbox');
     let announcement = chek_has_parent('announcement-checkbox');
     let categories = chek_has_parent('categories-checkbox');
+
     let tool_btn = $('.tool-btn');
     if (announcement === 0 && marketplace === 0 && user === 0 && categories === 0) {
       tool_btn.addClass('disabled');
@@ -322,33 +319,26 @@ $(document).ready(function () {
     }, 300);
   });
 
+  let all_photos = []
+
   $('.photos-all').children('input[type="file"]').change(function () {
-    let parent = $(`.${$(this).attr('class')}`).parent().attr('class').split(' ');
-    let close_btn = $(`.${parent[1]}`).children('.close-photos-btn');
+
     if (this.files && this.files[0]) {
       let photos_reader = new FileReader();
 
-      for (let i = 0; i < 16; i++) {
-        if ($(`.photos-${i}`).css('display') === 'none') {
-          $(`.photos-${i}`).css('display', 'flex');
-          break;
-        }
-      }
-
       photos_reader.onload = e => {
-        $(`.${parent[1]}`).children('img').attr('src', e.target.result);
-        $(`.${parent[1]}`).children('img').css('visibility', 'visible');
-        close_btn.css('visibility', 'visible');
+        all_photos.push(e.target.result)
+
+        for(let i =0; i < all_photos.lenght; i++){
+          $("<div/>",{
+            html: `<img src="${all_photos[i]}" />`,
+            class: "photos-all",
+          }).appendTo(".all-photos");
+        }
       };
 
       photos_reader.readAsDataURL(this.files[0]);
     }
-
-    close_btn.click(function () {
-      $(`.${parent[1]}`).children('img').attr('src', '');
-      $(`.${parent[1]}`).children('img').css('visibility', 'hidden');
-      $(this).css('visibility', 'hidden');
-    });
   });
 });
 
@@ -379,7 +369,7 @@ $(document).ready(function () {
     $('.category-description-modal').show();
   });
   $('#delete_category1').on('click', function () {
-    $('.select-category-input').hide();
+    $('.select-category').hide();
     $('.enter-category-name-input').show();
     $('.about-category-delete').show();
     $('.delete-category-pt1').hide();
@@ -434,3 +424,46 @@ $(document).ready(function () {
     }
   });
 });
+
+$(document).ready(function () {
+  let parent = $(".documents-content")
+  parent.find("input[type=\"checkbox\"]").change(function () {
+    let check = ($(`.document-checkbox`).children('input[type="checkbox"]').filter(':checked').length);
+
+    if(check === 0){
+      parent.find(".edit").addClass('disabled');
+      parent.find(".edit").prop('disabled', true);
+
+      parent.find(".document-add").removeClass('disabled');
+      parent.find(".document-add").prop('disabled', false);
+
+      parent.find(".activate").addClass('disabled');
+      parent.find(".activate").prop('disabled', true);
+
+      parent.find(".deactive").addClass('disabled');
+      parent.find(".deactive").prop('disabled', true);
+
+      parent.find(".remove").addClass('disabled');
+      parent.find(".remove").prop('disabled', true);
+    }else{
+      parent.find(".document-add").addClass('disabled');
+      parent.find(".document-add").prop('disabled', true);
+
+      parent.find(".edit").removeClass('disabled');
+      parent.find(".edit").prop('disabled', false);
+
+      parent.find(".activate").removeClass('disabled');
+      parent.find(".activate").prop('disabled', false);
+
+      parent.find(".deactive").removeClass('disabled');
+      parent.find(".deactive").prop('disabled', false);
+
+      parent.find(".remove").removeClass('disabled');
+      parent.find(".remove").prop('disabled', false);
+    }
+  })
+
+  $(".document-add, .modal-toggle-create-document").click(function () {
+    $(".modal-create-document").toggleClass("is-visible")
+  })
+})
