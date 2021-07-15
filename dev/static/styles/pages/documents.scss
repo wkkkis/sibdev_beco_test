@@ -1,3 +1,33 @@
+.document-editor {
+  border-radius: 12px;
+  max-height: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__toolbar {
+    z-index: 1;
+    border-bottom: 1px solid #DDDDDD;
+
+    .ck-toolbar {
+      border: 0;
+      border-radius: 0;
+      background-color: red;
+
+      .tool-wrap .tool-bar {
+        background: red;
+        padding: 10px 5px 10px 10px;
+        border-radius: 16px;
+        color: #171717;
+        margin-right: 20px;
+
+        :root {
+          --ck-border-radius: 0 0 12px 12px;
+        }
+      }
+    }
+  }
+
+}
 .documents-main-wrap {
 
   .documents-content {

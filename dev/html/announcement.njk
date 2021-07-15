@@ -1,6 +1,6 @@
 {% extends "templates/main.njk" %}
 
-{% set title = "announcement" %}
+{% set title = "Announcement" %}
 
 {% from "macros/pages_options.njk" import pages_title, page_description %}
 {% from "macros/tools.njk" import edit, block, unblock, export, remove, active, deactive %}
@@ -94,7 +94,7 @@
                                 <div style="margin-right: 20px">
                                     {{ field("User ID", "text", "From", "112px", "from_id_input") }}
                                 </div>
-                                {{ field("", "text", "To", "112px", "to-id-input") }}
+                                {{ field("", "text", "To", "112px", "to_id_input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -131,9 +131,9 @@
                             </div>
                             <div class="option-sort-input">
                                 <div style="margin-right: 20px">
-                                    {{ field("Price", "text", "From", "112px", "from_ad_id_input") }}
+                                    {{ field("Price", "text", "From", "112px", "from_price_input") }}
                                 </div>
-                                {{ field("", "text", "To", "112px", "to-id-input") }}
+                                {{ field("", "text", "To", "112px", "to-price-input") }}
                             </div>
                             <div class="options-checkbox text-15">
                                 <div class="complete-checkbox">

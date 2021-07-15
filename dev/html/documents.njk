@@ -1,6 +1,6 @@
 {% extends "templates/main.njk" %}
 
-{% set title = "documents" %}
+{% set title = "Documents" %}
 
 {% from "macros/pages_options.njk" import pages_title, page_description %}
 {% from "macros/tools.njk" import edit, block, unblock, export, remove, active, deactive %}
@@ -206,7 +206,6 @@
     <script>
       DecoupledEditor
         .create(document.querySelector('.document-editor__editable'), {
-          plugin: [ CKFinder ],
           toolbar: [
             'bold', 'italic', 'underline', 'alignment:left',
             'alignment:center', 'numberedList', 'link',
@@ -214,12 +213,10 @@
           ],
           ckfinder: {
             openerMethod: 'popup'
-          },
-          placeholder: 'Type the content here!'
+          }
         })
         .then(editor => {
           const toolbarContainer = document.querySelector('.document-editor__toolbar');
-
 
           toolbarContainer.appendChild(editor.ui.view.toolbar.element);
 

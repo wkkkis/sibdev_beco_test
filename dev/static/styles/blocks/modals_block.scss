@@ -549,11 +549,13 @@
       &__all-options {
         .all-photos {
           display: flex;
-          margin-bottom: 20px;
+          margin-bottom: 15px;
+          margin-top: 0;
+          padding: 0;
           width: 800px;
           overflow-x: scroll;
 
-          .photos-all {
+          li {
             position: relative;
             min-width: 120px;
             max-width: 120px;
@@ -562,13 +564,9 @@
             background: #F9F9F9;
             border-radius: 12px;
             margin-right: 20px;
-            display: none;
+            display: flex;
             justify-content: center;
             align-items: center;
-
-            &:first-child {
-              display: flex;
-            }
 
             .close-photos-btn {
               position: absolute;
@@ -577,9 +575,9 @@
               padding: 6px;
               background: #171717;
               border-radius: 50%;
-              visibility: hidden;
               z-index: 10;
               cursor: pointer;
+              visibility: hidden;
             }
 
             input[type="file"] {
@@ -655,6 +653,17 @@
               &:last-child {
                 font-size: 13px;
                 color: #888888;
+              }
+            }
+
+            .wrapper {
+
+              input[type="checkbox"]{
+                background: white;
+
+                &:after {
+                  background: #171717;
+                }
               }
             }
           }
@@ -771,6 +780,11 @@
         margin-bottom: 30px;
         border-bottom: 1px solid #DDDDDD;
 
+        .links-wrap {
+          padding: 0;
+          margin: 0;
+        }
+
         .input_custom {
 
           label {
@@ -788,6 +802,7 @@
               position: absolute;
               right: 9px;
               top: 20%;
+              cursor: pointer;
             }
           }
         }
@@ -801,6 +816,30 @@
           button {
             width: 219px;
             height: 46px;
+          }
+        }
+      }
+
+      .communication-edit-wrap {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px;
+
+        .toggle-phone-active {
+          margin-top: 25px;
+          border: 1px solid #DDDDDD;
+          box-sizing: border-box;
+          border-radius: 12px;
+
+          &__number {
+            border-bottom: 1px solid #DDDDDD;
+            padding-left: 14px;
+            height: 56px;
+            padding-right: 13px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: space-between;
           }
         }
       }

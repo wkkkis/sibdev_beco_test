@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/styles/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <title>documents</title>
+    <title>Documents</title>
   </head>
   <body>
     <div class="main-wrapper">
@@ -626,7 +626,6 @@
     <script>
       DecoupledEditor
         .create(document.querySelector('.document-editor__editable'), {
-          plugin: [CKFinder],
           toolbar: [
             'bold', 'italic', 'underline', 'alignment:left',
             'alignment:center', 'numberedList', 'link',
@@ -634,12 +633,10 @@
           ],
           ckfinder: {
             openerMethod: 'popup'
-          },
-          placeholder: 'Type the content here!'
+          }
         })
         .then(editor => {
           const toolbarContainer = document.querySelector('.document-editor__toolbar');
-
 
           toolbarContainer.appendChild(editor.ui.view.toolbar.element);
 
