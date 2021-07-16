@@ -1,6 +1,6 @@
 {% extends "templates/main.njk" %}
 
-{% set title = "marketplace" %}
+{% set title = "Marketplace" %}
 
 {% from "macros/pages_options.njk" import pages_title, page_description %}
 {% from "macros/tools.njk" import edit, block, unblock, export, remove %}
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        <div id="userid" class="options-users userid light" style="min-width: 130px">
+                        <div id="userid" class="options-users userid light" style="min-width: 112px">
                             <span>UserID</span>
                             <div>
                                 <svg width="24"
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Name / Surname", "250px", "name") }}
+                        {{ options_sort("Name / Surname", "232px", "name") }}
                         <div class="name-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Nickname", "200px", "nick") }}
+                        {{ options_sort("Nickname", "182px", "nick") }}
                         <div class="nick-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("E Mail", "200px", "email") }}
+                        {{ options_sort("E Mail", "182px", "email") }}
                         <div class="email-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("City", "150px", "city") }}
+                        {{ options_sort("City", "132px", "city") }}
                         <div class="city-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Phone", "150px", "phone") }}
+                        {{ options_sort("Phone", "132px", "phone") }}
                         <div class="phone-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -234,10 +234,10 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Social media", "150px", "social") }}
+                        {{ options_sort("Social media", "132px", "social") }}
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Rating", "130px", "rating") }}
+                        {{ options_sort("Rating", "112px", "rating") }}
                         <div class="rating-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -256,7 +256,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Registraton", "150px", "register") }}
+                        {{ options_sort("Registraton", "132px", "register") }}
                         <div class="register-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -284,7 +284,7 @@
 
                 <div class="users-data">
                     {% for i in range(1, 15) %}
-                        <div class="user" >
+                        <div onclick="location.href='user_list.html'" class="user" >
                             <div class="checkbox user-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"

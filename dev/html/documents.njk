@@ -89,6 +89,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -112,50 +113,23 @@
                     </div>
 
                     <div class="sort-block">
-                        {{ options_sort("Document name", "200px", "name") }}
-                        <div class="name-option options-sort-block option-sort-disabled">
-                            <div class="arrow-for-sort">
-                            </div>
-                            {{ field("Name", "text", "Enter name", "275px", "from_name_input") }}
-                            {{ field("Surname", "text", "Enter surname", "275px", "to_name_input") }}
-                            <div class="option-sort-button">
-                                <div class="reset-btn">
-                                    {{ button("Reset filter", "light", "button", "reset_name", "text-15") }}
-                                </div>
-                                {{ button("Apply filter", "dark", "button", "apply-name", "text-15") }}
-                            </div>
+                        <div id="name" class="options-users light name disabled"
+                             style="min-width: 182px">
+                            <span>Document name</span>
                         </div>
                     </div>
 
                     <div class="sort-block">
-                        {{ options_sort("Created", "130px", "created") }}
-                        <div class="created-option options-sort-block option-sort-disabled">
-                            <div class="arrow-for-sort">
-                            </div>
-                            {{ field("Name", "text", "Enter name", "275px", "from_created_input") }}
-                            {{ field("Surname", "text", "Enter surname", "275px", "to_created_input") }}
-                            <div class="option-sort-button">
-                                <div class="reset-btn">
-                                    {{ button("Reset filter", "light", "button", "reset_created", "text-15") }}
-                                </div>
-                                {{ button("Apply filter", "dark", "button", "apply-created", "text-15") }}
-                            </div>
+                        <div id="created" class="options-users light created disabled"
+                             style="min-width: 112px">
+                            <span>Created</span>
                         </div>
                     </div>
 
                     <div class="sort-block">
-                        {{ options_sort("Link", "335px", "document-link") }}
-                        <div class="link-option options-sort-block option-sort-disabled">
-                            <div class="arrow-for-sort">
-                            </div>
-                            {{ field("Name", "text", "Enter name", "275px", "from_created_input") }}
-                            {{ field("Surname", "text", "Enter surname", "275px", "to_created_input") }}
-                            <div class="option-sort-button">
-                                <div class="reset-btn">
-                                    {{ button("Reset filter", "light", "button", "reset_created", "text-15") }}
-                                </div>
-                                {{ button("Apply filter", "dark", "button", "apply-created", "text-15") }}
-                            </div>
+                        <div id="document-link" class="options-users light document-link disabled"
+                             style="min-width: 365px">
+                            <span>Link</span>
                         </div>
                     </div>
 
@@ -212,7 +186,7 @@
             'imageUpload', 'ckfinder'
           ],
           ckfinder: {
-            openerMethod: 'popup'
+            uploadUrl: ' https://33333.cke-cs.com/easyimage/upload/'
           }
         })
         .then(editor => {

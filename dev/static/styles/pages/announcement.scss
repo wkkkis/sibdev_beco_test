@@ -53,11 +53,16 @@
       .sort-block {
         position: relative;
 
-        &:hover {
-          .options-users {
-            opacity: 1;
-            border: 2px solid $darkgray;
-            height: 42px;
+        .category-select {
+          .select {
+
+            .new-select {
+              z-index: 10;
+
+              &__list {
+                z-index: 8;
+              }
+            }
           }
         }
       }

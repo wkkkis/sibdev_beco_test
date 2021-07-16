@@ -7,7 +7,7 @@
   height: 100%;
 }
 
-.modal-export {
+.modal-export, .modal-edit-role {
   visibility: hidden;
 }
 
@@ -41,6 +41,69 @@
 
 .modal-create-document {
   visibility: hidden;
+}
+
+.modal-add-role, .modal-edit-role {
+  visibility: hidden;
+  height: 100%;
+
+  .modal-wrapper {
+    top: 20%;
+
+    .role-name-surname {
+      display: grid;
+      grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+      grid-gap: 10px;
+
+      .input_custom {
+        input {
+          width: 183px;
+        }
+      }
+    }
+
+    .select {
+      margin-bottom: 10px;
+
+      .new-select {
+        width: 458px;
+
+        &__list {
+          width: 94.1%;
+        }
+
+        &:after {
+          opacity: 1;
+          transform: rotate(-90deg);
+        }
+
+        &.on:after {
+          transform: rotate(2deg);
+        }
+      }
+    }
+
+    .input_custom {
+      input {
+        width: calc(100% - 55px);
+      }
+    }
+
+    .role-enter-mail {
+      position: relative;
+
+      input {
+        width: calc(100% - 55px);
+      }
+
+      svg {
+        position: absolute;
+        top: 20%;
+        right: 14px;
+        transform: rotate(4deg);
+      }
+    }
+  }
 }
 
 .modal-announcement {

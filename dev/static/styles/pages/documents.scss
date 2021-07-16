@@ -28,6 +28,7 @@
   }
 
 }
+
 .documents-main-wrap {
 
   .documents-content {
@@ -37,6 +38,10 @@
       .documents-sort {
         display: flex;
         margin-bottom: 10px;
+
+        .sort-block {
+          position: relative;
+        }
 
         .all-checkbox {
           margin-right: 5px;

@@ -19,7 +19,7 @@
                         <span>Tools :</span>
                     </div>
                     <div class="tool-bar__links categories-tools">
-                        <button disabled class="tool-btn categories-add button disabled" style="width: 133px;">
+                        <button class="tool-categories-btn categories-add button" style="width: 133px;">
                             <svg width="20"
                                  height="20"
                                  viewBox="0 0 20 20"
@@ -72,9 +72,9 @@
                                         </div>
                                         <div class="category-name-input-wrap">
                                             <div class="input_custom">
-                                                <label class="text-15" for="category_name">Category name</label>
+                                                <label class="text-15" for="add_category_name">Category name</label>
                                                 <div class="category-name">
-                                                    <input id="category_name" name="category_name"
+                                                    <input id="add_category_name" name="add_category_name"
                                                            type="text"
                                                            placeholder="Enter category name"
                                                            style="width: 370px">
@@ -110,9 +110,9 @@
                                         </div>
                                         <div class="modal-buttons">
                                             <div class="modal-toggle-add-category">
-                                                {{ button("Cancel", "light", "button", "close_block_modal", "text-15") }}
+                                                {{ button("Cancel", "light", "button", "close_add_category_modal", "text-15") }}
                                             </div>
-                                            {{ button("Block announcements", "dark", "button", "block_user", "text-15") }}
+                                            {{ button("Add category", "dark", "button", "apply_add_category", "text-15") }}
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                             </svg>
                                         </div>
                                         <div class="category-name">
-                                            {{ field("Category name", "text", "Enter category name", "370px", "category_name") }}
+                                            {{ field("Category name", "text", "Enter category name", "370px", "edit_category_name") }}
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -160,9 +160,9 @@
                                         </div>
                                         <div class="modal-buttons">
                                             <div class="modal-toggle-edit-category">
-                                                {{ button("Cancel", "light", "button", "close_block_modal", "text-15") }}
+                                                {{ button("Cancel", "light", "button", "close_edit_category_modal", "text-15") }}
                                             </div>
-                                            {{ button("Add subcategory", "dark", "button", "block_user", "text-15") }}
+                                            {{ button("Add subcategory", "dark", "button", "apply_edit_category", "text-15") }}
                                         </div>
                                     </div>
                                 </div>
@@ -196,7 +196,7 @@
                                         <div class="select-category">
                                             <label class="label-for-drop">Select the category to which the ads will be
                                                 assigned</label>
-                                            <select id="category_name" class="select">
+                                            <select id="delete_category_name_select" class="select">
                                                 <option disabled>Select category</option>
                                                 <option value="1">Select status 1</option>
                                                 <option value="2">Select status 2</option>
@@ -208,7 +208,7 @@
                                             </select>
                                         </div>
                                         <div class="enter-category-name-input" style="display: none">
-                                            {{ field("To confirm the deletion, enter the name of the category to be deleted", "text", "Enter category name", "430px", "category_name") }}
+                                            {{ field("To confirm the deletion, enter the name of the category to be deleted", "text", "Enter category name", "430px", "delete_category_name_input") }}
                                         </div>
                                         <div class="modal-time-about about-category-delete text-15"
                                              style="display: none">
@@ -350,9 +350,9 @@
                                 <div class="modal-body">
                                     <div class="modal-content">
                                         <div class="input_custom">
-                                            <label class="text-15" for="add_subs_name">Subcategory name</label>
+                                            <label class="text-15" for="edit_subs_name">Subcategory name</label>
                                             <div class="category-name">
-                                                <input id="add_subs_name" name="add_subs_edit"
+                                                <input id="edit_subs_name" name="edit_subs_edit"
                                                        type="text"
                                                        placeholder="Enter Subcategory name"
                                                        style="width: 430px">
@@ -395,7 +395,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Category name", "280px", "name") }}
+                        {{ options_sort("Category name", "262px", "name") }}
                         <div class="name-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -409,7 +409,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Created", "130px", "created") }}
+                        {{ options_sort("Created", "112px", "created") }}
                         <div class="created-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -428,7 +428,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Subcategories", "170px", "subs") }}
+                        {{ options_sort("Subcategories", "152px", "subs") }}
                         <div class="subs-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -452,7 +452,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Announcements", "180px", "announcements") }}
+                        {{ options_sort("Announcements", "162px", "announcements") }}
                         <div class="announcements-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>

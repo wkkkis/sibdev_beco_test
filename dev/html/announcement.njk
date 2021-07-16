@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Ad ID", "150px", "id") }}
+                        {{ options_sort("Ad ID", "132px", "id") }}
                         <div class="id-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Ad title", "250px", "title") }}
+                        {{ options_sort("Ad title", "232px", "title") }}
                         <div class="title-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -119,13 +119,46 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Subm. (Mod)", "160px", "sumb") }}
+                        {{ options_sort("Subm. (Mod)", "142px", "subm") }}
+                        <div class="subm-option options-sort-block option-sort-disabled">
+                            <div class="arrow-for-sort">
+                            </div>
+                            <div class="option-sort-input">
+                                <div style="margin-right: 20px">
+                                    <input placeholder="From"
+                                           type="text"
+                                           onfocus="(this.type = 'date')"
+                                           id="date_from_input">
+                                </div>
+                                <input placeholder="To"
+                                       type="text"
+                                       onfocus="(this.type = 'date')"
+                                       id="date_to_input">
+                            </div>
+                            <div class="option-sort-button">
+                                <div class="reset-btn">
+                                    {{ button("Reset filter", "light", "button", "reset_subm", "text-15") }}
+                                </div>
+                                {{ button("Apply filter", "dark", "button", "apply_subm", "text-15") }}
+                            </div>
+                        </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Author", "200px", "author") }}
+                        {{ options_sort("Author", "182px", "author") }}
+                        <div class="author-option options-sort-block option-sort-disabled">
+                            <div class="arrow-for-sort">
+                            </div>
+                            {{ field("Author’s nickname", "text", "Enter nickname", "275px", "author_input") }}
+                            <div class="option-sort-button">
+                                <div class="reset-btn">
+                                    {{ button("Reset filter", "light", "button", "reset_author", "text-15") }}
+                                </div>
+                                {{ button("Apply filter", "dark", "button", "apply_author", "text-15") }}
+                            </div>
+                        </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Price", "120px", "price") }}
+                        {{ options_sort("Price", "102px", "price") }}
                         <div class="price-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -150,13 +183,70 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("City", "150px", "city") }}
+                        {{ options_sort("City", "132px", "city") }}
+                        <div class="city-option options-sort-block option-sort-disabled">
+                            <div class="arrow-for-sort">
+                            </div>
+                            <label class="label-for-drop">City</label>
+                            <select id="marketplace_city" class="select">
+                                <option disabled>Select city / cities</option>
+                                <option value="1">Select status 1</option>
+                                <option value="2">Select status 2</option>
+                                <option value="3">Select status 3</option>
+                                <option value="4">Select status 4</option>
+                                <option value="5">Select status 5</option>
+                                <option value="5">Select status 6</option>
+                                <option value="5">Select status 7</option>
+                            </select>
+                            <div class="option-sort-button">
+                                <div class="reset-btn">
+                                    {{ button("Reset filter", "light", "button", "reset_city", "text-15") }}
+                                </div>
+                                {{ button("Apply filter", "dark", "button", "apply_city", "text-15") }}
+                            </div>
+                        </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Category > Subcategory", "220px", "category") }}
+                        {{ options_sort("Category > Subcategory", "202px", "category") }}
+                        <div class="category-option options-sort-block option-sort-disabled">
+                            <div class="arrow-for-sort">
+                            </div>
+                            <div class="category-select">
+                                <label class="label-for-drop">Category</label>
+                                <select id="category_select" class="select">
+                                    <option disabled>Select category</option>
+                                    <option value="1">Select status 1</option>
+                                    <option value="2">Select status 2</option>
+                                    <option value="3">Select status 3</option>
+                                    <option value="4">Select status 4</option>
+                                    <option value="5">Select status 5</option>
+                                    <option value="5">Select status 6</option>
+                                    <option value="5">Select status 7</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="label-for-drop">Subcategory</label>
+                                <select id="subcategory_select" class="select">
+                                    <option disabled>Select subcategory (-ies)</option>
+                                    <option value="1">Select status 1</option>
+                                    <option value="2">Select status 2</option>
+                                    <option value="3">Select status 3</option>
+                                    <option value="4">Select status 4</option>
+                                    <option value="5">Select status 5</option>
+                                    <option value="5">Select status 6</option>
+                                    <option value="5">Select status 7</option>
+                                </select>
+                            </div>
+                            <div class="option-sort-button">
+                                <div class="reset-btn">
+                                    {{ button("Reset filter", "light", "button", "category_email", "text-15") }}
+                                </div>
+                                {{ button("Apply filter", "dark", "button", "apply_category", "text-15") }}
+                            </div>
+                        </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Status", "120px", "status") }}
+                        {{ options_sort("Status", "102px", "status") }}
                         <div class="status-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>

@@ -91,14 +91,23 @@ $(document).ready(function () {
     let user = chek_has_parent('user-checkbox');
     let announcement = chek_has_parent('announcement-checkbox');
     let categories = chek_has_parent('categories-checkbox');
+    let roles = chek_has_parent('rules-checkbox');
 
     let tool_btn = $('.tool-btn');
-    if (announcement === 0 && marketplace === 0 && user === 0 && categories === 0) {
+    if (announcement === 0 && marketplace === 0 && user === 0 && categories === 0 && roles === 0) {
       tool_btn.addClass('disabled');
       tool_btn.prop('disabled', true);
+      $('.tool-role-btn').removeClass('disabled');
+      $('.tool-role-btn').prop('disabled', false);
+      $('.tool-categories-btn').removeClass('disabled');
+      $('.tool-categories-btn').prop('disabled', false);
     } else {
       tool_btn.removeClass('disabled');
       tool_btn.prop('disabled', false);
+      $('.tool-role-btn').addClass('disabled');
+      $('.tool-role-btn').prop('disabled', true);
+      $('.tool-categories-btn').addClass('disabled');
+      $('.tool-categories-btn').prop('disabled', true);
     }
   });
 
@@ -129,8 +138,8 @@ $(document).ready(function () {
     'social', 'rating', 'register',
     'status', 'price', 'category',
     'title', 'photo', 'id', 'author',
-    'announcement-id', 'sumb', 'subs', 'created',
-    'announcements', 'filter'
+    'announcement-id', 'subm', 'subs', 'created',
+    'announcements', 'filter', 'role', 'document-link'
   ];
 
   $('.options-users').click(function () {
@@ -324,6 +333,7 @@ $(document).ready(function () {
   });
 
   let main_parent = $('.all-photos');
+  let boolean_for_all_photos = false;
 
   main_parent.on('change', 'input[type=\'file\']', function () {
 
@@ -338,7 +348,7 @@ $(document).ready(function () {
         parent.children('img').css('visibility', 'visible');
         parent.children('.close-photos-btn').css('visibility', 'visible');
 
-        if (main_parent.children('*').length <= 6) {
+        if (main_parent.children('*').length < 20) {
 
           main_parent.append(`<li class="photos-all">
                             <svg width="10"
@@ -361,6 +371,8 @@ $(document).ready(function () {
                             </svg>
                             <input type="file" class="file-all" accept="image/*" />
                         </li>`);
+        } else {
+          boolean_for_all_photos = true;
         }
       };
 
@@ -369,8 +381,32 @@ $(document).ready(function () {
   });
 
   $('.all-photos').on('click', 'svg', function () {
-    alert(main_parent.children('*').length);
     $(this).parent().remove();
+
+    if (main_parent.children('*').length < 20 && boolean_for_all_photos) {
+      main_parent.append(`<li class="photos-all">
+                            <svg width="10"
+                                 height="10"
+                                 class="close-photos-btn"
+                                 viewBox="0 0 10 10"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.70994 1.28994C8.61698 1.19621 8.50637 1.12182 8.38452 1.07105C8.26266 1.02028 8.13195 0.994141 7.99994 0.994141C7.86793 0.994141 7.73722 1.02028 7.61536 1.07105C7.4935 1.12182 7.3829 1.19621 7.28994 1.28994L4.99994 3.58994L2.70994 1.28994C2.52164 1.10164 2.26624 0.995847 1.99994 0.995847C1.73364 0.995847 1.47824 1.10164 1.28994 1.28994C1.10164 1.47824 0.995847 1.73364 0.995847 1.99994C0.995847 2.26624 1.10164 2.52164 1.28994 2.70994L3.58994 4.99994L1.28994 7.28994C1.19621 7.3829 1.12182 7.4935 1.07105 7.61536C1.02028 7.73722 0.994141 7.86793 0.994141 7.99994C0.994141 8.13195 1.02028 8.26266 1.07105 8.38452C1.12182 8.50637 1.19621 8.61698 1.28994 8.70994C1.3829 8.80367 1.4935 8.87806 1.61536 8.92883C1.73722 8.9796 1.86793 9.00574 1.99994 9.00574C2.13195 9.00574 2.26266 8.9796 2.38452 8.92883C2.50638 8.87806 2.61698 8.80367 2.70994 8.70994L4.99994 6.40994L7.28994 8.70994C7.3829 8.80367 7.4935 8.87806 7.61536 8.92883C7.73722 8.9796 7.86793 9.00574 7.99994 9.00574C8.13195 9.00574 8.26266 8.9796 8.38452 8.92883C8.50637 8.87806 8.61698 8.80367 8.70994 8.70994C8.80367 8.61698 8.87806 8.50637 8.92883 8.38452C8.9796 8.26266 9.00574 8.13195 9.00574 7.99994C9.00574 7.86793 8.9796 7.73722 8.92883 7.61536C8.87806 7.4935 8.80367 7.3829 8.70994 7.28994L6.40994 4.99994L8.70994 2.70994C8.80367 2.61698 8.87806 2.50638 8.92883 2.38452C8.9796 2.26266 9.00574 2.13195 9.00574 1.99994C9.00574 1.86793 8.9796 1.73722 8.92883 1.61536C8.87806 1.4935 8.80367 1.3829 8.70994 1.28994Z"
+                                      fill="white" />
+                            </svg>
+                            <img class="all-pic" src="" />
+                            <svg width="24"
+                                 height="24"
+                                 viewBox="0 0 24 24"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 10C18.7348 10 18.4804 10.1054 18.2929 10.2929C18.1054 10.4804 18 10.7348 18 11V14.38L16.52 12.9C15.9974 12.3815 15.2911 12.0906 14.555 12.0906C13.8189 12.0906 13.1126 12.3815 12.59 12.9L11.89 13.61L9.41 11.12C8.88742 10.6015 8.18113 10.3106 7.445 10.3106C6.70887 10.3106 6.00258 10.6015 5.48 11.12L4 12.61V7C4 6.73478 4.10536 6.48043 4.29289 6.29289C4.48043 6.10536 4.73478 6 5 6H13C13.2652 6 13.5196 5.89464 13.7071 5.70711C13.8946 5.51957 14 5.26522 14 5C14 4.73478 13.8946 4.48043 13.7071 4.29289C13.5196 4.10536 13.2652 4 13 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V19.22C2.00264 19.9565 2.29637 20.6621 2.81715 21.1828C3.33794 21.7036 4.04351 21.9974 4.78 22H17.22C17.491 21.9978 17.7603 21.9574 18.02 21.88C18.5974 21.718 19.1058 21.3711 19.4671 20.8924C19.8283 20.4137 20.0226 19.8297 20.02 19.23V11C20.02 10.867 19.9935 10.7353 19.942 10.6126C19.8905 10.49 19.8151 10.3789 19.7201 10.2857C19.6251 10.1926 19.5125 10.1194 19.3888 10.0703C19.2652 10.0212 19.133 9.99734 19 10ZM5 20C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V15.43L6.89 12.54C7.03615 12.3947 7.23389 12.3131 7.44 12.3131C7.64611 12.3131 7.84385 12.3947 7.99 12.54L15.46 20H5ZM18 19C17.9936 19.1936 17.931 19.3812 17.82 19.54L13.3 15L14.01 14.3C14.0817 14.2268 14.1673 14.1687 14.2617 14.129C14.3561 14.0893 14.4576 14.0689 14.56 14.0689C14.6624 14.0689 14.7639 14.0893 14.8583 14.129C14.9527 14.1687 15.0383 14.2268 15.11 14.3L18 17.21V19ZM21 4H20V3C20 2.73478 19.8946 2.48043 19.7071 2.29289C19.5196 2.10536 19.2652 2 19 2C18.7348 2 18.4804 2.10536 18.2929 2.29289C18.1054 2.48043 18 2.73478 18 3V4H17C16.7348 4 16.4804 4.10536 16.2929 4.29289C16.1054 4.48043 16 4.73478 16 5C16 5.26522 16.1054 5.51957 16.2929 5.70711C16.4804 5.89464 16.7348 6 17 6H18V7C18 7.26522 18.1054 7.51957 18.2929 7.70711C18.4804 7.89464 18.7348 8 19 8C19.2652 8 19.5196 7.89464 19.7071 7.70711C19.8946 7.51957 20 7.26522 20 7V6H21C21.2652 6 21.5196 5.89464 21.7071 5.70711C21.8946 5.51957 22 5.26522 22 5C22 4.73478 21.8946 4.48043 21.7071 4.29289C21.5196 4.10536 21.2652 4 21 4Z"
+                                      fill="#888888" />
+                            </svg>
+                            <input type="file" class="file-all" accept="image/*" />
+                        </li>`);
+      boolean_for_all_photos = false;
+    }
   });
 });
 
@@ -501,11 +537,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $('.links-wrap').on("click", 'svg', function () {
-    if($('.links-wrap').children('*').length != 1){
-      $(this).closest(".input_custom").remove()
+  $('.links-wrap').on('click', 'svg', function () {
+    if ($('.links-wrap').children('*').length != 1) {
+      $(this).closest('.input_custom').remove();
     }
-  })
+  });
   $('.button-link-wrap').on('click', 'button', function () {
     $('.links-wrap').append(`<li class="input_custom">
                                 <div class="edit-link">
@@ -523,5 +559,15 @@ $(document).ready(function () {
                                     </svg>
                                 </div>
                             </li>`);
-  })
+  });
+});
+
+
+$(document).ready(function () {
+  $('.role-add, .modal-toggle-add-role').on('click', function () {
+    $('.modal-add-role').toggleClass('is-visible');
+  });
+  $('.role_edit_tool, .modal-toggle-edit-role').on('click', function () {
+    $('.modal-edit-role').toggleClass('is-visible');
+  });
 });

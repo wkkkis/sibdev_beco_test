@@ -148,6 +148,7 @@
           .new-select {
             border: none;
             display: flex;
+            color: #171717;
             justify-content: flex-end;
             padding: 0 40px 0 0;
             font-size: 15px;
@@ -321,14 +322,6 @@
           .select {
             width: 315px;
             height: 60px;
-          }
-
-          &:hover {
-            .options-users {
-              opacity: 1;
-              border: 2px solid $darkgray;
-              height: 42px;
-            }
           }
         }
       }
