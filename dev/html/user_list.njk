@@ -175,6 +175,9 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="tool-bar__modal">
+                            {% include "blocks/user_list_modal.njk" %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -321,10 +324,7 @@
                 </div>
                 <div class="user-description-padding">
                     <span>Main phone number</span>
-                    <div class="user-description-with-edit">
-                        <span class="bold">+1 500 1000 000</span>
-                        <input type="text" value="+1 500 1000 000">
-                    </div>
+                    <span class="bold">+1 500 1000 000</span>
                 </div>
                 <div class="user-description-padding">
                     <span>Registration</span>
@@ -333,7 +333,7 @@
             </div>
             <div class="system-user-description user-social-media text-15">
                 <div class="user-description-padding user-social-media-padding">
-                    <span>Social media</span>
+                    <span>Contact numbers</span>
                 </div>
                 <div class="user-description-padding user-social-media-padding">
                     <div>
@@ -386,7 +386,6 @@
                             <span>Interaction announcement</span>
                         </div>
                         <div class="tool-bar__links">
-                            {{ edit('82px') }}
                             {{ active('105px') }}
                             {{ deactive('119px') }}
                             {{ block('122px') }}
@@ -443,7 +442,7 @@
             <div class="user-announcement-data">
                 <div class="announcement-sort">
                     <div id="all-checkbox" class="all-checkbox light disabled">
-                        <div class="checkbox">
+                        <div class="checkbox-custom">
                             <input type="checkbox" id="selectall">
                             <label for="selectall"></label>
                         </div>
@@ -613,8 +612,8 @@
                 </div>
                 <div class="user-marketplace-data">
                     {% for i in range(1, 13) %}
-                        <div class="user-marketplace text-15">
-                            <div class="checkbox user-marketplace-checkbox">
+                        <div class="user-marketplace text-15 data-line">
+                            <div class="checkbox-custom user-marketplace-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
                                        class="selectedId">
@@ -642,7 +641,7 @@
                         </div>
                     {% endfor %}
                     <div class="user-marketplace text-15">
-                        <div class="checkbox user-marketplace-checkbox">
+                        <div class="checkbox-custom user-marketplace-checkbox">
                             <input type="checkbox"
                                    id="checkbox13"
                                    class="selectedId">
@@ -669,7 +668,7 @@
                         </div>
                     </div>
                     <div class="user-marketplace text-15">
-                        <div class="checkbox user-marketplace-checkbox">
+                        <div class="checkbox-custom user-marketplace-checkbox">
                             <input type="checkbox"
                                    id="checkbox14"
                                    class="selectedId">

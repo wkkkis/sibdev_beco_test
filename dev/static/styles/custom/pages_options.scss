@@ -31,8 +31,11 @@
     }
 
     span{
-      padding-left: 20px;
       padding-right: 20px;
+
+      &:last-child {
+        padding-left: 20px;
+      }
     }
 
     .border{

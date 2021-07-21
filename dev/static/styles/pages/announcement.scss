@@ -3,10 +3,6 @@
   .tool-wrap {
     margin-right: 10px;
 
-    .activate {
-      margin-left: 15px;
-    }
-
     .deactive {
       margin-right: 20px;
     }
@@ -78,13 +74,13 @@
     }
 
     .announcement-data {
-      width: 1470px;
+      width: 1600px;
       border: 1px solid $blackgray;
       border-radius: 6px;
 
       .announcement {
         display: grid;
-        grid-template-columns: 46px 157px 257px 167px 207px 128px 157px 227px 126px;
+        grid-template-columns: 46px 157px 257px 167px 207px 128px 157px 227px 126px 126px;
         border-bottom: 1px solid $blackgray;
         height: 44px;
         cursor: pointer;
@@ -113,6 +109,10 @@
               }
             }
           }
+        }
+
+        .paid {
+          color: #5CFA54;
         }
 
         .announcement-padding {

@@ -10,19 +10,26 @@
 
 {% block content %}
     <div class="announcement-wrap">
-        {{ pages_title("Announcements", "Showing 1 to 14 of 100 000 announcements") }}
+        <div class="pages-title">
+            <div class="title-about-page">
+            <span class="title-page text-21">
+               Announcements
+            </span>
+                <div class="border"></div>
+                <span class="about-page text-15">
+               Showing 1 to 14 of 100 000 announcements
+            </span>
+            </div>
+        </div>
         <div class="announcement-content">
             <div class="tool-wrap text-13">
                 <div class="tool-bar">
                     <div class="tool-bar__title">
-                        <span>Interaction announcement</span>
+                        <span>tools:</span>
                     </div>
                     <div class="tool-bar__links">
-                        {{ edit('82px') }}
                         {{ active('105px') }}
                         {{ deactive('119px') }}
-                        {{ block('122px') }}
-                        {{ unblock('153px') }}
                         {{ export("142px") }}
                         {{ remove('97px') }}
                     </div>
@@ -80,7 +87,7 @@
             <div class="announcement-table-wrap">
                 <div class="announcement-sort">
                     <div id="all-checkbox" class="all-checkbox light disabled">
-                        <div class="checkbox">
+                        <div class="checkbox-custom">
                             <input type="checkbox" id="selectall">
                             <label for="selectall"></label>
                         </div>
@@ -170,8 +177,8 @@
                             </div>
                             <div class="options-checkbox text-15">
                                 <div class="complete-checkbox">
-                                    {{ checkbox("price_complete") }}
-                                    <span class="price_complete">Contact price</span>
+                                    <input type="radio" id="test5" name="radio-group" checked>
+                                    <label for="test5">Contact price</label>
                                 </div>
                             </div>
                             <div class="option-sort-button">
@@ -271,11 +278,32 @@
                             </div>
                         </div>
                     </div>
+                    <div class="sort-block">
+                        {{ options_sort("Type", "102px", "type") }}
+                        <div class="type-option options-sort-block option-sort-disabled">
+                            <div class="arrow-for-sort">
+                            </div>
+                            <div>
+                                <label class="label-for-drop">Type</label>
+                                <select id="user_status-select" class="select">
+                                    <option disabled>Select status</option>
+                                    <option value="1">Paid</option>
+                                    <option value="2">Free</option>
+                                </select>
+                            </div>
+                            <div class="option-sort-button">
+                                <div class="reset-btn">
+                                    {{ button("Reset filter", "light", "button", "reset_type", "text-15") }}
+                                </div>
+                                {{ button("Apply filter", "dark", "button", "apply_type", "text-15") }}
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="announcement-data">
                     {% for i in range(1, 15) %}
-                        <div class="announcement">
-                            <div class="checkbox announcement-checkbox">
+                        <div class="announcement data-line">
+                            <div class="checkbox-custom announcement-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
                                        class="selectedId">
@@ -305,6 +333,9 @@
                             <div class="announcement-padding">
                                 <span>Active</span>
                             </div>
+                            <div class="announcement-padding paid">
+                                <span>Paid</span>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
@@ -315,4 +346,8 @@
         </div>
         {% include "blocks/pagination.njk" %}
     </div>
+{% endblock %}
+
+{% block scripts %}
+
 {% endblock %}

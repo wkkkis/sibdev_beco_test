@@ -11,6 +11,10 @@ body {
   font-family: $main-font;
 }
 
+.note-modal-backdrop {
+  visibility: hidden;
+}
+
 .text-13 {
   font-size: 13px;
 }

@@ -19,7 +19,6 @@
                         <span>Tools :</span>
                     </div>
                     <div class="tool-bar__links">
-                        {{ edit("88px") }}
                         {{ block("122px") }}
                         {{ unblock("153px") }}
                         {{ export("143px") }}
@@ -70,7 +69,6 @@
                 </div>
                 <div class="description-bar">
                     {{ page_description("Summary:", "100 000") }}
-                    {{ page_description("Online:", "3 240") }}
                     {{ page_description("Blocked / banned:", "120") }}
                 </div>
             </div>
@@ -78,7 +76,7 @@
 
                 <div class="users-sort">
                     <div id="all-checkbox" class="all-checkbox light disabled">
-                        <div class="checkbox">
+                        <div class="checkbox-custom">
                             <input type="checkbox" id="selectall">
                             <label for="selectall"></label>
                         </div>
@@ -139,18 +137,18 @@
                     </div>
                     <div class="sort-block">
                         {{ options_sort("Nickname", "182px", "nick") }}
-                        <div class="nick-option options-sort-block option-sort-disabled">
+                        <form action="#" class="nick-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             {{ field("Nickname", "text", "Enter nickname", "275px", "nick_input") }}
                             <div class="options-checkbox text-15">
                                 <div class="complete-checkbox">
-                                    {{ checkbox("nick_complete") }}
-                                    <span class="nick_complete">Complete match</span>
+                                    <input type="radio" id="test1" name="radio-group" checked>
+                                    <label for="test1">Complete checkbox</label>
                                 </div>
                                 <div class="partial-checkbox">
-                                    {{ checkbox("nick_partial") }}
-                                    <span class="nick_partial color-black">Partial match</span>
+                                    <input type="radio" id="test2" name="radio-group" checked>
+                                    <label for="test2">Partial checkbox</label>
                                 </div>
                             </div>
                             <div class="option-sort-button">
@@ -159,22 +157,22 @@
                                 </div>
                                 {{ button("Apply filter", "dark", "button", "apply_nick", "text-15") }}
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="sort-block">
                         {{ options_sort("E Mail", "182px", "email") }}
-                        <div class="email-option options-sort-block option-sort-disabled">
+                        <form action="#" class="email-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             {{ field("E-mail", "text", "Enter E-main", "275px", "email_input") }}
                             <div class="options-checkbox">
-                                <div class="complete-checkbox">
-                                    {{ checkbox("email_complete") }}
-                                    <span class="email_complete">Complete match</span>
+                                <div class="complete-checkbox text-15">
+                                    <input type="radio" id="test3" name="radio-group" checked>
+                                    <label for="test3">Complete checkbox</label>
                                 </div>
                                 <div class="partial-checkbox">
-                                    {{ checkbox("email_partial") }}
-                                    <span class="email_partial">Partial match</span>
+                                    <input type="radio" id="test4" name="radio-group" checked>
+                                    <label for="test4">Partial checkbox</label>
                                 </div>
                             </div>
                             <div class="option-sort-button">
@@ -183,7 +181,7 @@
                                 </div>
                                 {{ button("Apply filter", "dark", "button", "apply_email", "text-15") }}
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="sort-block">
                         {{ options_sort("City", "132px", "city") }}
@@ -192,7 +190,7 @@
                             </div>
                             <label class="label-for-drop">City</label>
                             <select id="marketplace_city" class="select">
-                                <option disabled>Select city / cities</option>
+                                <option disabled>Select city</option>
                                 <option value="1">Select status 1</option>
                                 <option value="2">Select status 2</option>
                                 <option value="3">Select status 3</option>
@@ -211,18 +209,18 @@
                     </div>
                     <div class="sort-block">
                         {{ options_sort("Phone", "132px", "phone") }}
-                        <div class="phone-option options-sort-block option-sort-disabled">
+                        <form class="phone-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             {{ field("Phone", "text", "Enter phone", "275px", "phone_input") }}
                             <div class="options-checkbox">
                                 <div class="complete-checkbox">
-                                    {{ checkbox("phone_complete") }}
-                                    <span class="phone_complete">Complete match</span>
+                                    <input type="radio" id="test5" name="radio-group" checked>
+                                    <label for="test5">Complete checkbox</label>
                                 </div>
                                 <div class="partial-checkbox">
-                                    {{ checkbox("phone_partial") }}
-                                    <span class="phone_partial">Partial match</span>
+                                    <input type="radio" id="test6" name="radio-group" checked>
+                                    <label for="test6">Partial checkbox</label>
                                 </div>
                             </div>
                             <div class="option-sort-button">
@@ -231,10 +229,13 @@
                                 </div>
                                 {{ button("Apply filter", "dark", "button", "apply_phone", "text-15") }}
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Social media", "132px", "social") }}
+                        <div id="{{ id }}" class="options-users-without-disabled light disabled"
+                             style="min-width: 132px">
+                            <span>Social media</span>
+                        </div>
                     </div>
                     <div class="sort-block">
                         {{ options_sort("Rating", "112px", "rating") }}
@@ -284,32 +285,32 @@
 
                 <div class="users-data">
                     {% for i in range(1, 15) %}
-                        <div onclick="location.href='user_list.html'" class="user" >
-                            <div class="checkbox user-checkbox">
+                        <div class="user" >
+                            <div class="checkbox-custom user-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
                                        class="selectedId">
                                 <label for="checkbox{{ i }}"></label>
                             </div>
-                            <div class="user-padding bold">
+                            <div onclick="location.href='user_list.html'" class="user-padding bold">
                                 <span>00000{{ i }}</span>
                             </div>
-                            <div class="user-padding bold">
+                            <div onclick="location.href='user_list.html'" class="user-padding bold">
                                 <span>Johnathan Silverstone</span>
                             </div>
-                            <div class="user-padding nickname">
+                            <div onclick="location.href='user_list.html'" class="user-padding nickname">
                                 <span>johnathanseller</span>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <span>samplelongmail@shoof.com</span>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <span> Abu-Dhabi</span>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <span>+1 500 1000 000</span>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <svg width="18"
                                      height="18"
                                      class="active-social"
@@ -321,7 +322,7 @@
                                 </svg>
                                 <svg width="18"
                                      height="18"
-                                     class="disabled-social"
+                                     class="active-social"
                                      viewBox="0 0 18 18"
                                      fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -335,10 +336,10 @@
                                           fill="white" />
                                 </svg>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <span>4.98</span>
                             </div>
-                            <div class="user-padding">
+                            <div onclick="location.href='user_list.html'" class="user-padding">
                                 <span>20 may 2020</span>
                             </div>
                         </div>

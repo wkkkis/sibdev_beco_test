@@ -31,6 +31,16 @@
 
 .documents-main-wrap {
 
+  .pages-title {
+
+    .title-about-page {
+
+      span:last-child {
+        padding-left: 0;
+      }
+    }
+  }
+
   .documents-content {
 
     .documents-wrap {
@@ -129,7 +139,7 @@
 
               span {
 
-                &:first-child{
+                &:first-child {
                   color: #888888;
                 }
 

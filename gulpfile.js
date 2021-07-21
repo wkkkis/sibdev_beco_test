@@ -58,6 +58,15 @@ function js() {
 }
 
 // ------------------------------------------
+// Plugins
+// ------------------------------------------
+function plugins() {
+  return src('dev/static/plugins/***/**/*')
+    .pipe(dest('build/static/plugins'))
+    .on('end', browserSync.reload);
+}
+
+// ------------------------------------------
 // Images
 // ------------------------------------------
 function images() {
@@ -104,5 +113,5 @@ exports.js = js;
 exports.watchFiles = watchFiles;
 exports.serve = serve;
 
-exports.default = series(clean, parallel(html, css, js, images), parallel(serve, watchFiles));
-exports.build = series(clean, parallel(html, css, js, images));
+exports.default = series(clean, parallel(html, css, js, plugins, images), parallel(serve, watchFiles));
+exports.build = series(clean, parallel(html, css, js, plugins, images));
