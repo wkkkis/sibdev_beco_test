@@ -144,6 +144,9 @@
 
     .modal-images-wrap {
       display: flex;
+      height: 680px;
+      overflow: hidden;
+      margin-bottom: 20px;
 
       .announcement-main-images, .user-list-main-images {
         width: 1020px;
@@ -247,6 +250,7 @@
       }
 
       .announcement-all-images, .user-list-all-images {
+        position: relative;
         margin-left: 20px;
 
         div {
@@ -269,6 +273,13 @@
             object-fit: cover;
             border-radius: 12px;
           }
+        }
+
+        .photos-all-btn {
+          position: absolute;
+          bottom: -18px;
+          left: 0;
+          border: 1px solid #F9F9F9;
         }
       }
     }

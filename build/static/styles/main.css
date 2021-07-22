@@ -1889,7 +1889,10 @@ input[type="radio"]:checked + label:after {
         .modal-announcement .modal-wrapper .announcement-tools-title .announcement-tools-preview .deactive, .modal-announcement .modal-wrapper .announcement-tools-title .user-list-tools-preview .deactive, .modal-announcement .modal-wrapper .user-list-tools-title .announcement-tools-preview .deactive, .modal-announcement .modal-wrapper .user-list-tools-title .user-list-tools-preview .deactive, .modal-user-list .modal-wrapper .announcement-tools-title .announcement-tools-preview .deactive, .modal-user-list .modal-wrapper .announcement-tools-title .user-list-tools-preview .deactive, .modal-user-list .modal-wrapper .user-list-tools-title .announcement-tools-preview .deactive, .modal-user-list .modal-wrapper .user-list-tools-title .user-list-tools-preview .deactive {
           margin-right: 15px; }
     .modal-announcement .modal-wrapper .modal-images-wrap, .modal-user-list .modal-wrapper .modal-images-wrap {
-      display: flex; }
+      display: flex;
+      height: 680px;
+      overflow: hidden;
+      margin-bottom: 20px; }
       .modal-announcement .modal-wrapper .modal-images-wrap .announcement-main-images, .modal-announcement .modal-wrapper .modal-images-wrap .user-list-main-images, .modal-user-list .modal-wrapper .modal-images-wrap .announcement-main-images, .modal-user-list .modal-wrapper .modal-images-wrap .user-list-main-images {
         width: 1020px;
         height: 680px;
@@ -1966,6 +1969,7 @@ input[type="radio"]:checked + label:after {
             font-size: 14px;
             margin-left: 4px; }
       .modal-announcement .modal-wrapper .modal-images-wrap .announcement-all-images, .modal-announcement .modal-wrapper .modal-images-wrap .user-list-all-images, .modal-user-list .modal-wrapper .modal-images-wrap .announcement-all-images, .modal-user-list .modal-wrapper .modal-images-wrap .user-list-all-images {
+        position: relative;
         margin-left: 20px; }
         .modal-announcement .modal-wrapper .modal-images-wrap .announcement-all-images div, .modal-announcement .modal-wrapper .modal-images-wrap .user-list-all-images div, .modal-user-list .modal-wrapper .modal-images-wrap .announcement-all-images div, .modal-user-list .modal-wrapper .modal-images-wrap .user-list-all-images div {
           width: 120px;
@@ -1985,6 +1989,11 @@ input[type="radio"]:checked + label:after {
             height: 120px;
             object-fit: cover;
             border-radius: 12px; }
+        .modal-announcement .modal-wrapper .modal-images-wrap .announcement-all-images .photos-all-btn, .modal-announcement .modal-wrapper .modal-images-wrap .user-list-all-images .photos-all-btn, .modal-user-list .modal-wrapper .modal-images-wrap .announcement-all-images .photos-all-btn, .modal-user-list .modal-wrapper .modal-images-wrap .user-list-all-images .photos-all-btn {
+          position: absolute;
+          bottom: -18px;
+          left: 0;
+          border: 1px solid #F9F9F9; }
     .modal-announcement .modal-wrapper .announcement-description-wrap, .modal-announcement .modal-wrapper .user-list-description-wrap, .modal-user-list .modal-wrapper .announcement-description-wrap, .modal-user-list .modal-wrapper .user-list-description-wrap {
       display: flex;
       margin-bottom: 20px; }
