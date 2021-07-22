@@ -42,7 +42,7 @@
                         <span>Delete</span>
                     </button>
                 </div>
-                <div class="announcement-tools-editmode" style="display: none">
+                <div class="user-list-tools-editmode" style="display: none">
                     <button class="tool-seller-btn save-edit button" style="width: 132px;">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.5917 6.00834C15.5142 5.93023 15.4221 5.86824 15.3205 5.82593C15.219 5.78362 15.11 5.76184 15 5.76184C14.89 5.76184 14.7811 5.78362 14.6796 5.82593C14.578 5.86824 14.4858 5.93023 14.4084 6.00834L8.20004 12.225L5.59171 9.60834C5.51127 9.53064 5.41632 9.46955 5.31227 9.42854C5.20823 9.38754 5.09713 9.36743 4.98531 9.36937C4.87349 9.3713 4.76315 9.39524 4.66058 9.43982C4.55802 9.4844 4.46524 9.54874 4.38754 9.62917C4.30984 9.70961 4.24875 9.80456 4.20774 9.9086C4.16674 10.0127 4.14663 10.1238 4.14856 10.2356C4.1505 10.3474 4.17444 10.4577 4.21902 10.5603C4.2636 10.6629 4.32794 10.7556 4.40837 10.8333L7.60837 14.0333C7.68584 14.1114 7.77801 14.1734 7.87956 14.2157C7.98111 14.2581 8.09003 14.2798 8.20004 14.2798C8.31005 14.2798 8.41897 14.2581 8.52052 14.2157C8.62207 14.1734 8.71424 14.1114 8.79171 14.0333L15.5917 7.23334C15.6763 7.1553 15.7438 7.06059 15.79 6.95518C15.8361 6.84976 15.86 6.73592 15.86 6.62084C15.86 6.50575 15.8361 6.39192 15.79 6.2865C15.7438 6.18108 15.6763 6.08637 15.5917 6.00834Z"
@@ -202,7 +202,7 @@
                                 </a>
                             </div>
 
-                            <div class="reviews">
+                            <div class="reviews view-map">
                                 <span>View on map</span>
                                 <svg width="24"
                                      height="24"
@@ -212,6 +212,20 @@
                                     <path d="M14.8297 11.29L10.5897 7.05001C10.4967 6.95628 10.3861 6.88189 10.2643 6.83112C10.1424 6.78035 10.0117 6.75421 9.8797 6.75421C9.74769 6.75421 9.61698 6.78035 9.49512 6.83112C9.37326 6.88189 9.26266 6.95628 9.1697 7.05001C8.98345 7.23737 8.87891 7.49082 8.87891 7.75501C8.87891 8.0192 8.98345 8.27265 9.1697 8.46001L12.7097 12L9.1697 15.54C8.98345 15.7274 8.87891 15.9808 8.87891 16.245C8.87891 16.5092 8.98345 16.7626 9.1697 16.95C9.26314 17.0427 9.37395 17.116 9.49579 17.1658C9.61763 17.2155 9.74809 17.2408 9.8797 17.24C10.0113 17.2408 10.1418 17.2155 10.2636 17.1658C10.3854 17.116 10.4963 17.0427 10.5897 16.95L14.8297 12.71C14.9234 12.617 14.9978 12.5064 15.0486 12.3846C15.0994 12.2627 15.1255 12.132 15.1255 12C15.1255 11.868 15.0994 11.7373 15.0486 11.6154C14.9978 11.4936 14.9234 11.383 14.8297 11.29Z"
                                           fill="#888888" />
                                 </svg>
+                            </div>
+
+                            <div class="map-wrap">
+                                <div id="map"></div>
+                                <div class="map-close">
+                                    <svg width="24"
+                                         height="24"
+                                         viewBox="0 0 24 24"
+                                         fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4099 11.9999L19.7099 5.70994C19.8982 5.52164 20.004 5.26624 20.004 4.99994C20.004 4.73364 19.8982 4.47825 19.7099 4.28994C19.5216 4.10164 19.2662 3.99585 18.9999 3.99585C18.7336 3.99585 18.4782 4.10164 18.2899 4.28994L11.9999 10.5899L5.70994 4.28994C5.52164 4.10164 5.26624 3.99585 4.99994 3.99585C4.73364 3.99585 4.47824 4.10164 4.28994 4.28994C4.10164 4.47825 3.99585 4.73364 3.99585 4.99994C3.99585 5.26624 4.10164 5.52164 4.28994 5.70994L10.5899 11.9999L4.28994 18.2899C4.19621 18.3829 4.12182 18.4935 4.07105 18.6154C4.02028 18.7372 3.99414 18.8679 3.99414 18.9999C3.99414 19.132 4.02028 19.2627 4.07105 19.3845C4.12182 19.5064 4.19621 19.617 4.28994 19.7099C4.3829 19.8037 4.4935 19.8781 4.61536 19.9288C4.73722 19.9796 4.86793 20.0057 4.99994 20.0057C5.13195 20.0057 5.26266 19.9796 5.38452 19.9288C5.50638 19.8781 5.61698 19.8037 5.70994 19.7099L11.9999 13.4099L18.2899 19.7099C18.3829 19.8037 18.4935 19.8781 18.6154 19.9288C18.7372 19.9796 18.8679 20.0057 18.9999 20.0057C19.132 20.0057 19.2627 19.9796 19.3845 19.9288C19.5064 19.8781 19.617 19.8037 19.7099 19.7099C19.8037 19.617 19.8781 19.5064 19.9288 19.3845C19.9796 19.2627 20.0057 19.132 20.0057 18.9999C20.0057 18.8679 19.9796 18.7372 19.9288 18.6154C19.8781 18.4935 19.8037 18.3829 19.7099 18.2899L13.4099 11.9999Z"
+                                              fill="black" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -487,6 +501,8 @@
 
 {% block scripts %}
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVVwSaUxTj6FZ3hp1oSjt03Lvc2ARMHkw&callback=initMap"></script>
     <script>
       const myCarousel = new Carousel(document.querySelector('#myCarousel'), {
         preload: 1
@@ -506,5 +522,217 @@
           }
         }
       });
+    </script>
+    <script>
+      let stylesMap = [
+        {
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#212121'
+            }
+          ]
+        },
+        {
+          'elementType': 'labels.icon',
+          'stylers': [
+            {
+              'visibility': 'off'
+            }
+          ]
+        },
+        {
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#757575'
+            }
+          ]
+        },
+        {
+          'elementType': 'labels.text.stroke',
+          'stylers': [
+            {
+              'color': '#212121'
+            }
+          ]
+        },
+        {
+          'featureType': 'administrative',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#757575'
+            }
+          ]
+        },
+        {
+          'featureType': 'administrative.country',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#9e9e9e'
+            }
+          ]
+        },
+        {
+          'featureType': 'administrative.land_parcel',
+          'stylers': [
+            {
+              'visibility': 'off'
+            }
+          ]
+        },
+        {
+          'featureType': 'administrative.locality',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#bdbdbd'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#757575'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi.park',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#181818'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi.park',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#616161'
+            }
+          ]
+        },
+        {
+          'featureType': 'poi.park',
+          'elementType': 'labels.text.stroke',
+          'stylers': [
+            {
+              'color': '#1b1b1b'
+            }
+          ]
+        },
+        {
+          'featureType': 'road',
+          'elementType': 'geometry.fill',
+          'stylers': [
+            {
+              'color': '#2c2c2c'
+            }
+          ]
+        },
+        {
+          'featureType': 'road',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#8a8a8a'
+            }
+          ]
+        },
+        {
+          'featureType': 'road.arterial',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#373737'
+            }
+          ]
+        },
+        {
+          'featureType': 'road.highway',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#3c3c3c'
+            }
+          ]
+        },
+        {
+          'featureType': 'road.highway.controlled_access',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#4e4e4e'
+            }
+          ]
+        },
+        {
+          'featureType': 'road.local',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#616161'
+            }
+          ]
+        },
+        {
+          'featureType': 'transit',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#757575'
+            }
+          ]
+        },
+        {
+          'featureType': 'water',
+          'elementType': 'geometry',
+          'stylers': [
+            {
+              'color': '#000000'
+            }
+          ]
+        },
+        {
+          'featureType': 'water',
+          'elementType': 'labels.text.fill',
+          'stylers': [
+            {
+              'color': '#3d3d3d'
+            }
+          ]
+        }
+      ];
+
+      function initMap() {
+        let pos = { lat: 24.466667, lng: 54.366669 };
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: pos,
+          zoom: 8,
+          styles: stylesMap
+        });
+
+        let marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          icon: '../static/images/mapsMarker.svg'
+        });
+
+        marker.addListener('click', function () {
+          info.open(map, marker);
+        });
+
+        google.maps.event.addListener(map, 'click', (event) => {
+          let location = event.latLng;
+          console.log(location.lat().toFixed(4) + ', ' + location.lng().toFixed(4));
+        });
+      }
     </script>
 {% endblock %}

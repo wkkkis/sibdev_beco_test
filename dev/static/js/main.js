@@ -297,23 +297,21 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   let toggle_class = $('.modal-announcement');
-  $('.announcement').click(function () {
+  $('.announcement, .modal-toggle-announcement').click(function () {
     toggle_class.toggleClass('is-visible');
   });
-  $('.modal-toggle-announcement').click(function () {
-    toggle_class.removeClass('is-visible');
-  });
+
   $('.tool-seller-btn').click(function () {
     if ($(this).hasClass('edit-announcement')) {
-      $('.modal-announcement').find('.modal-preview-wrap').fadeToggle('');
-      toggle_class.find('.modal-editmode-wrap').fadeToggle('');
-      $('.announcement-tools-preview').toggle();
-      $('.announcement-tools-editmode ').toggle();
+      toggle_class.find('.modal-preview-wrap').fadeOut('');
+      toggle_class.find('.modal-editmode-wrap').fadeIn('');
+      $('.announcement-tools-preview').hide();
+      $('.announcement-tools-editmode ').show();
     } else if ($(this).hasClass('cancel-edit')) {
-      $('.modal-announcement').find('.modal-preview-wrap').fadeToggle('');
-      $('.modal-editmode-wrap').fadeToggle('');
-      $('.announcement-tools-preview').toggle();
-      $('.announcement-tools-editmode ').toggle();
+      toggle_class.find('.modal-preview-wrap').fadeIn('');
+      toggle_class.find('.modal-editmode-wrap').fadeOut('');
+      $('.announcement-tools-preview').show();
+      $('.announcement-tools-editmode ').hide();
     }
   });
   $(toggle_class).find('.modal-footer-wrap').children('button').on('click', function () {
@@ -329,15 +327,15 @@ $(document).ready(function () {
   });
   $('.tool-seller-btn').click(function () {
     if ($(this).hasClass('edit-user-list')) {
-      $('.modal-user-list').find('.modal-preview-wrap').fadeToggle('');
-      user_list_modal.find('.modal-editmode-wrap').fadeToggle('');
-      $('.user-list-tools-preview').toggle();
-      $('.user-list-tools-editmode ').toggle();
+      user_list_modal.find('.modal-preview-wrap').fadeOut('');
+      user_list_modal.find('.modal-editmode-wrap').fadeIn('');
+      $('.user-list-tools-preview').hide();
+      $('.user-list-tools-editmode ').show();
     } else if ($(this).hasClass('cancel-edit')) {
-      $('.modal-user-list').find('.modal-preview-wrap').fadeToggle('');
-      $('.modal-editmode-wrap').fadeToggle('');
-      $('.user-list-tools-preview').toggle();
-      $('.user-list-tools-editmode ').toggle();
+      user_list_modal.find('.modal-preview-wrap').fadeIn('');
+      user_list_modal.find('.modal-editmode-wrap').fadeOut('');
+      $('.user-list-tools-preview').show();
+      $('.user-list-tools-editmode ').hide();
     }
   });
   $(user_list_modal).find('.modal-footer-wrap').children('button').on('click', function () {
@@ -492,10 +490,27 @@ $(document).ready(function () {
   $('.categories-add, .modal-toggle-add-category').on('click', function () {
     $('.modal-add-category').toggleClass('is-visible');
   });
+  $('.modal-add-category').find('input[type="file"]').on('change', function () {
+    let file = this.files[0];
+    let readerIcon = new FileReader();
+    readerIcon.onload = function (e) {
+      $('.modal-add-category').find('.icon').children('img').attr('src', e.target.result)
+      $('.modal-add-category').find('.icon').children('img').show()
+    };
+    readerIcon.readAsDataURL(file);
+  });
   $('.categories-edit, .modal-toggle-edit-category').on('click', function () {
     $('.modal-edit-category').toggleClass('is-visible');
   });
-
+  $('.modal-edit-category').find('input[type="file"]').on('change', function () {
+    let file = this.files[0];
+    let readerIcon = new FileReader();
+    readerIcon.onload = function (e) {
+      $('.modal-edit-category').find('.icon').children('img').attr('src', e.target.result)
+      $('.modal-edit-category').find('.icon').children('img').show()
+    };
+    readerIcon.readAsDataURL(file);
+  });
   $('.categories-remove, .modal-toggle-delete-category').on('click', function () {
     $('.modal-delete-category').toggleClass('is-visible');
     $('.select-category').show();
@@ -638,5 +653,21 @@ $(document).ready(function () {
   });
   $('.role_edit_tool, .modal-toggle-edit-role').on('click', function () {
     $('.modal-edit-role').toggleClass('is-visible');
+  });
+});
+
+$(document).ready(function () {
+  $('.view-map').click(function () {
+    $('.map-wrap').fadeIn();
+  });
+  $('.map-close').click(function () {
+    $('.map-wrap').fadeOut();
+  });
+
+  $('.view-map-editmode').click(function () {
+    $('.map-wrap-editmode').fadeIn();
+  });
+  $('.map-close-editmode').click(function () {
+    $('.map-wrap-editmode').fadeOut();
   });
 });

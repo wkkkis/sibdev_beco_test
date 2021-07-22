@@ -19,6 +19,9 @@
           .icon {
             margin-right: 12px;
             cursor: pointer;
+            position: relative;
+            width: 46px;
+            height: 46px;
             display: block;
 
             svg {
@@ -27,6 +30,28 @@
               border-radius: 12px;
               margin-top: 8px;
               cursor: pointer;
+            }
+
+            img{
+              width: 46.5px;
+              height: 46.5px;
+              object-fit: cover;
+              border-radius: 12px;
+              left: 0;
+              top: 25px;
+              display: none;
+              position: absolute;
+              border: 1px solid #DDDDDD;
+            }
+
+            input[type="file"]{
+              width: 46px;
+              height: 46px;
+              opacity: 0;
+              z-index: 5;
+              position: absolute;
+              left: 0;
+              top: 25px;
             }
           }
 

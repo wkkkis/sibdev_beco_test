@@ -1037,6 +1037,9 @@ input[type="radio"]:checked + label:after {
   .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .icon, .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .icon {
     margin-right: 12px;
     cursor: pointer;
+    position: relative;
+    width: 46px;
+    height: 46px;
     display: block; }
     .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .icon svg, .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .icon svg {
       padding: 10px;
@@ -1044,6 +1047,24 @@ input[type="radio"]:checked + label:after {
       border-radius: 12px;
       margin-top: 8px;
       cursor: pointer; }
+    .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .icon img, .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .icon img {
+      width: 46.5px;
+      height: 46.5px;
+      object-fit: cover;
+      border-radius: 12px;
+      left: 0;
+      top: 25px;
+      display: none;
+      position: absolute;
+      border: 1px solid #DDDDDD; }
+    .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .icon input[type="file"], .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .icon input[type="file"] {
+      width: 46px;
+      height: 46px;
+      opacity: 0;
+      z-index: 5;
+      position: absolute;
+      left: 0;
+      top: 25px; }
   .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .category-name-input-wrap, .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .category-name-input-wrap {
     margin-bottom: 10px; }
     .categories-wrap-main .categories-content .categories-modal-block .modal-add-category .modal-content .category-name-input-wrap .input_custom .category-name, .categories-wrap-main .categories-content .categories-modal-block .modal-edit-category .modal-content .category-name-input-wrap .input_custom .category-name {
@@ -2068,6 +2089,27 @@ input[type="radio"]:checked + label:after {
               border: none; }
             .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .reviews svg, .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .reviews svg, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .reviews svg, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .reviews svg, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .reviews svg, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .reviews svg, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .reviews svg, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .reviews svg {
               margin-right: 8px; }
+          .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap, .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap {
+            position: absolute;
+            width: calc(100% - 40px);
+            height: 600px;
+            display: none;
+            left: 20px;
+            border-radius: 12px;
+            top: 580px; }
+            .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap #map, .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap #map, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap #map, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap #map, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap #map, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap #map, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap #map, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap #map {
+              width: 100%;
+              height: 100%;
+              border-radius: 12px; }
+            .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close, .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close {
+              position: absolute;
+              padding: 4.5px 4.5px 0 4.5px;
+              background: #EEEEEE;
+              border-radius: 4px;
+              top: 20px;
+              left: 20px; }
+              .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close svg, .modal-announcement .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close svg, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close svg, .modal-announcement .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close svg, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close svg, .modal-user-list .modal-wrapper .announcement-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close svg, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .announcement-location .map-wrap .map-close svg, .modal-user-list .modal-wrapper .user-list-description-wrap .seller-about-wrap .user-list-location .map-wrap .map-close svg {
+                margin: 0; }
       .modal-announcement .modal-wrapper .announcement-description-wrap .announcement-description, .modal-announcement .modal-wrapper .announcement-description-wrap .user-list-description, .modal-announcement .modal-wrapper .user-list-description-wrap .announcement-description, .modal-announcement .modal-wrapper .user-list-description-wrap .user-list-description, .modal-user-list .modal-wrapper .announcement-description-wrap .announcement-description, .modal-user-list .modal-wrapper .announcement-description-wrap .user-list-description, .modal-user-list .modal-wrapper .user-list-description-wrap .announcement-description, .modal-user-list .modal-wrapper .user-list-description-wrap .user-list-description {
         width: 380px;
         border: 1px solid #DDDDDD;
@@ -2150,265 +2192,289 @@ input[type="radio"]:checked + label:after {
           width: 163px;
           height: 44px;
           margin-left: 20px; }
-  .modal-announcement .modal-editmode-wrap .accept-photos, .modal-user-list .modal-editmode-wrap .accept-photos {
-    display: flex;
-    margin-bottom: 70px; }
-    .modal-announcement .modal-editmode-wrap .accept-photos__main-photos, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos {
+  .modal-announcement .modal-editmode-wrap, .modal-user-list .modal-editmode-wrap {
+    display: none; }
+    .modal-announcement .modal-editmode-wrap .accept-photos, .modal-user-list .modal-editmode-wrap .accept-photos {
       display: flex;
-      background: #F9F9F9;
-      position: relative;
-      width: 380px;
-      height: 244px;
-      margin-right: 20px;
-      overflow: hidden;
-      transition: all .3s ease;
-      cursor: pointer;
-      border-radius: 12px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos svg, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos svg {
-        margin-right: 10px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos span, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos span {
-        color: #888888;
-        font-size: 16px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos input[type="file"], .modal-user-list .modal-editmode-wrap .accept-photos__main-photos input[type="file"] {
-        opacity: 0;
-        cursor: pointer; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn {
-        z-index: 10;
-        padding-top: 10px;
-        width: 100%;
+      margin-bottom: 70px; }
+      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos {
         display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        justify-content: space-between;
-        align-items: center;
-        visibility: hidden; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn span, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn span {
-          padding-right: 12px;
-          padding-left: 12px;
-          background: #171717;
-          border-radius: 12px;
-          color: white;
-          font-weight: 600;
-          margin-left: 10px; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn svg, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn svg {
-          padding: 6px;
-          background: #171717;
-          border-radius: 50%; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .profile-pic, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .profile-pic {
-        height: 100%;
-        width: 100%;
-        transition: all .3s ease;
-        border: none;
-        visibility: hidden;
-        z-index: 3;
-        position: absolute;
-        cursor: pointer; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .upload-button, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .upload-button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer; }
-    .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos {
-      display: flex;
-      margin-bottom: 15px;
-      margin-top: 0;
-      padding: 0;
-      width: 800px;
-      overflow-x: scroll; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li {
-        position: relative;
-        min-width: 120px;
-        max-width: 120px;
-        min-height: 120px;
-        max-height: 120px;
         background: #F9F9F9;
-        border-radius: 12px;
+        position: relative;
+        width: 380px;
+        height: 244px;
         margin-right: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li .close-photos-btn, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li .close-photos-btn {
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          padding: 6px;
-          background: #171717;
-          border-radius: 50%;
-          z-index: 10;
-          cursor: pointer;
-          visibility: hidden; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li input[type="file"], .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li input[type="file"] {
+        overflow: hidden;
+        transition: all .3s ease;
+        cursor: pointer;
+        border-radius: 12px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos svg, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos svg {
+          margin-right: 10px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos span, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos span {
+          color: #888888;
+          font-size: 16px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos input[type="file"], .modal-user-list .modal-editmode-wrap .accept-photos__main-photos input[type="file"] {
           opacity: 0;
+          cursor: pointer; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn {
+          z-index: 10;
+          padding-top: 10px;
           width: 100%;
-          height: 100%;
-          cursor: pointer;
+          display: flex;
           position: absolute;
           top: 0;
-          left: 0; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li svg, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li svg {
-          position: absolute; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li img, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li img {
-          width: 120px;
-          height: 120px;
+          left: 0;
+          justify-content: space-between;
+          align-items: center;
+          visibility: hidden; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn span, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn span {
+            padding-right: 12px;
+            padding-left: 12px;
+            background: #171717;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            margin-left: 10px; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn svg, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .about-image-close-btn svg {
+            padding: 6px;
+            background: #171717;
+            border-radius: 50%; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .profile-pic, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .profile-pic {
+          height: 100%;
+          width: 100%;
+          transition: all .3s ease;
+          border: none;
           visibility: hidden;
-          object-fit: cover;
-          border-radius: 12px;
+          z-index: 3;
           position: absolute;
-          z-index: 5; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar {
-        width: 10px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-track, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-track {
-        background-color: white; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb {
-        background-color: #DDDDDD;
-        border: 8px solid white;
-        cursor: pointer;
-        border-radius: 10px; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb:hover, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb:hover {
-          background-color: #171717; }
-    .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option {
-      background: #171717;
-      padding: 10px;
-      width: 392px;
-      border-radius: 12px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option button, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option button {
-        border: none;
-        padding: 6px 10px 6px 10px;
-        color: white;
-        font-size: 13px;
-        background: #4D4D4D;
-        border-radius: 6px;
-        margin-top: 10px; }
-      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox {
-        display: flex;
-        position: relative;
-        justify-content: space-between; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span {
-          color: white;
-          font-size: 16px; }
-          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span:last-child, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span:last-child {
-            font-size: 13px;
-            color: #888888; }
-        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"], .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"] {
-          background: white; }
-          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"]:after, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"]:after {
-            background: #171717; }
-  .modal-announcement .modal-editmode-wrap .announcement-edit-option, .modal-announcement .modal-editmode-wrap .user-list-edit-option, .modal-user-list .modal-editmode-wrap .announcement-edit-option, .modal-user-list .modal-editmode-wrap .user-list-edit-option {
-    width: 800px;
-    margin: 0 auto; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .label-for-drop, .modal-announcement .modal-editmode-wrap .user-list-edit-option .label-for-drop, .modal-user-list .modal-editmode-wrap .announcement-edit-option .label-for-drop, .modal-user-list .modal-editmode-wrap .user-list-edit-option .label-for-drop {
-      margin-top: 5px;
-      margin-bottom: 10px; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-select {
-      display: grid;
-      grid-template-columns: calc(50% - 10px) calc(50% - 10px);
-      grid-gap: 20px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-select .select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-select .select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-select .select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-select .select {
-        width: 100%;
-        margin-top: 10px; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #DDDDDD; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea {
-        font-family: "Cabin", sans-serif;
-        padding: 13px 14px 13px 14px;
-        border-radius: 12px;
-        border: 1px solid #DDDDDD;
-        resize: none;
-        outline: none;
-        height: 160px;
-        font-size: 17px; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea::-webkit-input-placeholder {
-          color: #888888; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap {
-      display: flex;
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #DDDDDD; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox {
-        margin-left: 30px; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div {
-          height: 70%;
-          display: flex;
-          align-items: center; }
-          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div .wrapper label {
-            margin-left: 20px; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap {
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #DDDDDD;
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-gap: 20px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .select {
-        width: 100%;
-        margin-top: 10px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom label {
-        margin-bottom: 11px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location {
-        position: relative; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location input {
-          width: calc(100% - 74px); }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location svg {
-          position: absolute;
-          right: 26px;
-          top: 20%; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap {
-      display: grid;
-      grid-template-columns: 50% calc(50% - 20px);
-      grid-gap: 20px;
-      padding-bottom: 30px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #DDDDDD; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .links-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .links-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .links-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .links-wrap {
-        padding: 0;
-        margin: 0; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom label {
-        margin-bottom: 11px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link {
-        position: relative; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link input {
-          width: calc(100% - 54px); }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link svg {
-          position: absolute;
-          right: 9px;
-          top: 20%;
           cursor: pointer; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap {
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        padding-top: 27px; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap button, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap button, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap button, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap button {
-          width: 219px;
-          height: 46px; }
-    .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-gap: 20px; }
-      .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active {
-        margin-top: 25px;
-        border: 1px solid #DDDDDD;
-        box-sizing: border-box;
-        border-radius: 12px; }
-        .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active__number {
-          border-bottom: 1px solid #DDDDDD;
-          padding-left: 14px;
-          height: 56px;
-          padding-right: 13px;
+        .modal-announcement .modal-editmode-wrap .accept-photos__main-photos .upload-button, .modal-user-list .modal-editmode-wrap .accept-photos__main-photos .upload-button {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
           display: flex;
           align-items: center;
-          font-weight: bold;
+          justify-content: center;
+          cursor: pointer; }
+      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos {
+        display: flex;
+        margin-bottom: 15px;
+        margin-top: 0;
+        padding: 0;
+        width: 800px;
+        overflow-x: scroll; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li {
+          position: relative;
+          min-width: 120px;
+          max-width: 120px;
+          min-height: 120px;
+          max-height: 120px;
+          background: #F9F9F9;
+          border-radius: 12px;
+          margin-right: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li .close-photos-btn, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li .close-photos-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 6px;
+            background: #171717;
+            border-radius: 50%;
+            z-index: 10;
+            cursor: pointer;
+            visibility: hidden; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li input[type="file"], .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li input[type="file"] {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li svg, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li svg {
+            position: absolute; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos li img, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos li img {
+            width: 120px;
+            height: 120px;
+            visibility: hidden;
+            object-fit: cover;
+            border-radius: 12px;
+            position: absolute;
+            z-index: 5; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar {
+          width: 10px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-track, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-track {
+          background-color: white; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb {
+          background-color: #DDDDDD;
+          border: 8px solid white;
+          cursor: pointer;
+          border-radius: 10px; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb:hover, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .all-photos::-webkit-scrollbar-thumb:hover {
+            background-color: #171717; }
+      .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option {
+        background: #171717;
+        padding: 10px;
+        width: 392px;
+        border-radius: 12px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option button, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option button {
+          border: none;
+          padding: 6px 10px 6px 10px;
+          color: white;
+          font-size: 13px;
+          background: #4D4D4D;
+          border-radius: 6px;
+          margin-top: 10px; }
+        .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox {
+          display: flex;
+          position: relative;
           justify-content: space-between; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span {
+            color: white;
+            font-size: 16px; }
+            .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span:last-child, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox span:last-child {
+              font-size: 13px;
+              color: #888888; }
+          .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"], .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"] {
+            background: white; }
+            .modal-announcement .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"]:after, .modal-user-list .modal-editmode-wrap .accept-photos__all-options .about-account-option .description-with-checkbox .wrapper input[type="checkbox"]:after {
+              background: #171717; }
+    .modal-announcement .modal-editmode-wrap .announcement-edit-option, .modal-announcement .modal-editmode-wrap .user-list-edit-option, .modal-user-list .modal-editmode-wrap .announcement-edit-option, .modal-user-list .modal-editmode-wrap .user-list-edit-option {
+      width: 800px;
+      margin: 0 auto; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .label-for-drop, .modal-announcement .modal-editmode-wrap .user-list-edit-option .label-for-drop, .modal-user-list .modal-editmode-wrap .announcement-edit-option .label-for-drop, .modal-user-list .modal-editmode-wrap .user-list-edit-option .label-for-drop {
+        margin-top: 5px;
+        margin-bottom: 10px; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-select {
+        display: grid;
+        grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+        grid-gap: 20px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-select .select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-select .select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-select .select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-select .select {
+          width: 100%;
+          margin-top: 10px; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #DDDDDD; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea {
+          font-family: "Cabin", sans-serif;
+          padding: 13px 14px 13px 14px;
+          border-radius: 12px;
+          border: 1px solid #DDDDDD;
+          resize: none;
+          outline: none;
+          height: 160px;
+          font-size: 17px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-description-wrap textarea::-webkit-input-placeholder, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-description-wrap textarea::-webkit-input-placeholder {
+            color: #888888; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap {
+        display: flex;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #DDDDDD; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox {
+          margin-left: 30px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div {
+            height: 70%;
+            display: flex;
+            align-items: center; }
+            .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-price-wrap .price-checkbox div .wrapper label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-price-wrap .price-checkbox div .wrapper label {
+              margin-left: 20px; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #DDDDDD;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .select, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .select, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .select, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .select {
+          width: 100%;
+          margin-top: 10px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom label {
+          margin-bottom: 11px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location {
+          position: relative; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location input, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location input {
+            width: calc(100% - 74px); }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .input_custom .edit-location svg, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .input_custom .edit-location svg {
+            position: absolute;
+            right: 26px;
+            top: 20%; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode {
+          position: absolute;
+          width: calc(100% - 40px);
+          height: 600px;
+          display: none;
+          left: 20px;
+          z-index: 1000;
+          border-radius: 12px;
+          top: 580px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode #map2, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode #map2, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode #map2, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode #map2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode {
+            position: absolute;
+            padding: 4.5px 4.5px 0 4.5px;
+            background: #EEEEEE;
+            border-radius: 4px;
+            top: 20px;
+            left: 20px; }
+            .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode svg, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode svg, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode svg, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-city-wrap .map-wrap-editmode .map-close-editmode svg {
+              margin: 0; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap {
+        display: grid;
+        grid-template-columns: 50% calc(50% - 20px);
+        grid-gap: 20px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #DDDDDD; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .links-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .links-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .links-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .links-wrap {
+          padding: 0;
+          margin: 0; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom label, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom label, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom label {
+          margin-bottom: 11px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link {
+          position: relative; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link input, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link input {
+            width: calc(100% - 54px); }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .input_custom .edit-link svg, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .input_custom .edit-link svg {
+            position: absolute;
+            right: 9px;
+            top: 20%;
+            cursor: pointer; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap {
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          padding-top: 27px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap button, .modal-announcement .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap button, .modal-user-list .modal-editmode-wrap .announcement-edit-option .edit-link-wrap .button-link-wrap button, .modal-user-list .modal-editmode-wrap .user-list-edit-option .edit-link-wrap .button-link-wrap button {
+            width: 219px;
+            height: 46px; }
+      .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px; }
+        .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active {
+          margin-top: 25px;
+          border: 1px solid #DDDDDD;
+          box-sizing: border-box;
+          border-radius: 12px; }
+          .modal-announcement .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-announcement .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-user-list .modal-editmode-wrap .announcement-edit-option .communication-edit-wrap .toggle-phone-active__number, .modal-user-list .modal-editmode-wrap .user-list-edit-option .communication-edit-wrap .toggle-phone-active__number {
+            border-bottom: 1px solid #DDDDDD;
+            padding-left: 14px;
+            height: 56px;
+            padding-right: 13px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: space-between; }
 
 .modal-create-document .modal-wrapper {
   top: 40px;
