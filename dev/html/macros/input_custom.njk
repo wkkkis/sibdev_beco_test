@@ -1,11 +1,10 @@
-{% macro field(label, type, placeholder, width, name) %}
+{% macro field(label, type, placeholder, name) %}
     <div class="input_custom">
         <label class="text-15" for="{{ name }}">{{ label }}</label>
         <div class="input-with-clear {{ name }}">
             <input id="{{ name }}" name="{{ name }}"
                    type="{{ type }}"
-                   placeholder="{{ placeholder }}"
-                   style="width: {{ width }}">
+                   placeholder="{{ placeholder }}">
 
             <svg width="24"
                  class="svg-clear-toggle"

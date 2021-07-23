@@ -19,13 +19,15 @@
                         <span>Tools :</span>
                     </div>
                     <div class="tool-bar__links">
-                        {{ block("122px") }}
-                        {{ unblock("153px") }}
-                        {{ export("143px") }}
-                        {{ remove("97px") }}
+                        {{ block() }}
+                        {{ unblock() }}
+                        {{ export() }}
+                        {{ remove() }}
                     </div>
                     <div class="tool-bar__modal">
+
                         {% include "blocks/export_excel.njk" %}
+
                         <div class="modal modal-block">
                             <div class="modal-overlay modal-toggle-block"></div>
                             <div class="modal-wrapper modal-transition">
@@ -82,12 +84,13 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        <div id="userid" class="options-users userid light" style="min-width: 112px">
+                        <div id="userid" class="options-users userid light">
                             <span>UserID</span>
                             <div>
                                 <svg width="24"
                                      height="24"
                                      viewBox="0 0 24 24"
+                                     class="sort-svg"
                                      fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 2H5C4.20435 2 3.44129 2.31607 2.87868 2.87868C2.31607 3.44129 2 4.20435 2 5V6.17C1.99986 6.58294 2.08497 6.99147 2.25 7.37V7.43C2.39128 7.75097 2.59139 8.04266 2.84 8.29L9 14.41V21C8.99966 21.1699 9.04264 21.3372 9.12487 21.4859C9.20711 21.6346 9.32589 21.7599 9.47 21.85C9.62914 21.9486 9.81277 22.0006 10 22C10.1565 21.9991 10.3107 21.9614 10.45 21.89L14.45 19.89C14.6149 19.8069 14.7536 19.6798 14.8507 19.5227C14.9478 19.3656 14.9994 19.1847 15 19V14.41L21.12 8.29C21.3686 8.04266 21.5687 7.75097 21.71 7.43V7.37C21.8888 6.99443 21.9876 6.58578 22 6.17V5C22 4.20435 21.6839 3.44129 21.1213 2.87868C20.5587 2.31607 19.7956 2 19 2ZM13.29 13.29C13.1973 13.3834 13.124 13.4943 13.0742 13.6161C13.0245 13.7379 12.9992 13.8684 13 14V18.38L11 19.38V14C11.0008 13.8684 10.9755 13.7379 10.9258 13.6161C10.876 13.4943 10.8027 13.3834 10.71 13.29L5.41 8H18.59L13.29 13.29ZM20 6H4V5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V6Z"
@@ -107,10 +110,8 @@
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("User ID", "text", "From", "112px", "from_id_input") }}
-                                </div>
-                                {{ field("", "text", "To", "112px", "to-id-input") }}
+                                {{ field("User ID", "text", "From", "from_id_input") }}
+                                {{ field("", "text", "To", "to-id-input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -121,12 +122,12 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Name / Surname", "232px", "name") }}
+                        {{ options_sort("Name / Surname", "name") }}
                         <div class="name-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("Name", "text", "Enter name", "275px", "from_name_input") }}
-                            {{ field("Surname", "text", "Enter surname", "275px", "to_name_input") }}
+                            {{ field("Name", "text", "Enter name", "from_name_input") }}
+                            {{ field("Surname", "text", "Enter surname", "to_name_input") }}
                             <div class="option-sort-button">
                                 <div class="reset-btn">
                                     {{ button("Reset filter", "light", "button", "reset_name", "text-15") }}
@@ -136,11 +137,11 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Nickname", "182px", "nick") }}
+                        {{ options_sort("Nickname", "nick") }}
                         <form action="#" class="nick-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("Nickname", "text", "Enter nickname", "275px", "nick_input") }}
+                            {{ field("Nickname", "text", "Enter nickname", "nick_input") }}
                             <div class="options-checkbox text-15">
                                 <div class="complete-checkbox">
                                     <input type="radio" id="test1" name="radio-group" checked>
@@ -160,11 +161,11 @@
                         </form>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("E Mail", "182px", "email") }}
+                        {{ options_sort("E Mail", "email") }}
                         <form action="#" class="email-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("E-mail", "text", "Enter E-main", "275px", "email_input") }}
+                            {{ field("E-mail", "text", "Enter E-mail", "email_input") }}
                             <div class="options-checkbox">
                                 <div class="complete-checkbox text-15">
                                     <input type="radio" id="test3" name="radio-group" checked>
@@ -184,7 +185,7 @@
                         </form>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("City", "132px", "city") }}
+                        {{ options_sort("City", "city") }}
                         <div class="city-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -208,11 +209,11 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Phone", "132px", "phone") }}
+                        {{ options_sort("Phone", "phone") }}
                         <form class="phone-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("Phone", "text", "Enter phone", "275px", "phone_input") }}
+                            {{ field("Phone", "text", "Enter phone", "phone_input") }}
                             <div class="options-checkbox">
                                 <div class="complete-checkbox">
                                     <input type="radio" id="test5" name="radio-group" checked>
@@ -232,21 +233,18 @@
                         </form>
                     </div>
                     <div class="sort-block">
-                        <div id="{{ id }}" class="options-users-without-disabled light disabled"
-                             style="min-width: 132px">
+                        <div class="options-users-without-disabled light disabled">
                             <span>Social media</span>
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Rating", "112px", "rating") }}
+                        {{ options_sort("Rating", "rating") }}
                         <div class="rating-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Ratging", "text", "From 0.00", "112px", "from_rating_input") }}
-                                </div>
-                                {{ field("", "text", "To 5.00", "112px", "to_rating_input") }}
+                                {{ field("Ratging", "text", "From 0.00", "from_rating_input") }}
+                                {{ field("", "text", "To 5.00", "to_rating_input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -257,17 +255,15 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Registraton", "132px", "register") }}
+                        {{ options_sort("Registraton", "register") }}
                         <div class="register-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    <input placeholder="From"
-                                           type="text"
-                                           onfocus="(this.type = 'date')"
-                                           id="date_from_input">
-                                </div>
+                                <input placeholder="From"
+                                       type="text"
+                                       onfocus="(this.type = 'date')"
+                                       id="date_from_input">
                                 <input placeholder="To"
                                        type="text"
                                        onfocus="(this.type = 'date')"
@@ -285,7 +281,7 @@
 
                 <div class="users-data">
                     {% for i in range(1, 15) %}
-                        <div class="user" >
+                        <div class="user">
                             <div class="checkbox-custom user-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"

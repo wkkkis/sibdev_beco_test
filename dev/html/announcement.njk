@@ -28,10 +28,10 @@
                         <span>tools:</span>
                     </div>
                     <div class="tool-bar__links">
-                        {{ active('105px') }}
-                        {{ deactive('119px') }}
-                        {{ export("142px") }}
-                        {{ remove('97px') }}
+                        {{ active() }}
+                        {{ deactive() }}
+                        {{ export() }}
+                        {{ remove() }}
                     </div>
                     <div class="tool-bar__modal">
                         {% include "blocks/export_excel.njk" %}
@@ -93,15 +93,13 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Ad ID", "132px", "id") }}
+                        {{ options_sort("Ad ID", "id") }}
                         <div class="id-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("User ID", "text", "From", "112px", "from_id_input") }}
-                                </div>
-                                {{ field("", "text", "To", "112px", "to_id_input") }}
+                                {{ field("User ID", "text", "From", "from_id_input") }}
+                                {{ field("", "text", "To", "to_id_input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -112,7 +110,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Ad title", "232px", "title") }}
+                        {{ options_sort("Ad title", "title") }}
                         <div class="title-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -126,17 +124,15 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Subm. (Mod)", "142px", "subm") }}
+                        {{ options_sort("Subm. (Mod)", "subm") }}
                         <div class="subm-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    <input placeholder="From"
-                                           type="text"
-                                           onfocus="(this.type = 'date')"
-                                           id="date_from_input">
-                                </div>
+                                <input placeholder="From"
+                                       type="text"
+                                       onfocus="(this.type = 'date')"
+                                       id="date_from_input">
                                 <input placeholder="To"
                                        type="text"
                                        onfocus="(this.type = 'date')"
@@ -151,7 +147,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Author", "182px", "author") }}
+                        {{ options_sort("Author", "author") }}
                         <div class="author-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -165,14 +161,12 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Price", "102px", "price") }}
+                        {{ options_sort("Price", "price") }}
                         <div class="price-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Price", "text", "From", "112px", "from_price_input") }}
-                                </div>
+                                {{ field("Price", "text", "From", "112px", "from_price_input") }}
                                 {{ field("", "text", "To", "112px", "to-price-input") }}
                             </div>
                             <div class="options-checkbox text-15">
@@ -190,7 +184,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("City", "132px", "city") }}
+                        {{ options_sort("City", "city") }}
                         <div class="city-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -214,7 +208,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Category > Subcategory", "202px", "category") }}
+                        {{ options_sort("Category > Subcategory", "category") }}
                         <div class="category-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -253,7 +247,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Status", "102px", "status") }}
+                        {{ options_sort("Status", "status") }}
                         <div class="status-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -279,7 +273,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Type", "102px", "type") }}
+                        {{ options_sort("Type", "type") }}
                         <div class="type-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -338,6 +332,11 @@
                             </div>
                         </div>
                     {% endfor %}
+                </div>
+                <div class="announcement-rounded-table">
+                    <table class="table-bordered">
+
+                    </table>
                 </div>
             </div>
             <div class="modals">

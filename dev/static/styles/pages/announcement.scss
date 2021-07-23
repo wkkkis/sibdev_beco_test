@@ -43,7 +43,9 @@
     }
 
     .announcement-sort {
-      display: flex;
+      display: grid;
+      grid-template-columns: 46px 152px 252px 162px 202px 122px 152px 222px 122px 122px;
+      grid-gap: 5px;
       margin-bottom: 10px;
 
       .sort-block {
@@ -64,7 +66,6 @@
       }
 
       .all-checkbox {
-        margin-right: 5px;
         border-radius: 6px;
         padding-right: 12px;
         padding-top: 10px;

@@ -19,7 +19,7 @@
                         <span>Tools :</span>
                     </div>
                     <div class="tool-bar__links categories-tools">
-                        <button class="tool-categories-btn categories-add button" style="width: 133px;">
+                        <button class="tool-categories-btn categories-add button">
                             <svg width="20"
                                  height="20"
                                  viewBox="0 0 20 20"
@@ -30,9 +30,9 @@
                             </svg>
                             <span>Add category</span>
                         </button>
-                        {{ edit("88px", "categories-edit") }}
-                        {{ export("143px") }}
-                        {{ remove("97px", "categories-remove") }}
+                        {{ edit("categories-edit") }}
+                        {{ export() }}
+                        {{ remove("categories-remove") }}
                     </div>
                     <div class="categories-modal-block">
                         {% include "blocks/export_excel.njk" %}
@@ -70,8 +70,8 @@
                                             </svg>
                                             <input type="file" accept="image/*">
                                         </div>
-                                        <div class="category-name-input-wrap">
-                                            {{ field("Category name", "text", "Enter category name", "370px", "to-photo-input") }}
+                                        <div class="category-name">
+                                            {{ field("Category name", "text", "Enter category name", "to-photo-input") }}
                                             <div>
                                                 <label class="label-for-drop">Type of category</label>
                                                 <select id="category_type-select" class="select">
@@ -136,7 +136,7 @@
                                             <input type="file" accept="image/*">
                                         </div>
                                         <div class="category-name">
-                                            {{ field("Category name", "text", "Enter category name", "370px", "edit_category_name") }}
+                                            {{ field("Category name", "text", "Enter category name", "edit_category_name") }}
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -193,7 +193,7 @@
                                             </select>
                                         </div>
                                         <div class="enter-category-name-input" style="display: none">
-                                            {{ field("To confirm the deletion, enter the name of the category to be deleted", "text", "Enter category name", "430px", "delete_category_name_input") }}
+                                            {{ field("To confirm the deletion, enter the name of the category to be deleted", "text", "Enter category name", "delete_category_name_input") }}
                                         </div>
                                         <div class="modal-time-about about-category-delete text-15"
                                              style="display: none">
@@ -280,7 +280,7 @@
 
                                 <div class="modal-body">
                                     <div class="modal-content">
-                                        {{ field('Subcategory name', "text", "Enter Subcategory name", "430px", "add_subs_name") }}
+                                        {{ field('Subcategory name', "text", "Enter Subcategory name", "add_subs_name") }}
                                     </div>
                                     <div class="modal-footer">
                                         <div class="modal-error">
@@ -317,7 +317,7 @@
 
                                 <div class="modal-body">
                                     <div class="modal-content">
-                                        {{ field('Subcategory name', "text", "Enter Subcategory name", "430px", "add_subs_edit") }}
+                                        {{ field('Subcategory name', "text", "Enter Subcategory name", "add_subs_edit") }}
                                     </div>
                                     <div class="modal-footer">
                                         <div class="modal-error">
@@ -346,11 +346,11 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Category name", "262px", "name") }}
+                        {{ options_sort("Category name", "name") }}
                         <div class="name-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("Category name", "text", "Input name", "275px", "category_name") }}
+                            {{ field("Category name", "text", "Input name", "category_name") }}
                             <div class="option-sort-button">
                                 <div class="reset-btn">
                                     {{ button("Reset filter", "light", "button", "reset_name", "text-15") }}
@@ -360,12 +360,12 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Created", "112px", "created") }}
+                        {{ options_sort("Created", "created") }}
                         <div class="created-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
+                                <div>
                                     <label class="label-for-drop">Created</label>
                                     <input placeholder="From"
                                            type="text"
@@ -386,7 +386,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Subcategories", "152px", "subs") }}
+                        {{ options_sort("Subcategories", "subs") }}
                         <div class="subs-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -410,15 +410,13 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Announcements", "162px", "announcements") }}
+                        {{ options_sort("Announcements", "announcements") }}
                         <div class="announcements-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Announcements ", "text", "From (Range)", "150px", "from_announcement_input") }}
-                                </div>
-                                {{ field("", "text", "To (Range)", "150px", "to_announcement_input") }}
+                                {{ field("Announcements ", "text", "From (Range)", "from_announcement_input") }}
+                                {{ field("", "text", "To (Range)", "to_announcement_input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -431,7 +429,7 @@
 
                 </div>
                 <div class="categories-data data-line">
-                    {% for i in range(1, 15) %}
+                    {% for i in range(1, 5) %}
                         <div class="categories">
                             <div class="categories-line">
                                 <div class="checkbox-custom categories-checkbox">
@@ -530,8 +528,7 @@
                                     </div>
                                 </div>
                                 <div class="subcategories-tools">
-                                    <button class="tool-subcategories-btn subs-add button"
-                                            style="width: 157px;">
+                                    <button class="tool-subcategories-btn subs-add button">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -543,8 +540,7 @@
                                         <span>Add subcategory</span>
                                     </button>
                                     <button disabled
-                                            class="tool-subcategories-btn subs-edit button disabled"
-                                            style="width: 157px;">
+                                            class="tool-subcategories-btn subs-edit button disabled">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -556,8 +552,7 @@
                                         <span>Edit subcategory</span>
                                     </button>
                                     <button disabled
-                                            class="tool-subcategories-btn subs-remove button disabled"
-                                            style="width: 171px;">
+                                            class="tool-subcategories-btn subs-remove button disabled">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"

@@ -1044,42 +1044,12 @@
       .modal-content {
 
         .document-input {
-          display: flex;
+          display: grid;
+          grid-template-columns: 400px 400px;
+          grid-gap: 10px;
 
-          .input_custom {
-            margin-right: 10px;
-
-            .document-enter-name {
-              width: 430px;
-              position: relative;
-
-              input {
-                width: calc(100% - 55px);
-              }
-
-              svg {
-                position: absolute;
-                top: 20%;
-                right: 11px;
-                transform: rotate(360deg);
-              }
-            }
-
-            .document-enter-link {
-              width: 430px;
-              position: relative;
-
-              input {
-                width: calc(100% - 55px);
-              }
-
-              svg {
-                position: absolute;
-                top: 20%;
-                right: 11px;
-                transform: rotate(360deg);
-              }
-            }
+          input[type="text"] {
+            width: calc(400px - 54px);
           }
         }
 

@@ -46,7 +46,9 @@
     .documents-wrap {
 
       .documents-sort {
-        display: flex;
+        display: grid;
+        grid-template-columns: 46px 202px 132px 385px;
+        grid-gap: 5px;
         margin-bottom: 10px;
 
         .sort-block {
@@ -54,20 +56,10 @@
         }
 
         .all-checkbox {
-          margin-right: 5px;
           border-radius: 6px;
           padding-right: 12px;
           padding-top: 10px;
           padding-left: 10px;
-        }
-
-        .settings-btn {
-          margin-right: 5px;
-          border-radius: 6px;
-          padding-right: 10px;
-          padding-top: 10px;
-          padding-left: 10px;
-          cursor: pointer;
         }
       }
 

@@ -299,6 +299,7 @@ $(document).ready(function () {
   let toggle_class = $('.modal-announcement');
   $('.announcement, .modal-toggle-announcement').click(function () {
     toggle_class.toggleClass('is-visible');
+    $('.announcement-tools-editmode ').hide();
     let photos_length = toggle_class.find('.announcement-all-images').children('*').length
     if(photos_length > 5){
       let hidden_photos = (`
@@ -333,7 +334,7 @@ $(document).ready(function () {
   let user_list_modal = $('.modal-user-list');
   $('.user-marketplace, .modal-toggle-user-list').click(function () {
     user_list_modal.toggleClass('is-visible');
-
+    $('.user-list-tools-editmode ').hide();
     let photos_length = user_list_modal.find('.user-list-all-images').children('*').length
     if(photos_length > 5) {
       let hidden_photos = (`

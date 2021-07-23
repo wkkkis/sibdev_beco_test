@@ -21,7 +21,7 @@
                         <div class="tool-bar__links">
                             <div class="tool-with-close-save-btn">
                                 <div class="save-close">
-                                    <button class="tool-user-btn save button" id="edit_save" style="width: 87px;">
+                                    <button class="tool-user-btn save button" id="edit_save">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -32,7 +32,7 @@
                                         </svg>
                                         <span>Save</span>
                                     </button>
-                                    <button class="tool-user-btn cancel button" id="edit_cancel" style="width: 97px;">
+                                    <button class="tool-user-btn cancel button" id="edit_cancel">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -45,7 +45,7 @@
                                     </button>
                                 </div>
 
-                                <button class="tool-user-btn button" id="edit" style="width: 82px;">
+                                <button class="tool-user-btn button" id="edit">
                                     <svg width="20"
                                          height="20"
                                          viewBox="0 0 20 20"
@@ -60,7 +60,7 @@
 
                             <div class="tool-with-close-save-btn">
                                 <div class="save-close">
-                                    <button class="tool-user-btn save button" id="ban_save" style="width: 87px;">
+                                    <button class="tool-user-btn save button" id="ban_save">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -71,7 +71,7 @@
                                         </svg>
                                         <span>Save</span>
                                     </button>
-                                    <button class="tool-user-btn cancel button" id="ban_cancel" style="width: 97px;">
+                                    <button class="tool-user-btn cancel button" id="ban_cancel">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -84,7 +84,7 @@
                                     </button>
                                 </div>
 
-                                <button class="tool-user-btn button" id="ban" style="width: 122px;">
+                                <button class="tool-user-btn button" id="ban">
                                     <svg width="20"
                                          height="20"
                                          viewBox="0 0 20 20"
@@ -99,7 +99,7 @@
 
                             <div class="tool-with-close-save-btn">
                                 <div class="save-close">
-                                    <button class="tool-user-btn save button" id="unban_save" style="width: 87px;">
+                                    <button class="tool-user-btn save button" id="unban_save">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -110,7 +110,7 @@
                                         </svg>
                                         <span>Save</span>
                                     </button>
-                                    <button class="tool-user-btn cancel button" id="unban_cancel" style="width: 97px;">
+                                    <button class="tool-user-btn cancel button" id="unban_cancel">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -123,7 +123,7 @@
                                     </button>
                                 </div>
 
-                                <button class="tool-user-btn button" id="unban" style="width: 153px;">
+                                <button class="tool-user-btn button" id="unban">
                                     <svg width="20"
                                          height="20"
                                          viewBox="0 0 20 20"
@@ -138,7 +138,7 @@
 
                             <div class="tool-with-close-save-btn">
                                 <div class="save-close">
-                                    <button class="tool-user-btn save button" id="remove_save" style="width: 87px;">
+                                    <button class="tool-user-btn save button" id="remove_save">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -149,7 +149,7 @@
                                         </svg>
                                         <span>Save</span>
                                     </button>
-                                    <button class="tool-user-btn cancel button" id="remove_cancel" style="width: 97px;">
+                                    <button class="tool-user-btn cancel button" id="remove_cancel">
                                         <svg width="20"
                                              height="20"
                                              viewBox="0 0 20 20"
@@ -162,7 +162,7 @@
                                     </button>
                                 </div>
 
-                                <button class="tool-user-btn button" id="remove" style="width: 97px;">
+                                <button class="tool-user-btn button" id="remove">
                                     <svg width="20"
                                          height="20"
                                          viewBox="0 0 20 20"
@@ -386,12 +386,12 @@
                             <span>Interaction announcement</span>
                         </div>
                         <div class="tool-bar__links">
-                            {{ active('105px') }}
-                            {{ deactive('119px') }}
-                            {{ block('122px') }}
-                            {{ unblock('153px') }}
-                            {{ export("142px") }}
-                            {{ remove('97px') }}
+                            {{ active() }}
+                            {{ deactive() }}
+                            {{ block() }}
+                            {{ unblock() }}
+                            {{ export() }}
+                            {{ remove() }}
                         </div>
                         <div class="tool-bar__modal">
                             {% include "blocks/export_excel.njk" %}
@@ -448,13 +448,14 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        <div id="id" class="options-users id light" style="min-width: 102px">
+                        <div id="id" class="options-users id light">
                             <span>Ad ID</span>
                             <div>
                                 <svg width="24"
                                      height="24"
                                      viewBox="0 0 24 24"
                                      fill="none"
+                                     class="sort-svg"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 2H5C4.20435 2 3.44129 2.31607 2.87868 2.87868C2.31607 3.44129 2 4.20435 2 5V6.17C1.99986 6.58294 2.08497 6.99147 2.25 7.37V7.43C2.39128 7.75097 2.59139 8.04266 2.84 8.29L9 14.41V21C8.99966 21.1699 9.04264 21.3372 9.12487 21.4859C9.20711 21.6346 9.32589 21.7599 9.47 21.85C9.62914 21.9486 9.81277 22.0006 10 22C10.1565 21.9991 10.3107 21.9614 10.45 21.89L14.45 19.89C14.6149 19.8069 14.7536 19.6798 14.8507 19.5227C14.9478 19.3656 14.9994 19.1847 15 19V14.41L21.12 8.29C21.3686 8.04266 21.5687 7.75097 21.71 7.43V7.37C21.8888 6.99443 21.9876 6.58578 22 6.17V5C22 4.20435 21.6839 3.44129 21.1213 2.87868C20.5587 2.31607 19.7956 2 19 2ZM13.29 13.29C13.1973 13.3834 13.124 13.4943 13.0742 13.6161C13.0245 13.7379 12.9992 13.8684 13 14V18.38L11 19.38V14C11.0008 13.8684 10.9755 13.7379 10.9258 13.6161C10.876 13.4943 10.8027 13.3834 10.71 13.29L5.41 8H18.59L13.29 13.29ZM20 6H4V5C4 4.73478 4.10536 4.48043 4.29289 4.29289C4.48043 4.10536 4.73478 4 5 4H19C19.2652 4 19.5196 4.10536 19.7071 4.29289C19.8946 4.48043 20 4.73478 20 5V6Z"
                                           fill="#171717" />
@@ -474,10 +475,8 @@
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Ad ID", "text", "From", "112px", "from_id_input") }}
-                                </div>
-                                {{ field("", "text", "To", "112px", "to-id-input") }}
+                                {{ field("Ad ID", "text", "From", "from_id_input") }}
+                                {{ field("", "text", "To", "to-id-input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -488,15 +487,13 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Photo", "132px", "photo") }}
+                        {{ options_sort("Photo", "photo") }}
                         <div class="photo-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Numbers of photo", "text", "From", "112px", "from_photo_input") }}
-                                </div>
-                                {{ field("", "text", "To", "112px", "to-photo-input") }}
+                                {{ field("Numbers of photo", "text", "From", "from_photo_input") }}
+                                {{ field("", "text", "To", "to-photo-input") }}
                             </div>
                             <div class="option-sort-button">
                                 <div class="reset-btn">
@@ -507,11 +504,11 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Ad title", "232px", "title") }}
+                        {{ options_sort("Ad title", "title") }}
                         <div class="title-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
-                            {{ field("Ad title", "text", "Input title", "275px", "title_input") }}
+                            {{ field("Ad title", "text", "Input title", "title_input") }}
                             <div class="option-sort-button">
                                 <div class="reset-btn">
                                     {{ button("Reset filter", "light", "button", "reset_title", "text-15") }}
@@ -521,7 +518,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Category > Subcategory", "202px", "category") }}
+                        {{ options_sort("Category > Subcategory", "category") }}
                         <div class="category-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
@@ -560,15 +557,13 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Price", "102px", "price") }}
+                        {{ options_sort("Price", "price") }}
                         <div class="price-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>
                             <div class="option-sort-input">
-                                <div style="margin-right: 20px">
-                                    {{ field("Price", "text", "From", "112px", "from_price_input") }}
-                                </div>
-                                {{ field("", "text", "To", "112px", "to-price-input") }}
+                                {{ field("Price", "text", "From", "from_price_input") }}
+                                {{ field("", "text", "To", "to-price-input") }}
                             </div>
                             <div class="options-checkbox text-15">
                                 <div class="complete-checkbox">
@@ -585,7 +580,7 @@
                         </div>
                     </div>
                     <div class="sort-block">
-                        {{ options_sort("Status", "112px", "status") }}
+                        {{ options_sort("Status", "status") }}
                         <div class="status-option options-sort-block option-sort-disabled">
                             <div class="arrow-for-sort">
                             </div>

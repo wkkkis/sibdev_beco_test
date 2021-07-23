@@ -7,7 +7,6 @@
   padding-left: 9px;
   padding-right: 9px;
   border-radius: 6px;
-  margin-right: 5px;
   cursor: pointer;
   height: 44px;
 
@@ -185,13 +184,17 @@ input[type="radio"]:checked + label:after {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid $border;
 
+  input[type="text"] {
+    width: calc(315px - 54px);
+  }
+
   .label-for-drop {
     color: #888888;
     font-size: 15px;
   }
 
   .select {
-    width: 345px;
+    width: 315px;
     height: 60px;
   }
 
@@ -229,8 +232,14 @@ input[type="radio"]:checked + label:after {
   }
 
   .option-sort-input {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
     align-items: flex-end;
+
+    input[type="text"]{
+      width: 98px;
+    }
 
     input[type="date"] {
       display: block;

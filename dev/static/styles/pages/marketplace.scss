@@ -32,8 +32,10 @@
       }
 
       .users-sort {
-        display: flex;
+        display: grid;
+        grid-template-columns: 46px 132px 252px 202px 202px 152px 152px 152px 132px 152px;
         margin-bottom: 10px;
+        grid-gap: 5px;
 
         .sort-block {
           position: relative;
@@ -44,7 +46,6 @@
         }
 
         .all-checkbox {
-          margin-right: 5px;
           border-radius: 6px;
           padding-right: 12px;
           padding-top: 10px;
