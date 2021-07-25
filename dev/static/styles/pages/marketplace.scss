@@ -36,34 +36,12 @@
         grid-template-columns: 46px 132px 252px 202px 202px 152px 152px 152px 132px 152px;
         margin-bottom: 10px;
         grid-gap: 5px;
-
-        .sort-block {
-          position: relative;
-
-          .select {
-            margin-top: 8px;
-          }
-        }
-
-        .all-checkbox {
-          border-radius: 6px;
-          padding-right: 12px;
-          padding-top: 10px;
-          padding-left: 10px;
-        }
       }
 
       .users-data {
-        border: 1px solid $blackgray;
         width: 1620px;
-        direction: ltr;
-        border-radius: 6px;
 
         .user {
-          height: 44px;
-          border-bottom: 1px solid $blackgray;
-          cursor: pointer;
-          display: grid;
           grid-template-columns: 48px 137px 257px 207px 207px 157px 157px 157px 137px 157px;
 
           .active-social {
@@ -80,54 +58,12 @@
             margin-left: 10px;
           }
 
-          .user-padding {
-            padding-top: 12px;
-            border-right: 1px solid $lightgray;
-            word-wrap: break-word;
-            overflow-x: hidden;
-
-            &:last-child {
-              border: none;
-            }
-
-            span {
-              margin-left: 11px;
-            }
-          }
-
-          .user-checkbox {
-            border-right: 1px solid $lightgray;
-            width: 27px;
-            padding: 10px;
-
-            label {
-              &:before {
-                border: 2px solid $border;
-                margin-top: 4px;
-              }
-
-              &:after {
-                top: 9px;
-              }
-            }
-
-            input[type="checkbox"] {
-
-              &:checked ~ label {
-
-                &:before {
-                  border: 2px solid $darkgray;
-                }
-              }
-            }
-          }
-
           .nickname {
             background: $lightgray;
           }
 
-          &:hover {
-            background-color: $lightgray;
+          .th-checkbox {
+            padding-top: 7px;
           }
         }
       }

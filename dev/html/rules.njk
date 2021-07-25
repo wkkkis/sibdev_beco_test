@@ -184,7 +184,7 @@
                 </div>
             </div>
             <div class="rules-wrap">
-                <div class="rules-sort">
+                <div class="rules-sort thead">
                     <div id="all-checkbox" class="all-checkbox light disabled">
                         <div class="checkbox-custom">
                             <input type="checkbox" id="selectall">
@@ -322,28 +322,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="rules-data">
+                <div class="rules-data tbody">
                     {% for i in range(1, 10) %}
-                        <div class="rules data-line">
-                            <div class="checkbox-custom rules-checkbox">
+                        <div class="rules th-line">
+                            <div class="checkbox-custom th-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
                                        class="selectedId">
                                 <label for="checkbox{{ i }}"></label>
                             </div>
-                            <div class="rules-padding bold">
+                            <div class="th-line-padding bold">
                                 <span>00000{{ i }}</span>
                             </div>
-                            <div class="rules-padding">
+                            <div class="th-line-padding">
                                 <span>Johnathan Silverstone</span>
                             </div>
-                            <div class="rules-padding">
+                            <div class="th-line-padding">
                                 <span>Super Admin</span>
                             </div>
-                            <div class="rules-padding">
+                            <div class="th-line-padding">
                                 <span>20 may 2020</span>
                             </div>
-                            <div class="rules-padding">
+                            <div class="th-line-padding">
                                 <span>Active</span>
                             </div>
                         </div>

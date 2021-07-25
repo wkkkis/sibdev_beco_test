@@ -43,101 +43,21 @@
     }
 
     .announcement-sort {
-      display: grid;
       grid-template-columns: 46px 152px 252px 162px 202px 122px 152px 222px 122px 122px;
-      grid-gap: 5px;
-      margin-bottom: 10px;
-
-      .sort-block {
-        position: relative;
-
-        .category-select {
-          .select {
-
-            .new-select {
-              z-index: 10;
-
-              &__list {
-                z-index: 8;
-              }
-            }
-          }
-        }
-      }
-
-      .all-checkbox {
-        border-radius: 6px;
-        padding-right: 12px;
-        padding-top: 10px;
-        padding-left: 10px;
-      }
-
     }
 
     .announcement-data {
       width: 1600px;
-      border: 1px solid $blackgray;
-      border-radius: 6px;
 
       .announcement {
-        display: grid;
         grid-template-columns: 46px 157px 257px 167px 207px 128px 157px 227px 126px 126px;
-        border-bottom: 1px solid $blackgray;
-        height: 44px;
-        cursor: pointer;
-
-        .announcement-checkbox {
-          padding: 10px 15px 10px 10px;
-          border-right: 1px solid $blackgray;
-
-          label {
-            &:before {
-              border: 2px solid $border;
-              margin-top: 4px;
-            }
-
-            &:after {
-              top: 9px;
-            }
-          }
-
-          input[type="checkbox"] {
-
-            &:checked ~ label {
-
-              &:before {
-                border: 2px solid $darkgray;
-              }
-            }
-          }
-        }
 
         .paid {
           color: #5CFA54;
         }
 
-        .announcement-padding {
-          display: flex;
-          align-items: center;
-          border-right: 1px solid $blackgray;
-          word-wrap: break-word;
-          overflow-x: hidden;
-
-          &:last-child {
-            border: none;
-          }
-
-          span {
-            margin-left: 11px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
-
-        }
-
-        &:hover {
-          background-color: $lightgray;
+        .th-checkbox {
+          padding-top: 7px;
         }
       }
     }

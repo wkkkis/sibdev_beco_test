@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div class="documents-wrap">
-                <div class="documents-sort">
+                <div class="documents-sort thead">
 
                     <div id="all-checkbox" class="all-checkbox light disabled">
                         <div class="checkbox-custom">
@@ -119,21 +119,21 @@
                 </div>
 
                 <div class="documents-data">
-                    {% for i in range(1, 15) %}
-                        <div class="documents">
-                            <div class="checkbox-custom document-checkbox">
+                    {% for i in range(1, 5) %}
+                        <div class="documents tbody th-line">
+                            <div class="checkbox-custom th-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
                                        class="selectedId">
                                 <label for="checkbox{{ i }}"></label>
                             </div>
-                            <div class="documents-padding bold">
+                            <div class="documents-padding th-line-padding bold">
                                 <span>Privacy policy</span>
                             </div>
-                            <div class="documents-padding">
+                            <div class="documents-padding th-line-padding">
                                 <span>20 may 2020</span>
                             </div>
-                            <div class="documents-padding">
+                            <div class="documents-padding th-line-padding">
                                 <div class="documents-links">
                                     <span>../documents/</span>
                                     <span>private_police</span>

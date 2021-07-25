@@ -151,21 +151,7 @@
   .categories-wrap {
 
     .categories-sort {
-      display: grid;
-      grid-gap: 5px;
       grid-template-columns: 46px 282px 132px 172px 182px;
-      margin-bottom: 10px;
-
-      .all-checkbox {
-        border-radius: 6px;
-        padding-right: 12px;
-        padding-top: 10px;
-        padding-left: 10px;
-      }
-
-      .sort-block {
-        position: relative;
-      }
     }
 
     .categories-data {
@@ -184,22 +170,12 @@
         margin-bottom: 10px;
 
         .categories-line {
-          display: grid;
           grid-template-columns: 42px 292px 138px 176px 135px 36px;
-          height: 44px;
           align-items: center;
-          cursor: pointer;
-          border: 1px solid $blackgray;
-          border-radius: 6px;
 
           .categories-padding {
-            border-right: 1px solid #EEEEEE;
-            word-wrap: break-word;
             max-height: 31px;
             height: 100%;
-            overflow-x: hidden;
-            display: flex;
-            align-items: center;
 
             &:last-child {
               border: none;
@@ -232,37 +208,8 @@
             }
           }
 
-          .categories-checkbox {
-            border-right: 1px solid #EEEEEE;
-            width: 27px;
-            height: 31px;
-            padding-right: 10px;
-            padding-left: 10px;
-
-            label {
-              &:before {
-                border: 2px solid $border;
-                margin-top: 4px;
-              }
-
-              &:after {
-                top: 9px;
-              }
-            }
-
-            input[type="checkbox"] {
-
-              &:checked ~ label {
-
-                &:before {
-                  border: 2px solid $darkgray;
-                }
-              }
-            }
-          }
-
-          &:hover {
-            background-color: $lightgray;
+          .th-checkbox {
+            padding-top: 0;
           }
         }
 

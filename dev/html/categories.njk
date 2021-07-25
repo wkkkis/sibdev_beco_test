@@ -338,7 +338,7 @@
                 </div>
             </div>
             <div class="categories-wrap">
-                <div class="categories-sort">
+                <div class="categories-sort thead">
                     <div id="all-checkbox" class="all-checkbox light disabled">
                         <div class="checkbox-custom">
                             <input type="checkbox" id="selectall">
@@ -428,17 +428,17 @@
                     </div>
 
                 </div>
-                <div class="categories-data data-line">
+                <div class="categories-data">
                     {% for i in range(1, 5) %}
                         <div class="categories">
-                            <div class="categories-line">
-                                <div class="checkbox-custom categories-checkbox">
+                            <div class="categories-line th-line tbody">
+                                <div class="checkbox-custom th-checkbox">
                                     <input type="checkbox"
                                            id="checkbox{{ i }}"
                                            class="selectedId">
                                     <label for="checkbox{{ i }}"></label>
                                 </div>
-                                <div class="categories-padding bold">
+                                <div class="categories-padding th-line-padding bold">
                                     <svg width="24"
                                          height="24"
                                          viewBox="0 0 24 24"
@@ -449,16 +449,16 @@
                                     </svg>
                                     <span>Furniture</span>
                                 </div>
-                                <div class="categories-padding">
+                                <div class="categories-padding th-line-padding">
                                     <span>20 may 2020</span>
                                 </div>
-                                <div class="categories-padding">
+                                <div class="categories-padding th-line-padding">
                                     <span>12</span>
                                 </div>
-                                <div class="categories-padding">
+                                <div class="categories-padding th-line-padding">
                                     <span>5 235</span>
                                 </div>
-                                <div class="categories-padding">
+                                <div class="categories-padding th-line-padding">
                                     <button>
                                         <svg width="24"
                                              height="24"
