@@ -4,8 +4,8 @@ $(document).ready(function () {
   });
 
   function pages_name() {
-    let pages_name = $('.content-wrapper').children().attr('class').split('-');
-    $(`.${pages_name[0]}-link`).addClass('active');
+    let pages_name = $('.content-wrapper').children().attr('class').split(' ');
+    $(`.${pages_name[1]}-link`).addClass('active');
   }
 
   pages_name();

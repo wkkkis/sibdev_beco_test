@@ -29,7 +29,7 @@
 
 }
 
-.documents-main-wrap {
+.main-wrap {
 
   .pages-title {
 
@@ -41,18 +41,19 @@
     }
   }
 
-  .documents-content {
+  .main-wrap-content {
 
-    .documents-wrap {
+    .data-wrap {
 
       .documents-sort {
         grid-template-columns: 46px 202px 132px 385px;
       }
 
-      .documents-data {
-        width: 780px;
+      .data-lines {
+        max-width: 780px;
 
-        .documents {
+        .documents-line {
+          width: 100%;
           grid-template-columns: 46px 208px 138px 406px;
           align-items: center;
           margin-bottom: 10px;

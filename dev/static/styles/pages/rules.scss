@@ -1,17 +1,17 @@
-.rules-main-wrap {
+.main-wrap {
 
-  .rules-content {
+  .main-wrap-content {
 
-    .rules-wrap {
+    .data-wrap {
 
       .rules-sort {
         grid-template-columns: 46px 152px 252px 202px 142px 122px;
       }
 
-      .rules-data {
-        width: 940px;
+      .data-lines {
+        min-width: 940px;
 
-        .rules {
+        .rules-line {
           grid-template-columns: 46px 158px 257px 207px 147px 122px;
 
           .th-checkbox {

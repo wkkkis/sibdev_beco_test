@@ -10,9 +10,9 @@
 {% from "macros/button_custom.njk" import button %}
 
 {% block content %}
-    <div class="marketplace-wrap">
+    <div class="main-wrap marketplace">
         {{ pages_title("Marketplace", "Showing 1 to 14 of 100 000 users") }}
-        <div class="marketplace-content">
+        <div class="main-wrap-content">
             <div class="tool-wrap text-13">
                 <div class="tool-bar">
                     <div class="tool-bar__title">
@@ -74,7 +74,7 @@
                     {{ page_description("Blocked / banned:", "120") }}
                 </div>
             </div>
-            <div class="users-wrap">
+            <div class="data-wrap">
 
                 <div class="users-sort thead">
                     <div id="all-checkbox" class="all-checkbox light disabled">
@@ -279,7 +279,7 @@
                     </div>
                 </div>
 
-                <div class="users-data tbody">
+                <div class="tbody">
                     {% for i in range(1, 15) %}
                         <div class="user th-line">
                             <div class="checkbox-custom th-checkbox">

@@ -1,4 +1,4 @@
-.announcement-wrap {
+.main-wrap {
 
   .tool-wrap {
     margin-right: 10px;
@@ -17,39 +17,16 @@
 
   }
 
-  .announcement-table-wrap {
-    overflow-x: scroll;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      background-color: #fff;
-      width: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: #fff;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $border;
-      border-radius: 10px;
-      border: 6px solid #fff;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $darkgray;
-        border: 6px solid #fff
-      }
-    }
+  .data-wrap {
 
     .announcement-sort {
       grid-template-columns: 46px 152px 252px 162px 202px 122px 152px 222px 122px 122px;
     }
 
-    .announcement-data {
+    .tbody {
       width: 1600px;
 
-      .announcement {
+      .announcement-line {
         grid-template-columns: 46px 157px 257px 167px 207px 128px 157px 227px 126px 126px;
 
         .paid {

@@ -1,35 +1,8 @@
-.marketplace-wrap {
-  font-family: $main-font;
+.main-wrap{
 
-  .marketplace-content {
+  .main-wrap-content {
 
-    .users-wrap {
-      width: 100%;
-      margin-top: 10px;
-      display: block;
-      overflow-x: scroll;
-      overflow-y: scroll;
-
-      &::-webkit-scrollbar {
-        background-color: #fff;
-        width: 10px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: #fff;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $border;
-        border-radius: 10px;
-        border: 6px solid #fff;
-        cursor: pointer;
-
-        &:hover {
-          background-color: $darkgray;
-          border: 6px solid #fff
-        }
-      }
+    .data-wrap {
 
       .users-sort {
         display: grid;
@@ -38,7 +11,7 @@
         grid-gap: 5px;
       }
 
-      .users-data {
+      .tbody {
         width: 1620px;
 
         .user {

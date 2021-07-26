@@ -9,7 +9,7 @@
 {% from "macros/users_options.njk" import options_sort, checkbox %}
 
 {% block content %}
-    <div class="announcement-wrap">
+    <div class="main-wrap announcement">
         <div class="pages-title">
             <div class="title-about-page">
             <span class="title-page text-21">
@@ -21,7 +21,7 @@
             </span>
             </div>
         </div>
-        <div class="announcement-content">
+        <div class="main-wrap-content">
             <div class="tool-wrap text-13">
                 <div class="tool-bar">
                     <div class="tool-bar__title">
@@ -84,7 +84,7 @@
                     {{ page_description("Deactivated:", "57 000") }}
                 </div>
             </div>
-            <div class="announcement-table-wrap">
+            <div class="data-wrap">
                 <div class="announcement-sort thead">
                     <div id="all-checkbox" class="all-checkbox light disabled">
                         <div class="checkbox-custom">
@@ -294,9 +294,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="announcement-data tbody">
+                <div class="tbody">
                     {% for i in range(1, 15) %}
-                        <div class="announcement th-line">
+                        <div class="announcement-line th-line">
                             <div class="checkbox-custom th-checkbox">
                                 <input type="checkbox"
                                        id="checkbox{{ i }}"
@@ -332,11 +332,6 @@
                             </div>
                         </div>
                     {% endfor %}
-                </div>
-                <div class="announcement-rounded-table">
-                    <table class="table-bordered">
-
-                    </table>
                 </div>
             </div>
             <div class="modals">
