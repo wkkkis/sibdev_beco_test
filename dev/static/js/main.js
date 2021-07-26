@@ -297,7 +297,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   let toggle_class = $('.modal-announcement');
-  $('.announcement, .modal-toggle-announcement').click(function () {
+  $('.announcement-line, .modal-toggle-announcement').click(function () {
     toggle_class.toggleClass('is-visible');
     $('.announcement-tools-editmode ').hide();
     let photos_length = toggle_class.find('.announcement-all-images').children('*').length
@@ -327,7 +327,7 @@ $(document).ready(function () {
       $('.announcement-tools-editmode ').hide();
     }
   });
-  $(toggle_class).find('.modal-footer-wrap').children('button').on('click', function () {
+  toggle_class.find('.modal-footer-wrap').children('button').on('click', function () {
     $(this).parent().remove();
   });
 
@@ -361,7 +361,7 @@ $(document).ready(function () {
       $('.user-list-tools-editmode ').hide();
     }
   });
-  $(user_list_modal).find('.modal-footer-wrap').children('button').on('click', function () {
+  user_list_modal.find('.modal-footer-wrap').children('button').on('click', function () {
     $(this).parent().remove();
   });
 });
