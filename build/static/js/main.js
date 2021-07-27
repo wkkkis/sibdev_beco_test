@@ -15,6 +15,18 @@ $('.svg-option-btn').click(function () {
   $('.chat-option-block').fadeToggle('');
 });
 
+$('.sort-arrow').click(function () {
+  let sort_arrow_parent = $(this).parent().attr('class')
+
+  for(let i = 0; i < $(`.${sort_arrow_parent}`).find('.sort-arrow').length; i++) {
+    if(this === $(`.${sort_arrow_parent}`).children('.sort-arrow')[i]) {
+      $($(`.${sort_arrow_parent}`).children('.sort-arrow')[i]).toggleClass('active-sort-arrow')
+    }else{
+      $($(`.${sort_arrow_parent}`).children('.sort-arrow')[i]).removeClass('active-sort-arrow')
+    }
+  }
+})
+
 $(document).ready(function () {
   $('.input-with-clear').on('click', function () {
     let id_input = $(this).children('input');
@@ -156,7 +168,7 @@ $(document).ready(function () {
     'email', 'city', 'phone',
     'social', 'rating', 'register',
     'status', 'price', 'category',
-    'title', 'photo', 'id', 'author',
+    'title', 'photo', 'author',
     'announcement-id', 'subm', 'subs', 'created',
     'announcements', 'filter', 'role', 'type'
   ];
@@ -497,14 +509,13 @@ $(document).ready(function () {
       all_photos_boolean = false;
     }
   });
-})
-;
+});
 
 $(document).ready(function () {
   $('.categories-padding').children('button').click(function (e) {
     e.preventDefault();
-    $(this).closest('.categories').children('.subcategories-drop').slideToggle(400);
-    $(this).closest('.categories').toggleClass('categories-active');
+    $(this).closest('.categories-line-wrap').children('.subcategories-drop').slideToggle(400);
+    $(this).closest('.categories-line-wrap').toggleClass('categories-active');
     $(this).children('svg').toggleClass('active-subcategories');
   });
 });

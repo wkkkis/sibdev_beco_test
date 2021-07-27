@@ -194,6 +194,13 @@
   border-radius: 6px;
   cursor: pointer;
   height: 44px; }
+  .options-users .sort-arrow, .options-users-without-disabled .sort-arrow {
+    transition: all 0.5s ease;
+    transform: rotate(180deg);
+    margin-left: 9px;
+    cursor: pointer; }
+  .options-users .sort-arrow.active-sort-arrow, .options-users-without-disabled .sort-arrow.active-sort-arrow {
+    transform: rotate(0deg); }
   .options-users:hover, .options-users-without-disabled:hover {
     opacity: 1;
     padding-left: 8px;
@@ -322,6 +329,13 @@ input[type="radio"]:checked + label:after {
   color: #888888;
   font-size: 15px;
   margin-left: 6px; }
+
+.options-sort-block.right {
+  right: 0;
+  left: auto; }
+  .options-sort-block.right .arrow-for-sort {
+    right: 27px;
+    left: auto; }
 
 .options-sort-block {
   padding: 20px;
@@ -691,6 +705,10 @@ input[type="radio"]:checked + label:after {
           border-radius: 50%;
           background-color: #DDDDDD;
           margin-right: 28px; }
+          .user-wrap .user-description-main .user-description-wrap .user-about .user-logo img {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%; }
         .user-wrap .user-description-main .user-description-wrap .user-about .user-description .user-name {
           font-weight: bold;
           margin-bottom: 5px; }
@@ -1058,7 +1076,7 @@ input[type="radio"]:checked + label:after {
 .main-wrap .main-wrap-content .data-wrap .data-lines {
   max-width: 780px; }
   .main-wrap .main-wrap-content .data-wrap .data-lines .documents-line {
-    width: 100%;
+    width: 780px;
     grid-template-columns: 46px 208px 138px 406px;
     align-items: center;
     margin-bottom: 10px; }
@@ -1144,12 +1162,6 @@ input[type="radio"]:checked + label:after {
       .feedback-main-wrap .feedback-content .users-chat .sort-block {
         position: relative;
         margin-bottom: 20px; }
-        .feedback-main-wrap .feedback-content .users-chat .sort-block .options-sort-block {
-          left: auto;
-          right: 30px; }
-          .feedback-main-wrap .feedback-content .users-chat .sort-block .options-sort-block .arrow-for-sort {
-            left: auto;
-            right: 20px; }
       .feedback-main-wrap .feedback-content .users-chat .chats-link {
         padding: 8px;
         position: relative;
@@ -2261,9 +2273,6 @@ input[type="radio"]:checked + label:after {
   .modal-create-document .modal-wrapper .modal-body .modal-content .note-editor.note-airframe .note-editing-area .note-editable, .modal-create-document .modal-wrapper .modal-body .modal-content .note-editor.note-frame .note-editing-area .note-editable {
     font-size: 17px;
     font-family: "Cabin", sans-serif; }
-    .modal-create-document .modal-wrapper .modal-body .modal-content .note-editor.note-airframe .note-editing-area .note-editable p, .modal-create-document .modal-wrapper .modal-body .modal-content .note-editor.note-frame .note-editing-area .note-editable p {
-      display: flex;
-      align-items: center; }
   .modal-create-document .modal-wrapper .modal-body .modal-content .note-current-fontsize {
     font-family: "Cabin", sans-serif;
     font-size: 19px; }

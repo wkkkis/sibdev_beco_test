@@ -11,6 +11,17 @@
   cursor: pointer;
   height: 44px;
 
+  .sort-arrow {
+    transition: all 0.5s ease;
+    transform: rotate(180deg);
+    margin-left: 9px;
+    cursor: pointer;
+  }
+
+  .sort-arrow.active-sort-arrow {
+    transform: rotate(0deg);
+  }
+
   &:hover {
     opacity: 1;
     padding-left: 8px;
@@ -173,6 +184,15 @@ input[type="radio"]:checked + label:after {
   margin-left: 6px;
 }
 
+.options-sort-block.right {
+  right: 0;
+  left: auto;
+
+  .arrow-for-sort {
+    right: 27px;
+    left: auto;
+  }
+}
 .options-sort-block {
   padding: 20px;
   position: absolute;

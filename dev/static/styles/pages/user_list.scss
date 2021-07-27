@@ -56,6 +56,12 @@
           border-radius: 50%;
           background-color: $border;
           margin-right: 28px;
+
+          img {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+          }
         }
 
         .user-description {
