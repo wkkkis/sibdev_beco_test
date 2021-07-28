@@ -640,7 +640,7 @@ input[type="radio"]:checked + label:after {
     .login-wrap__item svg {
       margin-right: 240px; }
 
-.main-wrap .main-wrap-content .data-wrap .users-sort {
+.main-wrap .main-wrap-content .data-wrap .user-sort {
   display: grid;
   grid-template-columns: 46px 132px 252px 202px 202px 152px 152px 152px 132px 152px;
   margin-bottom: 10px;
@@ -1142,42 +1142,42 @@ input[type="radio"]:checked + label:after {
     padding-bottom: 20px;
     grid-template-columns: 490px calc(100% - 490px);
     margin-top: 20px; }
-    .feedback-main-wrap .feedback-content .users-chat {
+    .feedback-main-wrap .feedback-content .user-chat {
       overflow-y: scroll;
       height: calc(100vh - 200px); }
-      .feedback-main-wrap .feedback-content .users-chat::-webkit-scrollbar {
+      .feedback-main-wrap .feedback-content .user-chat::-webkit-scrollbar {
         width: 16px; }
-      .feedback-main-wrap .feedback-content .users-chat::-webkit-scrollbar-track {
+      .feedback-main-wrap .feedback-content .user-chat::-webkit-scrollbar-track {
         background-color: #F9F9F9;
         border: 6px solid white;
         border-radius: 10px; }
-      .feedback-main-wrap .feedback-content .users-chat::-webkit-scrollbar-thumb {
+      .feedback-main-wrap .feedback-content .user-chat::-webkit-scrollbar-thumb {
         background-color: #DDDDDD;
         border-right: 6px solid white;
         border-left: 6px solid white;
         cursor: pointer;
         border-radius: 10px; }
-        .feedback-main-wrap .feedback-content .users-chat::-webkit-scrollbar-thumb:hover {
+        .feedback-main-wrap .feedback-content .user-chat::-webkit-scrollbar-thumb:hover {
           background-color: #171717; }
-      .feedback-main-wrap .feedback-content .users-chat .sort-block {
+      .feedback-main-wrap .feedback-content .user-chat .sort-block {
         position: relative;
         margin-bottom: 20px; }
-      .feedback-main-wrap .feedback-content .users-chat .chats-link {
+      .feedback-main-wrap .feedback-content .user-chat .chats-link {
         padding: 8px;
         position: relative;
         cursor: pointer;
         margin-bottom: 11px; }
-        .feedback-main-wrap .feedback-content .users-chat .chats-link__title {
+        .feedback-main-wrap .feedback-content .user-chat .chats-link__title {
           display: grid; }
-          .feedback-main-wrap .feedback-content .users-chat .chats-link__title span {
+          .feedback-main-wrap .feedback-content .user-chat .chats-link__title span {
             font-size: 15px;
             font-weight: bold;
             color: #171717; }
-            .feedback-main-wrap .feedback-content .users-chat .chats-link__title span:last-child {
+            .feedback-main-wrap .feedback-content .user-chat .chats-link__title span:last-child {
               font-size: 13px;
               color: #4D4D4D;
               margin-top: 4px; }
-        .feedback-main-wrap .feedback-content .users-chat .chats-link__notification {
+        .feedback-main-wrap .feedback-content .user-chat .chats-link__notification {
           position: absolute;
           right: 8px;
           top: 8px;
@@ -1190,17 +1190,17 @@ input[type="radio"]:checked + label:after {
           align-items: center;
           justify-content: center;
           font-size: 13px; }
-        .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message {
+        .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message {
           margin-top: 8px;
           display: flex; }
-          .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__logo {
+          .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__logo {
             position: relative;
             display: flex; }
-            .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__logo img {
+            .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__logo img {
               width: 36px;
               height: 36px;
               border-radius: 50%; }
-            .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__logo .user-active {
+            .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__logo .user-active {
               position: absolute;
               left: 27px;
               top: 27px;
@@ -1212,30 +1212,30 @@ input[type="radio"]:checked + label:after {
               width: 9px;
               align-items: center;
               justify-content: center; }
-              .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__logo .user-active__circle {
+              .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__logo .user-active__circle {
                 background: #5CFA54;
                 border-radius: 50%;
                 width: 7px;
                 height: 7px; }
-          .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__new-message {
+          .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__new-message {
             word-wrap: break-word;
             text-overflow: ellipsis;
             font-size: 13px;
             padding-left: 10px; }
-            .feedback-main-wrap .feedback-content .users-chat .chats-link .logo-with-message__new-message .message-time {
+            .feedback-main-wrap .feedback-content .user-chat .chats-link .logo-with-message__new-message .message-time {
               margin-top: 7px;
               color: #888888;
               font-size: 13px;
               font-weight: 500; }
-      .feedback-main-wrap .feedback-content .users-chat .chats-link.active {
+      .feedback-main-wrap .feedback-content .user-chat .chats-link.active {
         background: #F9F9F9;
         border-radius: 12px; }
-      .feedback-main-wrap .feedback-content .users-chat .chat-line {
+      .feedback-main-wrap .feedback-content .user-chat .chat-line {
         width: calc(100% - 16px);
         height: 1px;
         margin: 11px auto;
         background: #EEEEEE; }
-        .feedback-main-wrap .feedback-content .users-chat .chat-line:last-child {
+        .feedback-main-wrap .feedback-content .user-chat .chat-line:last-child {
           display: none; }
     .feedback-main-wrap .feedback-content .chat {
       border: 1px solid #EEEEEE;
