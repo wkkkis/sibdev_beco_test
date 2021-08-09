@@ -708,7 +708,8 @@ input[type="radio"]:checked + label:after {
           .user-wrap .user-description-main .user-description-wrap .user-about .user-logo img {
             width: 92px;
             height: 92px;
-            border-radius: 50%; }
+            border-radius: 50%;
+            object-fit: cover; }
         .user-wrap .user-description-main .user-description-wrap .user-about .user-description .user-name {
           font-weight: bold;
           margin-bottom: 5px; }
