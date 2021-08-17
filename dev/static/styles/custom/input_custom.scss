@@ -1,37 +1,22 @@
-.input_custom {
-  display: flex;
-  flex-direction: column;
-
-  .input-with-clear {
-    position: relative;
-
-    svg {
-      position: absolute;
-      top: 20%;
-      right: 10px;
-      cursor: pointer;
-      display: none;
-    }
-  }
+.input-custom {
+  width: 100%;
+  position: relative;
 
   input {
-    border: 1px solid #dddddd;
-    padding: 13px 40px 12px 14px;
-    width: calc(100% - 54px);
-    border-radius: 12px;
+    padding: 12px 8px 12px 44px;
+    border-radius: 52px;
+    width: calc(100% - 52px);
+    border: 1px solid rgba(51, 51, 51, 0.2);
     outline: none;
-    margin-bottom: 10px;
-    font-size: 17px;
-
-    &::-webkit-input-placeholder {
-      color: #888888;
-    }
+    font-size: 18px;
+    transition: width 0.5s ease;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
   }
 
-  label {
-    color: #888888;
-    margin-bottom: 8px;
-    margin-left: 6px;
-    font-size: 15px;
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 16px;
   }
 }

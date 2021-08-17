@@ -1,57 +1,64 @@
 @import "utils/vars";
-@import "custom/all_custom";
 @import "pages/all_pages";
 @import "blocks/all_blocks";
+@import "custom/all_custom";
 
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  overflow-y: scroll;
   font-family: $main-font;
 }
 
-.note-modal-backdrop {
-  visibility: hidden;
+.text-16 {
+  font-size: 16px;
 }
 
-.text-13 {
-  font-size: 13px;
+.text-18 {
+  font-size: 18px;
 }
 
-.text-15 {
-  font-size: 15px;
+.text-36 {
+  font-size: 36px;
 }
 
-.text-17 {
-  font-size: 17px;
+.text-28 {
+  font-size: 28px;
 }
 
-.text-19 {
-  font-size: 19px;
+.font-weight-400 {
+  font-weight: 400;
 }
 
-.text-21 {
-  font-size: 21px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.disabled {
-  opacity: 0.5;
-}
-
-.active {
-  opacity: 1;
+.font-weight-700 {
+  font-weight: 700;
 }
 
 .main-wrapper {
   width: 100%;
+  display: flex;
 
-  .content-wrapper {
-    padding-left: 20px;
-    margin-left: 300px;
+  &__sidebar-wrap {
+    position: relative;
+    transition: padding-left 0.5s ease;
+    -webkit-transition: padding-left 0.5s ease;
+    -moz-transition: padding-left 0.5s ease;
+    padding-left: 240px;
+  }
+
+  &__content-wrapper {
+    width: 100%;
+    background-color: $content_background;
+  }
+}
+
+@media screen and (max-width: 770px){
+  .main-wrapper__sidebar-wrap {
+    padding-left: 105px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-wrapper__sidebar-wrap {
+    padding-left: 12px;
   }
 }

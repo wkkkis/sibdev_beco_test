@@ -1,17 +1,9 @@
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
-$main-font: "Cabin", sans-serif;
-$raleview: 'Raleway', sans-serif;
+$main-font: 'Open Sans', sans-serif;
 
 //color
-$border: #DDDDDD;
-$darkborder: #888888;
-$fontcolor: #4D4D4D;
-$lightgray: #F9F9F9;
-$darkgray: #171717;
-$blackgray: #EEEEEE;
-$lightblack: rgba(255, 255, 255, 0.05);
-$lightborder: rgba(255, 255, 255, 0.1);
-$lightgreen: #5CFA54;
+$backgroundSideBar: #F3F4F9;
+$blueActive: #34ABE0;
+$content_background: #FAFAFA;

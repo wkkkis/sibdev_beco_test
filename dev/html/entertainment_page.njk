@@ -1,0 +1,44 @@
+{% extends "templates/main.njk" %}
+
+{% set title = "Развлечения" %}
+
+{% from "macros/input_custom.njk" import input_custom %}
+
+{% block content %}
+    <div class="content entertainment">
+
+        <div class="content__header">
+            <div class="content__header__pages_title">
+                <span>Развлечения</span>
+            </div>
+            <div>
+                {{ input_custom() }}
+            </div>
+        </div>
+
+        <div class="content__body">
+            {% for i in range(12) %}
+            <div class="item_card">
+                <b></b>
+                <b></b>
+                <div class="item_card__title_sales">
+                    <div>
+                        <span class="font-weight-700">
+                            пробка на мира
+                        </span>
+                        <p class="font-weight-400">Вечер для двоих</p>
+                    </div>
+                    <div>
+                        <span>50%</span>
+                        <p>скидка</p>
+                    </div>
+                </div>
+                <div class="item_card__image">
+                    <img src="../static/images/image-1.svg" alt="">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 {
-  "name": "shoof_admin_front",
+  "name": "sibdev_beco_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,11 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://wkkkis@bitbucket.org/irokezprogrammers/shoof_admin_front.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/irokezprogrammers/shoof_admin_front#readme",
   "devDependencies": {
     "browser-sync": "^2.27.1",
     "del": "^6.0.0",
